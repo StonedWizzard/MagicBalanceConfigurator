@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFrameworks>net47;netcoreapp2.0</TargetFrameworks>
+    <ApplicationIcon />
+    <StartupObject />
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Authors>Szymon Zak</Authors>
+    <VersionPrefix>1.4.0</VersionPrefix>
+    <AssemblyTitle>VdfsSharp</AssemblyTitle>
+    <Description>Reading, building and extracting VDFS archives used by the games "Gothic" and "Gothic II"</Description>
+    <Copyright>Copyright (c) 2019 Szymon Zak</Copyright>
+    <Version>1.4.0</Version>
+    <AssemblyVersion>1.4.0.0</AssemblyVersion>
+    <FileVersion>1.4.0.0</FileVersion>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/Szmyk/VdfsSharp/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/Szmyk/VdfsSharp</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Szmyk/VdfsSharp.git</RepositoryUrl>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34003.232
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicBalanceConfigurator", "MagicBalanceConfigurator\MagicBalanceConfigurator.csproj", "{435FBE41-9AFB-4D28-AD78-AF6E4BB2CC42}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VdfsSharp", "VdfsSharp\src\VdfsSharp\VdfsSharp.csproj", "{9CC19B55-1A71-4D3E-B5F7-182B905C5408}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{435FBE41-9AFB-4D28-AD78-AF6E4BB2CC42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{435FBE41-9AFB-4D28-AD78-AF6E4BB2CC42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{435FBE41-9AFB-4D28-AD78-AF6E4BB2CC42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{435FBE41-9AFB-4D28-AD78-AF6E4BB2CC42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CC19B55-1A71-4D3E-B5F7-182B905C5408}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CC19B55-1A71-4D3E-B5F7-182B905C5408}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CC19B55-1A71-4D3E-B5F7-182B905C5408}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CC19B55-1A71-4D3E-B5F7-182B905C5408}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2CD79FA2-66E1-496F-A31D-92B5E8F2E383}
+	EndGlobalSection
+EndGlobal
