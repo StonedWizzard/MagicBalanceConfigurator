@@ -76,6 +76,11 @@
     <Compile Include="Generators\Blt_T3_Generator.cs" />
     <Compile Include="Generators\Blt_T4_Generator.cs" />
     <Compile Include="Generators\ItemModsProvider.cs" />
+    <Compile Include="Generators\BasePotionGenerator.cs" />
+    <Compile Include="Generators\Pot_T4_Generator.cs" />
+    <Compile Include="Generators\Pot_T3_Generator.cs" />
+    <Compile Include="Generators\Pot_T2_Generator.cs" />
+    <Compile Include="Generators\Pot_T1_Generator.cs" />
     <Compile Include="Generators\Rng_T1_Generator .cs" />
     <Compile Include="Generators\Rng_T2_Generator.cs" />
     <Compile Include="Generators\Aml_T2_Generator.cs" />
@@ -134,9 +139,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ItemNamesForm.resx">
       <DependentUpon>ItemNamesForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.asa-TZ.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.en.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

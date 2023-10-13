@@ -36,8 +36,8 @@ namespace MagicBalanceConfigurator
 
         private void InitializeModConfigsController()
         {
-            try 
-            { 
+            try
+            {
                 ModConfigsController = new ModConfigsController();
                 ModConfigsHighlighter = new ModConfigsTextHighlighter(ModConfigsTextBox);
                 ModConfigsTextBox.Clear();
@@ -73,6 +73,7 @@ namespace MagicBalanceConfigurator
         {
             GenerateBtn.Enabled = !IsRandUiBlocked;
             ItemPriceRangeBox.Enabled = !IsRandUiBlocked;
+            ItemsCountBox.Enabled = !IsRandUiBlocked;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -84,36 +85,46 @@ namespace MagicBalanceConfigurator
 
         private void InitAppConfigsPage()
         {
-            if(!AppConfigsProvider.IsGamePathCorrect())
+            if (!AppConfigsProvider.IsGamePathCorrect())
                 AppConfigsProvider.DetectAndSetGamePath();
 
             GamePathTextBox.Text = AppConfigsProvider.Configs.GamePath;
             VdfsArchiveBox.Text = AppConfigsProvider.Configs.GameArchive;
             LanguageSelectBox.Text = AppConfigsProvider.Configs.Language;
+            OutputFilesCodepageBox.Text = AppConfigsProvider.Configs.OutputFilesEncoding;
         }
 
         private void InitRandomPage()
         {
             ItemModsProvider.InitializeItemsMods();
+            UpdateRandomList();
+            ItemPriceRangeBox.Value = RandomController.RandomPriceMagnitude;
+            BuildRandomItemsPackageBox.Checked = RandomController.BuildPackage;
+        }
+        private void UpdateRandomList()
+        {
+            GeneratorDataGrid.Rows.Clear();
             foreach (var generator in RandomController.Generators)
             {
                 var row = generator.GetData();
                 GeneratorDataGrid.Rows.Add(row);
             };
-            ItemPriceRangeBox.Value = RandomController.RandomPriceMagnitude;
-            BuildRandomItemsPackageBox.Checked = RandomController.BuildPackage;
         }
 
         private void InitPackagesPage()
         {
             PackagesController = new PackagesController();
             PatchController = new ScriptsPatcher();
-            UpdatepackagesList();
+            UpdatepackagesList(true);
             PackageListUpdater.Enabled = true;
         }
-        private void UpdatepackagesList()
+        private void UpdatepackagesList(bool forced = false)
         {
-            if (PackagesController.ReloadPackages())
+            if (PackagesGridView.IsCurrentCellInEditMode) return;
+            PackagesGridView.ClearSelection();
+            PackagesController.CheckPackages();
+
+            if (PackagesController.RequireUpdate || forced)
             {
                 PackagesGridView.Rows.Clear();
                 foreach (var package in PackagesController.GetSortedPackages())
@@ -133,7 +144,7 @@ namespace MagicBalanceConfigurator
         private void SetGothicDirBtn_Click(object sender, EventArgs e)
         {
             FileOpenDialog.InitialDirectory = AppConfigsProvider.GetG2DataDir();
-            if(FileOpenDialog.ShowDialog(this) == DialogResult.OK)
+            if (FileOpenDialog.ShowDialog(this) == DialogResult.OK)
             {
                 string archiveName = Path.GetFileName(FileOpenDialog.FileName);
                 AppConfigsProvider.Configs.GameArchive = archiveName;
@@ -180,7 +191,7 @@ namespace MagicBalanceConfigurator
                 {
                     generator.ModPower = Convert.ToDouble(e.Value);
                     return generator.ModPower;
-                });                
+                });
 
             else if (GeneratorDataGrid.Columns[e.ColumnIndex].Name == "ItemNameColumn")
                 e.Value = TrySetValue(e.Value, generator.IsActive, () => {
@@ -216,28 +227,42 @@ namespace MagicBalanceConfigurator
         {
             string pckgName = PackagesGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
             var package = PackagesController.GetPackage(pckgName);
+            bool saveRequired = false;
             if (package == null) return;
 
             if (PackagesGridView.Columns[e.ColumnIndex].Name == "IsPackageEnabledColumn")
-                e.Value = TrySetValue(e.Value, package.IsEnabled, () => {
+            {
+                bool valBefore = package.IsEnabled;
+                e.Value = TrySetValue(e.Value, package.IsEnabled, () =>
+                {
                     package.IsEnabled = Convert.ToBoolean(e.Value);
                     return package.IsEnabled;
                 });
-
+                if (valBefore != package.IsEnabled)
+                    saveRequired = true;
+            }
             if (PackagesGridView.Columns[e.ColumnIndex].Name == "LoadOrderColumn")
             {
+                int valBefore = package.LoadOrder;
                 e.Value = TrySetValue(e.Value, package.LoadOrder, () =>
                 {
                     package.LoadOrder = Convert.ToInt32(e.Value);
                     return package.LoadOrder;
                 });
+                if (valBefore != package.LoadOrder)
+                    saveRequired = true;
             }
-            PackagesController.SavePackageMeta(package);            
+
+            if (saveRequired)
+            {
+                PackagesController.SavePackageMeta(package);
+            }
+            PackagesGridView.ClearSelection();
         }
         private void timer1_Tick(object sender, EventArgs e) => UpdatepackagesList();
 
 
-        private void ModConfigsTextBox_TextChanged(object sender, EventArgs e) => 
+        private void ModConfigsTextBox_TextChanged(object sender, EventArgs e) =>
             ModConfigsController?.UpdateConfigs(ModConfigsTextBox.Text);
 
         private void ItemPriceRangeBox_ValueChanged(object sender, EventArgs e) =>
@@ -249,7 +274,7 @@ namespace MagicBalanceConfigurator
         private void InstallPackagesBtn_Click(object sender, EventArgs e)
         {
             try { PackagesController.InstallSelectedPackages(CleanUpAutorunBox.Checked); }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -268,15 +293,15 @@ namespace MagicBalanceConfigurator
 
         private void TabsPanel_Selected(object sender, TabControlEventArgs e)
         {
-            if(e.TabPage == ModConfigsPage)
+            if (e.TabPage == ModConfigsPage)
                 InitializeModConfigsController();
         }
 
         private void RunPatchBtn_Click(object sender, EventArgs e)
         {
-            if(!AppConfigsProvider.IsGamePathCorrect())
+            if (!AppConfigsProvider.IsGamePathCorrect())
             {
-                var dialogResult = 
+                var dialogResult =
                     MessageBox.Show(MsgLocalizer.GetMessage("GamePathIncorrectCompiling"), "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dialogResult != DialogResult.Yes) return;
             }
@@ -288,7 +313,7 @@ namespace MagicBalanceConfigurator
                 PatchController.BackUpFiles();
                 PatchController.PatchGame(CleanInstallBox.Checked);
             }
-            catch(Exception exeption)
+            catch (Exception exeption)
             {
                 MessageBox.Show($"Error: {exeption.Message}", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error); return;
             }
@@ -324,7 +349,7 @@ namespace MagicBalanceConfigurator
             resources.ApplyResources(ModConfigsPage, ModConfigsPage.Name, culture);
             LocalizeChilds(ModConfigsPage, resources);
             resources.ApplyResources(RandomPage, RandomPage.Name, culture);
-            LocalizeChilds(RandomPage, resources);            
+            LocalizeChilds(RandomPage, resources);
             LocalizeChilds(this, resources);
 
             resources.ApplyResources(IsActiveColumn, IsActiveColumn.Name, culture);
@@ -373,5 +398,19 @@ namespace MagicBalanceConfigurator
             var helpWindow = new HelpWindow();
             helpWindow.ShowDialog();
         }
+
+        private void OutputFilesCodepageBox_TextUpdate(object sender, EventArgs e)
+        {
+            AppConfigsProvider.Configs.OutputFilesEncoding = OutputFilesCodepageBox.Text;
+            AppConfigsProvider.SetConfigs();
+        }
+        private void OutputFilesCodepageBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AppConfigsProvider.Configs.OutputFilesEncoding = OutputFilesCodepageBox.Text;
+            AppConfigsProvider.SetConfigs();
+        }
+
+        private void ItemsCountBox_ValueChanged(object sender, EventArgs e)
+        { RandomController.SetItemsCount((int)ItemsCountBox.Value); UpdateRandomList(); }
     }
 }

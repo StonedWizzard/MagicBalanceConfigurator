@@ -8,5 +8,6 @@ namespace MagicBalanceConfigurator.Configs
         public string GamePath;
         public string Language;
         public string GameArchive;
+        public string OutputFilesEncoding;
     }
 }

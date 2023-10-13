@@ -6,9 +6,9 @@ namespace MagicBalanceConfigurator.Generators
     public class ItemMod
     {
         public ItemMod() { IsEnabled = true; }
-        public ItemMod(int id, int minValue, int maxValue) : this() 
+        public ItemMod(long id, int minValue, int maxValue) : this() 
         {
-            Id = (long)1<<id;
+            Id = id;
             ValueMax = maxValue;
             ValueMin = minValue;
         }

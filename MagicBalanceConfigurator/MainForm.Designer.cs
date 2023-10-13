@@ -47,6 +47,8 @@
             this.PackageAuthorColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PackageDescriptionColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RandomPage = new System.Windows.Forms.TabPage();
+            this.ItemsCountBox = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
             this.ItemNamesBtn = new System.Windows.Forms.Button();
             this.ItemModConfigsBtn = new System.Windows.Forms.Button();
             this.BuildRandomItemsPackageBox = new System.Windows.Forms.CheckBox();
@@ -70,6 +72,8 @@
             this.ModConfigsPage = new System.Windows.Forms.TabPage();
             this.ModConfigsTextBox = new System.Windows.Forms.RichTextBox();
             this.AppConfigsPage = new System.Windows.Forms.TabPage();
+            this.OutputFilesCodepageBox = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.VdfsArchiveBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -86,6 +90,7 @@
             this.InstallPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PackagesGridView)).BeginInit();
             this.RandomPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemsCountBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemPriceRangeBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GeneratorDataGrid)).BeginInit();
             this.ModConfigsPage.SuspendLayout();
@@ -219,6 +224,8 @@
             // RandomPage
             // 
             resources.ApplyResources(this.RandomPage, "RandomPage");
+            this.RandomPage.Controls.Add(this.ItemsCountBox);
+            this.RandomPage.Controls.Add(this.label5);
             this.RandomPage.Controls.Add(this.ItemNamesBtn);
             this.RandomPage.Controls.Add(this.ItemModConfigsBtn);
             this.RandomPage.Controls.Add(this.BuildRandomItemsPackageBox);
@@ -231,6 +238,32 @@
             this.RandomPage.Controls.Add(this.GenerateBtn);
             this.RandomPage.Name = "RandomPage";
             this.RandomPage.UseVisualStyleBackColor = true;
+            // 
+            // ItemsCountBox
+            // 
+            resources.ApplyResources(this.ItemsCountBox, "ItemsCountBox");
+            this.ItemsCountBox.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.ItemsCountBox.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.ItemsCountBox.Name = "ItemsCountBox";
+            this.ItemsCountBox.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.ItemsCountBox.ValueChanged += new System.EventHandler(this.ItemsCountBox_ValueChanged);
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
             // 
             // ItemNamesBtn
             // 
@@ -397,6 +430,8 @@
             // AppConfigsPage
             // 
             resources.ApplyResources(this.AppConfigsPage, "AppConfigsPage");
+            this.AppConfigsPage.Controls.Add(this.OutputFilesCodepageBox);
+            this.AppConfigsPage.Controls.Add(this.label4);
             this.AppConfigsPage.Controls.Add(this.VdfsArchiveBox);
             this.AppConfigsPage.Controls.Add(this.label10);
             this.AppConfigsPage.Controls.Add(this.linkLabel1);
@@ -408,6 +443,22 @@
             this.AppConfigsPage.Controls.Add(this.label1);
             this.AppConfigsPage.Name = "AppConfigsPage";
             this.AppConfigsPage.UseVisualStyleBackColor = true;
+            // 
+            // OutputFilesCodepageBox
+            // 
+            resources.ApplyResources(this.OutputFilesCodepageBox, "OutputFilesCodepageBox");
+            this.OutputFilesCodepageBox.FormattingEnabled = true;
+            this.OutputFilesCodepageBox.Items.AddRange(new object[] {
+            resources.GetString("OutputFilesCodepageBox.Items"),
+            resources.GetString("OutputFilesCodepageBox.Items1")});
+            this.OutputFilesCodepageBox.Name = "OutputFilesCodepageBox";
+            this.OutputFilesCodepageBox.SelectedIndexChanged += new System.EventHandler(this.OutputFilesCodepageBox_SelectedIndexChanged);
+            this.OutputFilesCodepageBox.TextUpdate += new System.EventHandler(this.OutputFilesCodepageBox_TextUpdate);
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
             // 
             // VdfsArchiveBox
             // 
@@ -472,7 +523,7 @@
             // 
             // PackageListUpdater
             // 
-            this.PackageListUpdater.Interval = 2000;
+            this.PackageListUpdater.Interval = 1000;
             this.PackageListUpdater.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FileOpenDialog
@@ -496,6 +547,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PackagesGridView)).EndInit();
             this.RandomPage.ResumeLayout(false);
             this.RandomPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemsCountBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemPriceRangeBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GeneratorDataGrid)).EndInit();
             this.ModConfigsPage.ResumeLayout(false);
@@ -558,6 +610,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox CleanUpAutorunBox;
+        private System.Windows.Forms.ComboBox OutputFilesCodepageBox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown ItemsCountBox;
+        private System.Windows.Forms.Label label5;
     }
 }
 

@@ -64,6 +64,11 @@ namespace MagicBalanceConfigurator
                 new Blt_T2_Generator(this),
                 new Blt_T3_Generator(this),
                 new Blt_T4_Generator(this),
+
+                new Pot_T1_Generator(this),
+                new Pot_T2_Generator(this),
+                new Pot_T3_Generator(this),
+                new Pot_T4_Generator(this),
             };
         }
 
@@ -80,9 +85,9 @@ namespace MagicBalanceConfigurator
             if(BuildPackage) 
             {
                 PackageBuilder packageBuilder = new PackageBuilder();
-                packageBuilder.BuildPackage(Consts.RandomItemsPackageDir, 
-                    OutputDir, "StonedWizzard", "2.0.1",
-                    "StExtMod - Random items. Required 'StExtMod - Core'", true);
+                packageBuilder.BuildPackage(Consts.RandomItemsPackageDir, OutputDir, "StonedWizzard", new List<string>() { "StExtMod - Core" },
+                    new List<string>() { "StExtMod - RandItemPack Patch", "StExtMod - Main", "StExtMod - User configs", "StExtMod - English" },
+                    "2.0.3", "StExtMod - Random items. Required 'StExtMod - Core'", true);
             }
 
             Generators.ForEach(g =>
@@ -115,6 +120,12 @@ namespace MagicBalanceConfigurator
                 SendStatusMessage("Items generation completed!");
                 UpdateUiBlock(false);
             });
+        }
+
+        public void SetItemsCount(int count)
+        {
+            foreach(var generator in Generators)
+                generator.ItemsCount = count;
         }
 
         private void ProgressCounter(int progress)
@@ -166,7 +177,8 @@ namespace MagicBalanceConfigurator
         {
             string path = $"{savePath}\\{Consts.RandLocalizationFileName}";
             string fallbackPath = $"{Application.StartupPath}\\{Consts.RandLocalizationFileName}";
-            try { File.WriteAllText(path, ItemsUniqNames.ToString(), Encoding.GetEncoding("windows-1251")); }
+            try { 
+                File.WriteAllText(path, ItemsUniqNames.ToString(), Encoding.GetEncoding(AppConfigsProvider.Configs.OutputFilesEncoding)); }
             catch (DirectoryNotFoundException) { File.WriteAllText(fallbackPath, ItemsUniqNames.ToString()); }
             catch (Exception ex)
             {
@@ -179,6 +191,9 @@ namespace MagicBalanceConfigurator
         {
             string path = $"{savePath}\\{Consts.RandMetaFileName}";
             string fallbackPath = $"{Application.StartupPath}\\{Consts.RandMetaFileName}";
+
+            RandItemsMeta.AppendLine(CommonTemplates.StExt_CreateRandomItemMock); 
+            RandItemsMeta.AppendLine(CommonTemplates.StExt_ApplyPotionEffectMock);
             try { File.WriteAllText(path, RandItemsMeta.ToString()); }
             catch (DirectoryNotFoundException) { File.WriteAllText(fallbackPath, RandItemsMeta.ToString()); }
             catch (Exception ex)

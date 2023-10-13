@@ -1,11 +1,9 @@
 ﻿using MagicBalanceConfigurator.Configs;
 using MagicBalanceConfigurator.Packages;
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace MagicBalanceConfigurator
 {
@@ -15,7 +13,7 @@ namespace MagicBalanceConfigurator
         private PackagesInstaller PckgInstaller { get; set; }
         private PackagesLoader PckgLoader { get; set; }
         private PackageBuilder PckgBuilder { get; set; }
-        private bool FirstUpdate;
+        public bool RequireUpdate { get; private set; }
 
         public PackagesController() 
         {
@@ -24,7 +22,7 @@ namespace MagicBalanceConfigurator
             PckgBuilder = new PackageBuilder();
             Directory.CreateDirectory(AppConfigsProvider.GetPackagesDir());
             Packages = PckgLoader.LoadPackages();
-            FirstUpdate = true;
+            RequireUpdate = true;
         }
 
         public void InstallSelectedPackages(bool cleanUpAutorun)
@@ -40,21 +38,23 @@ namespace MagicBalanceConfigurator
         /// <summary>
         /// Load all packages not present in current packages collection
         /// </summary>
-        public bool ReloadPackages()
+        public void CheckPackages()
         {
             var newPckgs = PckgLoader.GetNotInitializedPackages(Packages);
             var missingPckgs = PckgLoader.GetMissingPackages(Packages);
             bool hasMissingPckgs = missingPckgs?.Count > 0;
             bool hasNewPckgs = newPckgs?.Count > 0;
-            bool firstUpdate = FirstUpdate;
+            bool hasIncompatibles = false;
+            bool hasRequired = false;
 
-            if(hasNewPckgs)
+            if (hasNewPckgs)
                 Packages.AddRange(newPckgs);
             if (hasMissingPckgs)
                 missingPckgs.ForEach(x => Packages.Remove(x));
-            if(firstUpdate) FirstUpdate = false;
-            
-            return hasNewPckgs || hasMissingPckgs || firstUpdate;
+
+            hasRequired = EnableRequiredPackages();
+            hasIncompatibles = DisableIncompatiblePackages();
+            RequireUpdate = hasNewPckgs || hasMissingPckgs || hasIncompatibles || hasRequired;
         }
 
         public List<PackageInfo> GetSortedPackages() => Packages.OrderBy(p => p.LoadOrder).ToList();
@@ -71,6 +71,42 @@ namespace MagicBalanceConfigurator
         {
             foreach (var package in Packages)
                 SavePackageMeta(package);
+        }
+
+        private bool EnableRequiredPackages()
+        {
+            bool hasRequired = false;
+            foreach (var package in Packages.Where(x => x.IsEnabled))
+            {
+                if (package?.RequiredPackages?.Count() == 0) continue;
+
+                var requiredPckgs = Packages.Where(x => package.RequiredPackages.Contains(x.Name));
+                foreach (var pckg in requiredPckgs)
+                    pckg.IsEnabled = true;
+                hasRequired = true;
+            }
+            SavePackagesMeta();
+            return hasRequired;
+        }
+        private bool DisableIncompatiblePackages()
+        {
+            bool updateReq = false;
+            List<string> incompatiblePackages = new List<string>();
+            foreach (var package in Packages.Where(x => x.IsEnabled))
+            {
+                if (package?.IncompatiblePackages?.Count() == 0) continue;
+                if (!package.IsEnabled) continue;
+                incompatiblePackages.AddRange(package.IncompatiblePackages);
+            }
+
+            if(incompatiblePackages.Count > 0)
+            {
+                updateReq = true;
+                var incompatibleResult = Packages.Where(x => x.IsEnabled && incompatiblePackages.Contains(x.Name));
+                foreach (var pckg in incompatibleResult)
+                    pckg.IsEnabled = false;
+            }
+            return updateReq;
         }
     }
 }

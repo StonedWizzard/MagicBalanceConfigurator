@@ -22,12 +22,18 @@ namespace MagicBalanceConfigurator.Configs
                     GamePath = default,
                     GameArchive = Consts.DefaultG2GameArchive,
                     Language = "Eng",
+                    OutputFilesEncoding = "windows-1251",
                 };
                 SetConfigs();
             }
 
             string raw = File.ReadAllText(Consts.AppConfigsPath);            
             AppConfigs cnfg = JsonConvert.DeserializeObject<AppConfigs>(raw);
+            if (cnfg == null) 
+                throw new ArgumentException("Can't load configs file!");
+
+            cnfg.OutputFilesEncoding = 
+                string.IsNullOrEmpty(cnfg.OutputFilesEncoding) ? cnfg.OutputFilesEncoding = "windows-1251" : cnfg.OutputFilesEncoding;
             Configs = cnfg;
             return cnfg;
         }
