@@ -97,7 +97,10 @@ namespace MagicBalanceConfigurator.Generators
         }
 
         public string ItemName { get; set; }
-        public bool UseUniqName { get; set; }
+
+        private bool _useUniqNames;
+        public virtual bool UseUniqName { get => _useUniqNames; set => _useUniqNames = value; }
+
         public string ItemType { get; protected set; }
         public string OutputDir { get; set; }
 
@@ -256,7 +259,10 @@ namespace MagicBalanceConfigurator.Generators
             ItemSection.AppendLine(template.ToString());
         }
 
-        protected virtual void PostProcessTemplate(StringBuilder template) { }
+        protected virtual void PostProcessTemplate(StringBuilder template) 
+        {
+
+        }
 
         /// <summary>
         /// Add itemInfo to loot table
@@ -353,8 +359,8 @@ namespace MagicBalanceConfigurator.Generators
                 modValue = GetItemModValue(modsSet.ItemMods[modIndex]);
                 template.Replace($"[ModText_{textIndex}]", modsSet.ItemMods[modIndex].Template_Text);
                 template.Replace($"[ModValue_{textIndex}]", modValue);
-                template.Replace($"[ModEquip_{modIndex}]", GetItemModString_OnEquip(modsSet.ItemMods[modIndex], modValue));
-                template.Replace($"[ModUnEquip_{modIndex}]", GetItemModString_OnUnequip(modsSet.ItemMods[modIndex], modValue));
+                template.Replace($"[ModEquip_{modIndex}]", $"\t{GetItemModString_OnEquip(modsSet.ItemMods[modIndex], modValue)}");
+                template.Replace($"[ModUnEquip_{modIndex}]", $"\t{GetItemModString_OnUnequip(modsSet.ItemMods[modIndex], modValue)}");
                 textIndex += 1;
             }
         }
@@ -432,9 +438,6 @@ namespace MagicBalanceConfigurator.Generators
         private bool ValidateMod(ItemMod mod, List<ItemMod> mods)
         {
             if (Rand.Next(100) <= mod.ModRarity) return false;
-            /*long modSum = 1;
-            mods.ForEach(x => modSum |= x.Id);
-            bool modExist = (modSum & mod.Id) == mod.Id;*/
             bool modExist = mods.Any(x => x.Id == mod.Id);
             return modExist;
         }
@@ -497,12 +500,21 @@ namespace MagicBalanceConfigurator.Generators
 
         protected void SetModsCountRange(int min,  int max)
         {
-            if(min < 1) min = 1; 
-            if(max > MaxModsCount) max = MaxModsCount;
-            if(min > max) min = max;
+            var val = SetValueRange(min, max, MaxModsCount);
+            _modsCountMin = val.Min; 
+            _modsCountMax = val.Max;
+        }
 
-            _modsCountMin = min; 
-            _modsCountMax = max;
+        protected (int Min, int Max) SetValueRange(int min, int max, int cap)
+        {
+            (int Min, int Max) result = default;
+            if (min < 1) min = 1;
+            if (max > cap) max = cap;
+            if (min > max) min = max;
+
+            result.Min = min;
+            result.Max = max;
+            return result;
         }
     }
 }

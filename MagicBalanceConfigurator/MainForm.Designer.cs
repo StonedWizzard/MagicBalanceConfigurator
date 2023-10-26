@@ -56,16 +56,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.ProgressLabel = new System.Windows.Forms.Label();
             this.GeneratorDataGrid = new System.Windows.Forms.DataGridView();
-            this.IsActiveColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.SchemaNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QuantityColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ModsMinColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ModsMaxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PowerColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ItemNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UseUniqNameColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.SeedColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GenerationProgressBar = new System.Windows.Forms.ProgressBar();
             this.ConsoleTextBox = new System.Windows.Forms.RichTextBox();
             this.GenerateBtn = new System.Windows.Forms.Button();
@@ -86,6 +76,21 @@
             this.DirBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.PackageListUpdater = new System.Windows.Forms.Timer(this.components);
             this.FileOpenDialog = new System.Windows.Forms.OpenFileDialog();
+            this.IsActiveColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.SchemaNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QuantityColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ModsMinColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ModsMaxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PowerColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CondPower = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DamagePower = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RangePower = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProtPower = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PotionDurationPower = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UseUniqNameColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.SeedColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TabsPanel.SuspendLayout();
             this.InstallPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PackagesGridView)).BeginInit();
@@ -99,18 +104,17 @@
             // 
             // TabsPanel
             // 
-            resources.ApplyResources(this.TabsPanel, "TabsPanel");
             this.TabsPanel.Controls.Add(this.InstallPage);
             this.TabsPanel.Controls.Add(this.RandomPage);
             this.TabsPanel.Controls.Add(this.ModConfigsPage);
             this.TabsPanel.Controls.Add(this.AppConfigsPage);
+            resources.ApplyResources(this.TabsPanel, "TabsPanel");
             this.TabsPanel.Name = "TabsPanel";
             this.TabsPanel.SelectedIndex = 0;
             this.TabsPanel.Selected += new System.Windows.Forms.TabControlEventHandler(this.TabsPanel_Selected);
             // 
             // InstallPage
             // 
-            resources.ApplyResources(this.InstallPage, "InstallPage");
             this.InstallPage.Controls.Add(this.CleanUpAutorunBox);
             this.InstallPage.Controls.Add(this.button1);
             this.InstallPage.Controls.Add(this.label3);
@@ -119,6 +123,7 @@
             this.InstallPage.Controls.Add(this.RunPatchBtn);
             this.InstallPage.Controls.Add(this.InstallPackagesBtn);
             this.InstallPage.Controls.Add(this.PackagesGridView);
+            resources.ApplyResources(this.InstallPage, "InstallPage");
             this.InstallPage.Name = "InstallPage";
             this.InstallPage.UseVisualStyleBackColor = true;
             // 
@@ -172,9 +177,9 @@
             // 
             // PackagesGridView
             // 
-            resources.ApplyResources(this.PackagesGridView, "PackagesGridView");
             this.PackagesGridView.AllowUserToAddRows = false;
             this.PackagesGridView.AllowUserToDeleteRows = false;
+            resources.ApplyResources(this.PackagesGridView, "PackagesGridView");
             this.PackagesGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IsPackageEnabledColumn,
             this.LoadOrderColumn,
@@ -223,7 +228,6 @@
             // 
             // RandomPage
             // 
-            resources.ApplyResources(this.RandomPage, "RandomPage");
             this.RandomPage.Controls.Add(this.ItemsCountBox);
             this.RandomPage.Controls.Add(this.label5);
             this.RandomPage.Controls.Add(this.ItemNamesBtn);
@@ -236,6 +240,7 @@
             this.RandomPage.Controls.Add(this.GenerationProgressBar);
             this.RandomPage.Controls.Add(this.ConsoleTextBox);
             this.RandomPage.Controls.Add(this.GenerateBtn);
+            resources.ApplyResources(this.RandomPage, "RandomPage");
             this.RandomPage.Name = "RandomPage";
             this.RandomPage.UseVisualStyleBackColor = true;
             // 
@@ -321,9 +326,9 @@
             // 
             // GeneratorDataGrid
             // 
-            resources.ApplyResources(this.GeneratorDataGrid, "GeneratorDataGrid");
             this.GeneratorDataGrid.AllowUserToAddRows = false;
             this.GeneratorDataGrid.AllowUserToDeleteRows = false;
+            resources.ApplyResources(this.GeneratorDataGrid, "GeneratorDataGrid");
             this.GeneratorDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GeneratorDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IsActiveColumn,
@@ -332,6 +337,11 @@
             this.ModsMinColumn,
             this.ModsMaxColumn,
             this.PowerColumn,
+            this.CondPower,
+            this.DamagePower,
+            this.RangePower,
+            this.ProtPower,
+            this.PotionDurationPower,
             this.PriceColumn,
             this.ItemNameColumn,
             this.UseUniqNameColumn,
@@ -339,59 +349,6 @@
             this.GeneratorDataGrid.Name = "GeneratorDataGrid";
             this.GeneratorDataGrid.RowTemplate.Height = 24;
             this.GeneratorDataGrid.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.GeneratorDataGrid_CellFormatting);
-            // 
-            // IsActiveColumn
-            // 
-            resources.ApplyResources(this.IsActiveColumn, "IsActiveColumn");
-            this.IsActiveColumn.Name = "IsActiveColumn";
-            // 
-            // SchemaNameColumn
-            // 
-            resources.ApplyResources(this.SchemaNameColumn, "SchemaNameColumn");
-            this.SchemaNameColumn.Name = "SchemaNameColumn";
-            this.SchemaNameColumn.ReadOnly = true;
-            // 
-            // QuantityColumn
-            // 
-            resources.ApplyResources(this.QuantityColumn, "QuantityColumn");
-            this.QuantityColumn.Name = "QuantityColumn";
-            // 
-            // ModsMinColumn
-            // 
-            resources.ApplyResources(this.ModsMinColumn, "ModsMinColumn");
-            this.ModsMinColumn.Name = "ModsMinColumn";
-            // 
-            // ModsMaxColumn
-            // 
-            resources.ApplyResources(this.ModsMaxColumn, "ModsMaxColumn");
-            this.ModsMaxColumn.Name = "ModsMaxColumn";
-            // 
-            // PowerColumn
-            // 
-            resources.ApplyResources(this.PowerColumn, "PowerColumn");
-            this.PowerColumn.Name = "PowerColumn";
-            // 
-            // PriceColumn
-            // 
-            resources.ApplyResources(this.PriceColumn, "PriceColumn");
-            this.PriceColumn.Name = "PriceColumn";
-            // 
-            // ItemNameColumn
-            // 
-            resources.ApplyResources(this.ItemNameColumn, "ItemNameColumn");
-            this.ItemNameColumn.Name = "ItemNameColumn";
-            // 
-            // UseUniqNameColumn
-            // 
-            resources.ApplyResources(this.UseUniqNameColumn, "UseUniqNameColumn");
-            this.UseUniqNameColumn.Name = "UseUniqNameColumn";
-            // 
-            // SeedColumn
-            // 
-            resources.ApplyResources(this.SeedColumn, "SeedColumn");
-            this.SeedColumn.Name = "SeedColumn";
-            this.SeedColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.SeedColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // GenerationProgressBar
             // 
@@ -415,21 +372,20 @@
             // 
             // ModConfigsPage
             // 
-            resources.ApplyResources(this.ModConfigsPage, "ModConfigsPage");
             this.ModConfigsPage.Controls.Add(this.ModConfigsTextBox);
+            resources.ApplyResources(this.ModConfigsPage, "ModConfigsPage");
             this.ModConfigsPage.Name = "ModConfigsPage";
             this.ModConfigsPage.UseVisualStyleBackColor = true;
             // 
             // ModConfigsTextBox
             // 
-            resources.ApplyResources(this.ModConfigsTextBox, "ModConfigsTextBox");
             this.ModConfigsTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.ModConfigsTextBox, "ModConfigsTextBox");
             this.ModConfigsTextBox.Name = "ModConfigsTextBox";
             this.ModConfigsTextBox.TextChanged += new System.EventHandler(this.ModConfigsTextBox_TextChanged);
             // 
             // AppConfigsPage
             // 
-            resources.ApplyResources(this.AppConfigsPage, "AppConfigsPage");
             this.AppConfigsPage.Controls.Add(this.OutputFilesCodepageBox);
             this.AppConfigsPage.Controls.Add(this.label4);
             this.AppConfigsPage.Controls.Add(this.VdfsArchiveBox);
@@ -441,6 +397,7 @@
             this.AppConfigsPage.Controls.Add(this.SetGothicDirBtn);
             this.AppConfigsPage.Controls.Add(this.GamePathTextBox);
             this.AppConfigsPage.Controls.Add(this.label1);
+            resources.ApplyResources(this.AppConfigsPage, "AppConfigsPage");
             this.AppConfigsPage.Name = "AppConfigsPage";
             this.AppConfigsPage.UseVisualStyleBackColor = true;
             // 
@@ -485,8 +442,8 @@
             // 
             // LanguageSelectBox
             // 
-            resources.ApplyResources(this.LanguageSelectBox, "LanguageSelectBox");
             this.LanguageSelectBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.LanguageSelectBox, "LanguageSelectBox");
             this.LanguageSelectBox.FormattingEnabled = true;
             this.LanguageSelectBox.Items.AddRange(new object[] {
             resources.GetString("LanguageSelectBox.Items"),
@@ -517,10 +474,6 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // DirBrowserDialog
-            // 
-            resources.ApplyResources(this.DirBrowserDialog, "DirBrowserDialog");
-            // 
             // PackageListUpdater
             // 
             this.PackageListUpdater.Interval = 1000;
@@ -530,7 +483,84 @@
             // 
             this.FileOpenDialog.DefaultExt = " \"Vdf files|*.vdf|Mod files (*.mod*)|*.mod*\"";
             this.FileOpenDialog.FileName = "openFileDialog1";
-            resources.ApplyResources(this.FileOpenDialog, "FileOpenDialog");
+            // 
+            // IsActiveColumn
+            // 
+            resources.ApplyResources(this.IsActiveColumn, "IsActiveColumn");
+            this.IsActiveColumn.Name = "IsActiveColumn";
+            // 
+            // SchemaNameColumn
+            // 
+            resources.ApplyResources(this.SchemaNameColumn, "SchemaNameColumn");
+            this.SchemaNameColumn.Name = "SchemaNameColumn";
+            this.SchemaNameColumn.ReadOnly = true;
+            // 
+            // QuantityColumn
+            // 
+            resources.ApplyResources(this.QuantityColumn, "QuantityColumn");
+            this.QuantityColumn.Name = "QuantityColumn";
+            // 
+            // ModsMinColumn
+            // 
+            resources.ApplyResources(this.ModsMinColumn, "ModsMinColumn");
+            this.ModsMinColumn.Name = "ModsMinColumn";
+            // 
+            // ModsMaxColumn
+            // 
+            resources.ApplyResources(this.ModsMaxColumn, "ModsMaxColumn");
+            this.ModsMaxColumn.Name = "ModsMaxColumn";
+            // 
+            // PowerColumn
+            // 
+            resources.ApplyResources(this.PowerColumn, "PowerColumn");
+            this.PowerColumn.Name = "PowerColumn";
+            // 
+            // CondPower
+            // 
+            resources.ApplyResources(this.CondPower, "CondPower");
+            this.CondPower.Name = "CondPower";
+            // 
+            // DamagePower
+            // 
+            resources.ApplyResources(this.DamagePower, "DamagePower");
+            this.DamagePower.Name = "DamagePower";
+            // 
+            // RangePower
+            // 
+            resources.ApplyResources(this.RangePower, "RangePower");
+            this.RangePower.Name = "RangePower";
+            // 
+            // ProtPower
+            // 
+            resources.ApplyResources(this.ProtPower, "ProtPower");
+            this.ProtPower.Name = "ProtPower";
+            // 
+            // PotionDurationPower
+            // 
+            resources.ApplyResources(this.PotionDurationPower, "PotionDurationPower");
+            this.PotionDurationPower.Name = "PotionDurationPower";
+            // 
+            // PriceColumn
+            // 
+            resources.ApplyResources(this.PriceColumn, "PriceColumn");
+            this.PriceColumn.Name = "PriceColumn";
+            // 
+            // ItemNameColumn
+            // 
+            resources.ApplyResources(this.ItemNameColumn, "ItemNameColumn");
+            this.ItemNameColumn.Name = "ItemNameColumn";
+            // 
+            // UseUniqNameColumn
+            // 
+            resources.ApplyResources(this.UseUniqNameColumn, "UseUniqNameColumn");
+            this.UseUniqNameColumn.Name = "UseUniqNameColumn";
+            // 
+            // SeedColumn
+            // 
+            resources.ApplyResources(this.SeedColumn, "SeedColumn");
+            this.SeedColumn.Name = "SeedColumn";
+            this.SeedColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.SeedColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // MainForm
             // 
@@ -597,16 +627,6 @@
         private System.Windows.Forms.Button ItemNamesBtn;
         private System.Windows.Forms.CheckBox CleanInstallBox;
         private System.Windows.Forms.Button SelectBackupArchBtn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn IsActiveColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SchemaNameColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn QuantityColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ModsMinColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ModsMaxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PowerColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PriceColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ItemNameColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn UseUniqNameColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SeedColumn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox CleanUpAutorunBox;
@@ -614,6 +634,21 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown ItemsCountBox;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn IsActiveColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SchemaNameColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn QuantityColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ModsMinColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ModsMaxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PowerColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CondPower;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DamagePower;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RangePower;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProtPower;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PotionDurationPower;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PriceColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemNameColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn UseUniqNameColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SeedColumn;
     }
 }
 

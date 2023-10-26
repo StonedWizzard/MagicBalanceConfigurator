@@ -69,6 +69,51 @@ namespace MagicBalanceConfigurator
                 new Pot_T2_Generator(this),
                 new Pot_T3_Generator(this),
                 new Pot_T4_Generator(this),
+
+                new Weap_1h_T1_Generator(this),
+                new Weap_1h_T2_Generator(this),
+                new Weap_1h_T3_Generator(this),
+                new Weap_1h_T4_Generator(this),
+
+                new Weap_2h_T1_Generator(this),
+                new Weap_2h_T2_Generator(this),
+                new Weap_2h_T3_Generator(this),
+                new Weap_2h_T4_Generator(this),
+
+                new Weap_Bow_T1_Generator(this),
+                new Weap_Bow_T2_Generator(this),
+                new Weap_Bow_T3_Generator(this),
+                new Weap_Bow_T4_Generator(this),
+
+                new Weap_Crossbow_T1_Generator(this),
+                new Weap_Crossbow_T2_Generator(this),
+                new Weap_Crossbow_T3_Generator(this),
+                new Weap_Crossbow_T4_Generator(this),
+
+                new Weap_Staff_T1_Generator(this),
+                new Weap_Staff_T2_Generator(this),
+                new Weap_Staff_T3_Generator(this),
+                new Weap_Staff_T4_Generator(this),
+
+                new Weap_MagicSword_T1_Generator(this),
+                new Weap_MagicSword_T2_Generator(this),
+                new Weap_MagicSword_T3_Generator(this),
+                new Weap_MagicSword_T4_Generator(this),
+
+                new Armor_Shield_T1_Generator(this),
+                new Armor_Shield_T2_Generator(this),
+                new Armor_Shield_T3_Generator(this),
+                new Armor_Shield_T4_Generator(this),
+
+                new Armor_Helm_T1_Generator(this),
+                new Armor_Helm_T2_Generator(this),
+                new Armor_Helm_T3_Generator(this),
+                new Armor_Helm_T4_Generator(this),
+
+                new Armor_Body_T1_Generator(this),
+                new Armor_Body_T2_Generator(this),
+                new Armor_Body_T3_Generator(this),
+                new Armor_Body_T4_Generator(this),
             };
         }
 
@@ -87,7 +132,7 @@ namespace MagicBalanceConfigurator
                 PackageBuilder packageBuilder = new PackageBuilder();
                 packageBuilder.BuildPackage(Consts.RandomItemsPackageDir, OutputDir, "StonedWizzard", new List<string>() { "StExtMod - Core" },
                     new List<string>() { "StExtMod - RandItemPack Patch", "StExtMod - Main", "StExtMod - User configs", "StExtMod - English" },
-                    "2.0.3", "StExtMod - Random items. Required 'StExtMod - Core'", true);
+                    "2.0.4", "StExtMod - Random items. Required 'StExtMod - Core'", true);
             }
 
             Generators.ForEach(g =>

@@ -16,6 +16,7 @@ namespace MagicBalanceConfigurator.Generators
             ItemType = CommonTemplates.Poition_RandSufix;
             ModPower = 1;
             ItemsPrice = 500;
+            SetDurationRange(60, 180);
             SetModsCountRange(1, 2);
         }
 

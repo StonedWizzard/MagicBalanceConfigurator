@@ -10,6 +10,7 @@
             ItemType = CommonTemplates.Poition_RandSufix;
             ModPower = 5;
             ItemsPrice = 2500;
+            SetDurationRange(12, 240);
             SetModsCountRange(3, 4);
         }
 

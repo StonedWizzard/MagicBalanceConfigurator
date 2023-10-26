@@ -1,26 +1,48 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace MagicBalanceConfigurator.Generators
 {
     public abstract class BasePotionGenerator : BaseGenerator
     {
-        protected int PotionDurationMin { get; set; }
-        protected int PotionDurationMax { get; set; }
+        public const int MaxPotionDuration = 86400;
+
+        public double PotionDurationMult { get; set; }
+        protected int _potionMinDuration;
+        public int PotionMinDuration
+        {
+            get => _potionMinDuration;
+            set
+            {
+                if (value < 15) value = 15;
+                if (value > PotionMaxDuration) value = PotionMaxDuration;
+                _potionMinDuration = value;
+            }
+        }
+
+        protected int _potionMaxDuration;
+        public int PotionMaxDuration
+        {
+            get => _potionMaxDuration;
+            set
+            {
+                if (value < 15) value = 15;
+                if (value > MaxPotionDuration) value = MaxPotionDuration;
+                _potionMaxDuration = value;
+            }
+        }
 
         protected BasePotionGenerator(RandomController controller, string fileName) : 
             base(controller, fileName) 
         {
-            PotionDurationMin = 60;
-            PotionDurationMax = 180;
+            PotionDurationMult = 1;
+            SetDurationRange(60, 180);
             UseUniqName = true;
         }
 
         protected override ItemMod[] GetItemsMods() =>
-            ItemModsProvider.ItemMods.Where(x => x.IsEnabled && x.Id > 100).ToArray();
+            ItemModsProvider.ItemMods.Where(x => x.IsEnabled && x.Id > 100 && x.Id < 200).ToArray();
 
         protected override void PostProcessTemplate(StringBuilder template)
         {
@@ -30,33 +52,19 @@ namespace MagicBalanceConfigurator.Generators
 
         protected string GetRandomDuration()
         {
-            int duration = new Random(GetRandomSeed()).Next(PotionDurationMin, PotionDurationMax);
-            duration = (int)(duration * ModPower);
+            int duration = new Random(GetRandomSeed()).Next(PotionMinDuration, PotionMaxDuration);
+            duration = (int)(duration * (ModPower + PotionDurationMult));
             return duration.ToString();
         }
 
-        public override string GetTemplate() => @"instance [IdPrefix][Id](c_item) 
-{
-    name = stext_itpo_rnd_name;
-    mainflag = item_kat_potions;
-    flags = item_multi;
-    value = [Price];
-    visual = [Visual];
-    material = mat_glas;
-    on_state = use[IdPrefix][Id];
-    scemename = ""POTIONFAST"";
-    wear = wear_effect;
-    description = [NameId];
-[ModsText]
-    text[5] = name_value;
-    count[5] = value;
-    inv_animate = 1;
-};
-func void use[IdPrefix][Id]() 
-{
-[ModsEquip]
-};
-";
+        protected void SetDurationRange(int min, int max)
+        {
+            var val = SetValueRange(min, max, MaxPotionDuration);
+            _potionMinDuration = val.Min;
+            _potionMaxDuration = val.Max;
+        }
+
+        public override string GetTemplate() => CommonTemplates.PotionTemplate; 
 
     }
 }

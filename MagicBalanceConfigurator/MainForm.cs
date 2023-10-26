@@ -222,6 +222,52 @@ namespace MagicBalanceConfigurator
                     generator.ModsCountMin = Convert.ToInt32(e.Value);
                     return generator.ModsCountMin;
                 });
+
+            BaseItemGenerator baseItemGenerator = generator as BaseItemGenerator;
+            if (baseItemGenerator != null)
+            {
+                if (GeneratorDataGrid.Columns[e.ColumnIndex].Name == "CondPower")
+                    e.Value = TrySetValue(e.Value, baseItemGenerator.ItemCondMultiplier, () => {
+                        baseItemGenerator.ItemCondMultiplier = Convert.ToDouble(e.Value);
+                        return baseItemGenerator.ItemCondMultiplier;
+                    });
+            }
+
+            BaseWeaponGenerator baseWeaponGenerator = generator as BaseWeaponGenerator;
+            if (baseWeaponGenerator != null)
+            {
+                if (GeneratorDataGrid.Columns[e.ColumnIndex].Name == "DamagePower")
+                    e.Value = TrySetValue(e.Value, baseWeaponGenerator.WeaponDamageMult, () => {
+                        baseWeaponGenerator.WeaponDamageMult = Convert.ToDouble(e.Value);
+                        return baseWeaponGenerator.WeaponDamageMult;
+                    });
+                else if (GeneratorDataGrid.Columns[e.ColumnIndex].Name == "RangePower")
+                    e.Value = TrySetValue(e.Value, baseWeaponGenerator.WeaponRangeMult, () => {
+                        baseWeaponGenerator.WeaponRangeMult = Convert.ToDouble(e.Value);
+                        return baseWeaponGenerator.WeaponRangeMult;
+                    });
+            }
+
+            BaseArmorGenerator baseArmorGenerator = generator as BaseArmorGenerator;
+            if (baseArmorGenerator != null)
+            {
+                if (GeneratorDataGrid.Columns[e.ColumnIndex].Name == "ProtPower")
+                    e.Value = TrySetValue(e.Value, baseArmorGenerator.ArmorProtectionMult, () => {
+                        baseArmorGenerator.ArmorProtectionMult = Convert.ToDouble(e.Value);
+                        return baseArmorGenerator.ArmorProtectionMult;
+                    });
+            }
+            
+            BasePotionGenerator basePotionGenerator = generator as BasePotionGenerator;
+            if(basePotionGenerator != null)
+            {
+                if (GeneratorDataGrid.Columns[e.ColumnIndex].Name == "PotionDurationPower")
+                    e.Value = TrySetValue(e.Value, basePotionGenerator.PotionDurationMult, () => {
+                        basePotionGenerator.PotionDurationMult = Convert.ToDouble(e.Value);
+                        return basePotionGenerator.PotionDurationMult;
+                    });
+                
+            }
         }
         private void PackagesGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
