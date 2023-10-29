@@ -38,16 +38,24 @@ namespace MagicBalanceConfigurator.Packages
             return packages.Except(packagesInDirectory).ToList();
         }
 
+        public PackageInfo UpdatePackageFiles(PackageInfo package)
+        {
+            package.IncludedFiles = GetPackageFiles(package.Directory);
+            return package;
+        }
+
         private PackageInfo ReadPackageInfo(string packagePath)
         {
             string raw = File.ReadAllText($"{packagePath}\\{Consts.PackageInfoFile}");
             PackageInfo package = JsonConvert.DeserializeObject<PackageInfo>(raw);            
-            var packageFiles = Directory.EnumerateFiles(packagePath, "*.*", SearchOption.AllDirectories)
-                .Where(s => Consts.PackageExt.Contains(Path.GetExtension(s).TrimStart('.').ToLowerInvariant()));
-            package.IncludedFiles = packageFiles.ToList();
+            package.IncludedFiles = GetPackageFiles(packagePath);
             package.Directory = packagePath;
             return package;
         }
+
+        private List<string> GetPackageFiles(string packagePath) =>
+            Directory.EnumerateFiles(packagePath, "*.*", SearchOption.AllDirectories)
+                .Where(s => Consts.PackageExt.Contains(Path.GetExtension(s).TrimStart('.').ToLowerInvariant())).ToList();
 
         private bool IsPackageDir(string path) => 
             File.Exists($"{path}\\{Consts.PackageInfoFile}");

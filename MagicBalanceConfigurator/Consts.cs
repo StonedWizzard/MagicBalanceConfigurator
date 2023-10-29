@@ -7,6 +7,8 @@ namespace MagicBalanceConfigurator
     {
         public const int RandomModsDublicationThreshold = 99;
         public const string HomePageLink = "http://www.stonedwizzard.somee.com/";
+        public const string DonationLink1 = "https://stoned-wizzard.diaka.ua/donate";
+        public const string DonationLink2 = "https://send.monobank.ua/jar/AWepYzH61P";
 
         public const string AppConfigsPath = "StExt_MagicBalanceConfigs.json";
         public const string ItemModsConfigsPath = "StExt_ItemsModsConfigs.json";

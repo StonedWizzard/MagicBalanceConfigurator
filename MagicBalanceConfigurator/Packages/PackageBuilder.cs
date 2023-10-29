@@ -9,7 +9,7 @@ namespace MagicBalanceConfigurator.Packages
     /// </summary>
     public class PackageBuilder
     {
-        public void BuildPackage(string name, string dirName, string author, List<string> requiredPckgs = default,
+        public PackageInfo BuildPackage(string name, string dirName, string author, List<string> requiredPckgs = default,
             List<string> incompatiblePckgs = default, string version = default, string description = default, bool isEnabled = default) 
         {
             PackageInfo packageInfo = new PackageInfo()
@@ -25,6 +25,7 @@ namespace MagicBalanceConfigurator.Packages
             };
             Directory.CreateDirectory(dirName);
             UpdatePackageMeta(packageInfo);
+            return packageInfo;
         }
 
         public void UpdatePackageMeta(PackageInfo packageInfo)

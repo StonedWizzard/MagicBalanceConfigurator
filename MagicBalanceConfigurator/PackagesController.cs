@@ -32,6 +32,9 @@ namespace MagicBalanceConfigurator
                 foreach (string filePath in AppConfigsProvider.GetAutorunFiles())
                     File.Delete(filePath);
             }
+            PackagesLoader packagesLoader = new PackagesLoader();
+            foreach (var pckg in GetSortedPackages())
+                packagesLoader.UpdatePackageFiles(pckg);
             PckgInstaller.InstallSelectedPackages(GetSortedPackages());
         }
 

@@ -124,15 +124,16 @@ namespace MagicBalanceConfigurator
             TotalItemsToGenerate = 0;
             RandItemsMeta = new StringBuilder();
             ItemsUniqNames = new StringBuilder();
+            PackageInfo packageInfo = null;
 
             OutputDir = BuildPackage ? 
                 $"{AppConfigsProvider.GetPackagesDir()}\\{Consts.RandomItemsPackageDir}" : AppConfigsProvider.GetAutorunDir();
             if(BuildPackage) 
             {
                 PackageBuilder packageBuilder = new PackageBuilder();
-                packageBuilder.BuildPackage(Consts.RandomItemsPackageDir, OutputDir, "StonedWizzard", new List<string>() { "StExtMod - Core" },
+                packageInfo = packageBuilder.BuildPackage(Consts.RandomItemsPackageDir, OutputDir, "StonedWizzard", new List<string>() { "StExtMod - Core" },
                     new List<string>() { "StExtMod - RandItemPack Patch", "StExtMod - Main", "StExtMod - User configs", "StExtMod - English" },
-                    "2.0.4", "StExtMod - Random items. Required 'StExtMod - Core'", true);
+                    "2.0.6", "StExtMod - Random items. Required 'StExtMod - Core'", true);
             }
 
             Generators.ForEach(g =>
@@ -160,6 +161,7 @@ namespace MagicBalanceConfigurator
                 }
 
                 await Task.WhenAll(tasks);
+                UpdateProgressBar(TotalItemsToGenerate, TotalItemsToGenerate);
                 SaveItemsNames(OutputDir);
                 SaveRandMeta(OutputDir);
                 SendStatusMessage("Items generation completed!");

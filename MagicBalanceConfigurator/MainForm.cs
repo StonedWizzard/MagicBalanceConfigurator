@@ -458,5 +458,9 @@ namespace MagicBalanceConfigurator
 
         private void ItemsCountBox_ValueChanged(object sender, EventArgs e)
         { RandomController.SetItemsCount((int)ItemsCountBox.Value); UpdateRandomList(); }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) => System.Diagnostics.Process.Start(Consts.DonationLink1);
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) => System.Diagnostics.Process.Start(Consts.DonationLink2);
     }
 }

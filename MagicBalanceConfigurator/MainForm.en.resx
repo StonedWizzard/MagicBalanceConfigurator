@@ -117,8 +117,139 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="CleanUpAutorunBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 278</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>207, 375</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 41</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 310</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>340, 63</value>
+  </data>
+  <data name="CleanInstallBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>357, 348</value>
+  </data>
+  <data name="SelectBackupArchBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 375</value>
+  </data>
+  <data name="SelectBackupArchBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="SelectBackupArchBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 41</value>
+  </data>
+  <data name="RunPatchBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>265, 375</value>
+  </data>
+  <data name="RunPatchBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="RunPatchBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>307, 41</value>
+  </data>
+  <data name="InstallPackagesBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>357, 273</value>
+  </data>
+  <data name="InstallPackagesBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="InstallPackagesBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 40</value>
+  </data>
   <data name="IsPackageEnabledColumn.HeaderText" xml:space="preserve">
     <value>Enabled</value>
+  </data>
+  <data name="PackagesGridView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 5</value>
+  </data>
+  <data name="PackagesGridView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="PackagesGridView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>566, 264</value>
+  </data>
+  <data name="InstallPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="InstallPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="InstallPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>576, 423</value>
+  </data>
+  <data name="ItemsCountBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>360, 261</value>
+  </data>
+  <data name="ItemsCountBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="ItemsCountBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 23</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>276, 263</value>
+  </data>
+  <data name="label5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="ItemNamesBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>456, 297</value>
+  </data>
+  <data name="ItemNamesBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="ItemNamesBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 30</value>
+  </data>
+  <data name="ItemModConfigsBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>456, 263</value>
+  </data>
+  <data name="ItemModConfigsBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="ItemModConfigsBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 30</value>
+  </data>
+  <data name="BuildRandomItemsPackageBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 287</value>
+  </data>
+  <data name="BuildRandomItemsPackageBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="ItemPriceRangeBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>202, 261</value>
+  </data>
+  <data name="ItemPriceRangeBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="ItemPriceRangeBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 23</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 263</value>
+  </data>
+  <data name="label6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="ProgressLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>420, 334</value>
+  </data>
+  <data name="ProgressLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="ProgressLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 18</value>
   </data>
   <data name="QuantityColumn.HeaderText" xml:space="preserve">
     <value>Quantity</value>
@@ -129,10 +260,207 @@
   <data name="PriceColumn.HeaderText" xml:space="preserve">
     <value>Item price</value>
   </data>
+  <data name="GeneratorDataGrid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 5</value>
+  </data>
+  <data name="GeneratorDataGrid.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="GeneratorDataGrid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>566, 252</value>
+  </data>
+  <data name="GenerationProgressBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>420, 354</value>
+  </data>
+  <data name="GenerationProgressBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="GenerationProgressBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 24</value>
+  </data>
+  <data name="ConsoleTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 329</value>
+  </data>
+  <data name="ConsoleTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="ConsoleTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>410, 90</value>
+  </data>
+  <data name="GenerateBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>420, 382</value>
+  </data>
+  <data name="GenerateBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="GenerateBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 37</value>
+  </data>
   <data name="GenerateBtn.Text" xml:space="preserve">
     <value>Generate!</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="RandomPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="RandomPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="RandomPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>576, 423</value>
+  </data>
+  <data name="ModConfigsTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="ModConfigsTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>576, 423</value>
+  </data>
+  <data name="ModConfigsPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="ModConfigsPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>576, 423</value>
+  </data>
+  <data name="linkLabel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 401</value>
+  </data>
+  <data name="linkLabel3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 8, 0</value>
+  </data>
+  <data name="linkLabel3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 8, 0</value>
+  </data>
+  <data name="linkLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>566, 20</value>
+  </data>
+  <data name="linkLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 381</value>
+  </data>
+  <data name="linkLabel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 8, 0</value>
+  </data>
+  <data name="linkLabel2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 8, 0</value>
+  </data>
+  <data name="linkLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>566, 20</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 353</value>
+  </data>
+  <data name="label8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>562, 28</value>
+  </data>
+  <data name="OutputFilesCodepageBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>177, 110</value>
+  </data>
+  <data name="OutputFilesCodepageBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="OutputFilesCodepageBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 25</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 113</value>
+  </data>
+  <data name="label4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="VdfsArchiveBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>110, 42</value>
+  </data>
+  <data name="VdfsArchiveBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="VdfsArchiveBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>414, 23</value>
+  </data>
+  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 45</value>
+  </data>
+  <data name="label10.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 314</value>
+  </data>
+  <data name="linkLabel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 8, 0</value>
+  </data>
+  <data name="linkLabel1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 8, 0</value>
+  </data>
+  <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>566, 20</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 269</value>
+  </data>
+  <data name="label7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>566, 45</value>
+  </data>
+  <data name="LanguageSelectBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>109, 69</value>
+  </data>
+  <data name="LanguageSelectBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="LanguageSelectBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 25</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 72</value>
+  </data>
+  <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="SetGothicDirBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>528, 42</value>
+  </data>
+  <data name="SetGothicDirBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="SetGothicDirBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 23</value>
+  </data>
+  <data name="GamePathTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>110, 15</value>
+  </data>
+  <data name="GamePathTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="GamePathTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>459, 23</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 18</value>
+  </data>
+  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="AppConfigsPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="AppConfigsPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>576, 423</value>
+  </data>
+  <data name="TabsPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="TabsPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>584, 453</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>584, 453</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAYGAAAAEAIAColAAAFgAAACgAAABgAAAAwAAAAAEAIAAAAAAAAJAAAAAAAAAAAAAAAAAAAAAA
@@ -771,5 +1099,14 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
 </value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>998, 691</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>600, 492</value>
   </data>
 </root>

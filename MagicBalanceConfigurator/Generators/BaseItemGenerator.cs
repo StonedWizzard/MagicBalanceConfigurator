@@ -136,12 +136,12 @@ namespace MagicBalanceConfigurator.Generators
             else if (atr == CommonTemplates.ItemCondAtr_Crosbow)
                 mult = 0.3;
             else if (atr == CommonTemplates.ItemCondAtr_Shield)
-                mult = 0.3;
+                mult = 1;
             result = (int)(result * mult);
 
             if (atr == CommonTemplates.ItemCondAtr_Bow && result >= 99) result = 99;
             if (atr == CommonTemplates.ItemCondAtr_Crosbow && result >= 99) result = 99;
-            if (atr == CommonTemplates.ItemCondAtr_Shield && result >= 99) result = 99;
+            if (atr == CommonTemplates.ItemCondAtr_Shield && result > 1) result = 1;
             if (atr == CommonTemplates.ItemCondAtr_Stamina && result >= 99) result = 99;
             return result;
         }
@@ -156,7 +156,7 @@ namespace MagicBalanceConfigurator.Generators
         protected override string GetItemVisual() => $"\"{CurrentItemPreset.Visuals.GetRandomElement()}\"";
         protected virtual string GetItemVisualChange() => $"\"{CurrentItemPreset.VisualChanges?.GetRandomElement()}\"";
 
-        protected virtual ItemTemplatePreset GetItemTemplatePreset() => (ItemTemplatePreset)ItemTemplatePresets.GetRandomElement();
+        protected virtual ItemTemplatePreset GetItemTemplatePreset() => (ItemTemplatePreset)ItemTemplatePresets.GetRandomObj();
         protected abstract List<ItemTemplatePreset> BuildItemTemplatePresets();
         protected class ItemTemplatePreset
         {

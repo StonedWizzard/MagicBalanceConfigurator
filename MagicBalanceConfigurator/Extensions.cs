@@ -17,7 +17,7 @@ namespace MagicBalanceConfigurator
             if (strings == null || strings?.Length == 0) return string.Empty;
             return strings[Random.Next(strings.Count())];
         }
-        public static object GetRandomElement(this IEnumerable<object> array)
+        public static object GetRandomObj(this IEnumerable<object> array)
         {
             if (array == null || array?.Count() == 0) 
                 throw new IndexOutOfRangeException();
