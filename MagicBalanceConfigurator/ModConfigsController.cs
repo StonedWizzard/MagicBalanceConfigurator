@@ -14,11 +14,14 @@ namespace MagicBalanceConfigurator
     public class ModConfigsController
     {
         public string RawConfigs { get; private set; }
-        private string ConfigsPath { get => 
-                $"{AppConfigsProvider.GetPackagesDir()}\\{Consts.CustomConfigsDir}\\{Consts.ModConfigsPath}"; }
 
-        public ModConfigsController()
+        private string _configsDir;
+        private string ConfigsPath { get => 
+                $"{_configsDir}\\{Consts.ModConfigsPath}"; }
+
+        public ModConfigsController(string modulePath)
         {
+            _configsDir = modulePath;
             RawConfigs = GetRawConfigs();
         }
 
@@ -32,6 +35,12 @@ namespace MagicBalanceConfigurator
                 RawConfigs = rawConfigs;
                 SetRawConfigs();
             }
+        }
+
+        public void UpdateConfigsPath(string modulePath) 
+        {
+            _configsDir = modulePath;
+            RawConfigs = GetRawConfigs();
         }
     }
 }

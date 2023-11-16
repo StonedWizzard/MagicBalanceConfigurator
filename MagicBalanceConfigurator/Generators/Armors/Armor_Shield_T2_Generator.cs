@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace MagicBalanceConfigurator.Generators
 {
-    internal class Armor_Shield_T2_Generator : BaseArmorGenerator
+    internal class Armor_Shield_T2_Generator : BaseShieldGenerator
     {
         public Armor_Shield_T2_Generator(RandomController controller) : base(controller, Consts.Armor_Shield_T2_FileName) 
         {

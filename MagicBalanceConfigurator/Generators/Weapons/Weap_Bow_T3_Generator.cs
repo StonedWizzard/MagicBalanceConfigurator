@@ -18,6 +18,7 @@ namespace MagicBalanceConfigurator.Generators
             SetWeaponDamageRange(120, 240);
             SetItemCondRange(75, 150);
             SetModsCountRange(3, 4);
+            ProhibitedDamageTypes = new List<string>() { "dam_fire" };
         }
 
         protected override List<ItemTemplatePreset> BuildItemTemplatePresets() => new List<ItemTemplatePreset>()

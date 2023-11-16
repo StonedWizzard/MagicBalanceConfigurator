@@ -38,10 +38,22 @@ namespace MagicBalanceConfigurator
         {
             try
             {
-                ModConfigsController = new ModConfigsController();
-                ModConfigsHighlighter = new ModConfigsTextHighlighter(ModConfigsTextBox);
-                ModConfigsTextBox.Clear();
-                ModConfigsTextBox.AppendText(ModConfigsController.RawConfigs);
+                if (String.IsNullOrEmpty(ConfigPresetsBox.Text))
+                    ConfigPresetsBox.Text = ConfigPresetsBox.Items[0].ToString();
+
+                var moduleName = ConfigPresetsBox.Text;
+                var module = PackagesController.GetPackage(moduleName);
+                if (module != null)
+                {
+                    ModConfigsController = new ModConfigsController(module.Directory);
+                    ModConfigsHighlighter = new ModConfigsTextHighlighter(ModConfigsTextBox);
+                    ModConfigsTextBox.Clear();
+                    ModConfigsTextBox.AppendText(ModConfigsController.RawConfigs);
+                }
+                else
+                {
+                    MessageBox.Show("Selected package not found!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
                 IsModConfigsControllerInitialized = true;
             }
             catch (Exception ex)
@@ -462,5 +474,41 @@ namespace MagicBalanceConfigurator
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) => System.Diagnostics.Process.Start(Consts.DonationLink1);
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) => System.Diagnostics.Process.Start(Consts.DonationLink2);
+
+        private void ConfigPresetsBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ModConfigsController != null)
+            {
+                var moduleName = ConfigPresetsBox.Text;
+                var module = PackagesController.GetPackage(moduleName);
+                if (module != null)
+                {
+                    ModConfigsController.UpdateConfigs(ModConfigsTextBox.Text);
+                    ModConfigsController.UpdateConfigsPath(module.Directory);
+                    ModConfigsTextBox.Clear();
+                    ModConfigsTextBox.AppendText(ModConfigsController.RawConfigs);
+                }
+                else
+                {
+                    MessageBox.Show("Selected package not found!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                if (String.IsNullOrEmpty(ConfigPresetsBox.Text))
+                    ConfigPresetsBox.Text = ConfigPresetsBox.Items[0].ToString();
+            }
+        }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Clipboard.SetText("Z756674559775");
+            MessageBox.Show("Adress copied to clipboard!");
+        }
+        private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Clipboard.SetText("3HZFxPqyJnrNLSw7L8hJt9A2hZJjGgdGJe");
+            MessageBox.Show("Adress copied to clipboard!");
+        }
     }
 }

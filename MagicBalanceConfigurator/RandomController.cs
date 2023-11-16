@@ -133,7 +133,7 @@ namespace MagicBalanceConfigurator
                 PackageBuilder packageBuilder = new PackageBuilder();
                 packageInfo = packageBuilder.BuildPackage(Consts.RandomItemsPackageDir, OutputDir, "StonedWizzard", new List<string>() { "StExtMod - Core" },
                     new List<string>() { "StExtMod - RandItemPack Patch", "StExtMod - Main", "StExtMod - User configs", "StExtMod - English" },
-                    "2.0.6", "StExtMod - Random items. Required 'StExtMod - Core'", true);
+                    "2.1.5", "StExtMod - Random items. Required 'StExtMod - Core'", true);
             }
 
             Generators.ForEach(g =>
@@ -155,14 +155,18 @@ namespace MagicBalanceConfigurator
                         if (generator.IsActive) generator.GenerateItems(ProgressCounter);
                         else generator.GenerateMock();
                     });
-                    //await task.ConfigureAwait(false);
                     task.Start();
                     tasks.Add(task);
                 }
 
                 await Task.WhenAll(tasks);
-                UpdateProgressBar(TotalItemsToGenerate, TotalItemsToGenerate);
-                SaveItemsNames(OutputDir);
+                UpdateProgressBar(TotalItemsToGenerate - 1, TotalItemsToGenerate);
+                await Task.Run(() =>
+                {
+                    SendStatusMessage("Saving items names...");
+                    SaveItemsNames(OutputDir);
+                    UpdateProgressBar(TotalItemsToGenerate, TotalItemsToGenerate);
+                });                
                 SaveRandMeta(OutputDir);
                 SendStatusMessage("Items generation completed!");
                 UpdateUiBlock(false);
@@ -220,19 +224,55 @@ namespace MagicBalanceConfigurator
                 RandItemsMeta.Append($"{randItemsMeta}\r\n");
         }
 
+        private string GetEnumeratedFilePath(string path, int id) => path.Replace(".d", $"_{id.ToString("00")}.d");
+        private List<string> SplitItemsNames()
+        {
+            const int BlockSize = 20000;
+            List<string> result = new List<string>();
+            List<string> rawData = new List<string>();
+
+            // Use reader instead just String.Split method to prevent OutOfMemoryException
+            using (StringReader reader = new StringReader(ItemsUniqNames.ToString()))
+            {
+                string readText;
+                while ((readText = reader.ReadLine()) != null)
+                    rawData.Add(readText);
+            }
+
+            for (int i = 0, j = 0; i < rawData.ToArray().Length; j++)
+            {
+                int index = j * BlockSize;
+                StringBuilder block = new StringBuilder();
+                var blockData = rawData.Skip(index).Take(BlockSize).ToArray();
+                foreach (var item in blockData)
+                    block.AppendLine(item);
+                i += BlockSize;
+                result.Add(block.ToString());
+            }
+            return result;
+        }
+
         private void SaveItemsNames(string savePath)
         {
-            string path = $"{savePath}\\{Consts.RandLocalizationFileName}";
-            string fallbackPath = $"{Application.StartupPath}\\{Consts.RandLocalizationFileName}";
-            try { 
-                File.WriteAllText(path, ItemsUniqNames.ToString(), Encoding.GetEncoding(AppConfigsProvider.Configs.OutputFilesEncoding)); }
-            catch (DirectoryNotFoundException) { File.WriteAllText(fallbackPath, ItemsUniqNames.ToString()); }
-            catch (Exception ex)
+            var itemNamesData = SplitItemsNames();
+            int index = 0;
+            foreach (var itemNameBlock in itemNamesData)
             {
-                SendStatusMessage($"Can't save {Consts.RandLocalizationFileName}!\r\nMessage: {ex.Message}");
-                return;
-            }
-            SendStatusMessage($"{Consts.RandLocalizationFileName} saved!");
+                string path = $"{savePath}\\{GetEnumeratedFilePath(Consts.RandLocalizationFileName, index)}";
+                string fallbackPath = $"{Application.StartupPath}\\{GetEnumeratedFilePath(Consts.RandLocalizationFileName, index)}";
+                try
+                {
+                    File.WriteAllText(path, itemNameBlock, Encoding.GetEncoding(AppConfigsProvider.Configs.OutputFilesEncoding));
+                }
+                catch (DirectoryNotFoundException) { File.WriteAllText(fallbackPath, itemNameBlock); }
+                catch (Exception ex)
+                {
+                    SendStatusMessage($"Can't save {GetEnumeratedFilePath(Consts.RandLocalizationFileName, index)}!\r\nMessage: {ex.Message}");
+                    return;
+                }
+                index += 1;
+            }            
+            SendStatusMessage($"{Consts.RandLocalizationFileName} files saved!");
         }
         private void SaveRandMeta(string savePath)
         {

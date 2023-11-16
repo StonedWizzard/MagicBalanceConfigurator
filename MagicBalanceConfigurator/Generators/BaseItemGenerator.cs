@@ -14,6 +14,7 @@ namespace MagicBalanceConfigurator.Generators
 
         protected List<ItemTemplatePreset> ItemTemplatePresets { get; set; }
         protected ItemTemplatePreset CurrentItemPreset { get; set; }
+        protected Dictionary<string, int> CurrentConditionsData { get; set; }
 
         public double ItemCondMultiplier { get; set; }
 
@@ -57,6 +58,7 @@ namespace MagicBalanceConfigurator.Generators
 
         protected override string PreProcessTemplate(ItemModsSet modsSet)
         {
+            CurrentConditionsData = new Dictionary<string, int>();
             StringBuilder template = new StringBuilder(base.PreProcessTemplate(modsSet));
             CurrentItemPreset = GetItemTemplatePreset();
             template.Replace("[CondSection]", BuildItemCondSection());
@@ -91,17 +93,21 @@ namespace MagicBalanceConfigurator.Generators
             StringBuilder condAtrSection = new StringBuilder();
             StringBuilder condValueSection = new StringBuilder();
             StringBuilder result = new StringBuilder();
+            int condValue = 0;
 
             StringBuilder condAtrLine = new StringBuilder(CommonTemplates.ItemCondString_Atr);
             StringBuilder condValueLine = new StringBuilder(CommonTemplates.ItemCondString_Value);
             condAtrLine.Replace("[Index]", "1");
             condAtrLine.Replace("[AtrIndex]", CurrentItemPreset.ItemCondStat);
             condValueLine.Replace("[Index]", "1");
-            condValueLine.Replace("[CondAtrValue]", GetItemCondValue(CurrentItemPreset.ItemCondStat).ToString());
+            condValue = GetItemCondValue(CurrentItemPreset.ItemCondStat);
+            condValueLine.Replace("[CondAtrValue]", condValue.ToString());
             condAtrSection.Append($"\t{condAtrLine}");
             condValueSection.Append($"\t{condValueLine}");
+            if (CurrentItemPreset.ItemCondStat.Equals(CommonTemplates.ItemCondAtr_Stamina)) condValue *= 10;
+            CurrentConditionsData.Add(CurrentItemPreset.ItemCondStat, condValue);
 
-            if(new Random(GetRandomSeed()).Next(100) > 50)
+            if (new Random(GetRandomSeed()).Next(100) > 50)
             {
                 var allowedStats = CommonTemplates.ItemCondAtributes.Except(new List<string> { CurrentItemPreset.ItemCondStat })
                     .ToList();
@@ -112,9 +118,12 @@ namespace MagicBalanceConfigurator.Generators
                 condAtrLine.Replace("[Index]", "2");
                 condAtrLine.Replace("[AtrIndex]", condStat);
                 condValueLine.Replace("[Index]", "2");
-                condValueLine.Replace("[CondAtrValue]", GetItemCondValue(condStat).ToString());
+                condValue = GetItemCondValue(condStat);
+                condValueLine.Replace("[CondAtrValue]", condValue.ToString());
                 condAtrSection.Append($"\t{condAtrLine}");
                 condValueSection.Append($"\t{condValueLine}");
+                if (condStat.Equals(CommonTemplates.ItemCondAtr_Stamina)) condValue *= 10;
+                CurrentConditionsData.Add(condStat, condValue);
             }
             result.Append(condAtrSection);
             result.Append(condValueSection.ToString().TrimEnd(CommonTemplates.EndTrimChars));

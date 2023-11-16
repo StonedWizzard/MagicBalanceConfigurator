@@ -59,6 +59,8 @@ namespace MagicBalanceConfigurator.Generators
             }
         }
 
+        protected List<string> ProhibitedDamageTypes { get; set; }
+
         public BaseWeaponGenerator(RandomController controller, string fileName) : base(controller, fileName)
         {
             ItemName = "Оружие";
@@ -66,6 +68,7 @@ namespace MagicBalanceConfigurator.Generators
             WeaponRangeMult = 1;
             SetWeaponDamageRange(10, 50);
             SetWeaponRangeRange(30, 60);
+            ProhibitedDamageTypes = new List<string>();
         }
 
         protected override ItemMod[] GetItemsMods() =>
@@ -79,6 +82,7 @@ namespace MagicBalanceConfigurator.Generators
             template.Replace("[DamageTotal]", damageInfo.DamageTotal);
             template.Replace("[DamageTotalType]", damageInfo.DamageType);
             template.Replace("[WeaponRange]", GetWeaponRangeValue().ToString());
+            template.Replace("[WeapModsData]", GetWeaponModsData(modsSet).ToString());
             return template.ToString();
         }
 
@@ -121,7 +125,8 @@ namespace MagicBalanceConfigurator.Generators
 
         private string GetNextDamageType(List<string> usedDamageTypes)
         {
-            var availebleTypes = CommonTemplates.WeaponDamagePair.Keys.Where(x => !usedDamageTypes.Contains(x)).ToArray();
+            var availebleTypes = CommonTemplates.WeaponDamagePair.Keys.Where(x => !usedDamageTypes.Contains(x)).
+                Except(ProhibitedDamageTypes).ToArray();
             return availebleTypes.GetRandomElement();
         }
 
@@ -157,6 +162,17 @@ namespace MagicBalanceConfigurator.Generators
             _maxWeaponRangeValue = val.Max;
         }
         
+        protected int GetWeaponModsData(ItemModsSet modsSet)
+        {
+            int result = 0;
+            if(modsSet?.ModsCount > 0) 
+            {
+                foreach (var mod in modsSet.ItemMods)
+                    result = result | mod.ModDataFlag;
+            }
+            return result;
+        }
+
         private class DamageInfo
         {
             public string DamageTotal { get; set; }

@@ -5,12 +5,13 @@ namespace MagicBalanceConfigurator.Generators
     [Serializable]
     public class ItemMod
     {
-        public ItemMod() { IsEnabled = true; }
+        public ItemMod() { IsEnabled = true; ModDataFlag = default; }
         public ItemMod(long id, int minValue, int maxValue) : this() 
         {
             Id = id;
             ValueMax = maxValue;
             ValueMin = minValue;
+            ModDataFlag = default;
         }
 
         public long Id { get; set; }
@@ -34,6 +35,7 @@ namespace MagicBalanceConfigurator.Generators
         public string Template_OnUnequip { get; set; }
         public string ModName { get; set; }
         public bool IsEnabled { get; set; }
+        public int ModDataFlag { get; set; }
 
         public void SetValueRange(int min, int max)
         {

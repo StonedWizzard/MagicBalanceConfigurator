@@ -50,19 +50,44 @@ namespace MagicBalanceConfigurator.Generators
         };
 
         public readonly static string[] PoitionsT1Visuals = new[] {
-            "\"ITPO_SPEED_01_EX.3ds\"",
-            "\"ItPo_Health_01_Ex.3ds\"",
-            "\"ItPo_Mana_01_Ex.3ds\""
+            "\"MMB_BlueVino.3ds\"",
+            "\"MMB_BrownVino.3ds\"",
+            "\"MMB_GreenVino.3ds\"",
+            "\"MMB_LightBrownVino.3ds\"",
+            "\"MMB_LilaVino.3ds\"",
+            "\"MMB_RedVino.3ds\"",
+            "\"MMB_RoseVino.3ds\"",
+            "\"MMB_VioletVino.3ds\""
         };
         public readonly static string[] PoitionsT2Visuals = new[] {
-            "\"ITPO_SPEED_02_EX.3ds\"",
-            "\"ItPo_Health_02_Ex.3ds\"",
-            "\"ItPo_Mana_02_Ex.3ds\""
+            "\"MMB_BlueSphere.3ds\"",
+            "\"MMB_BrownSphere.3ds\"",
+            "\"MMB_GreenSphere.3ds\"",
+            "\"MMB_LightBrownSphere.3ds\"",
+            "\"MMB_LilaSphere.3ds\"",
+            "\"MMB_RedSphere.3ds\"",
+            "\"MMB_RoseSphere.3ds\"",
+            "\"MMB_VioletSphere.3ds\""
         };
         public readonly static string[] PoitionsT3Visuals = new[] {
-            "\"ITPO_SPEED_03_EX.3ds\"",
-            "\"ItPo_Health_03_Ex.3ds\"",
-            "\"ItPo_Mana_03_Ex.3ds\""
+            "\"MMB_BlueAlchemy.3ds\"",
+            "\"MMB_BrownAlchemy.3ds\"",
+            "\"MMB_GreenAlchemy.3ds\"",
+            "\"MMB_LightBrownAlchemy.3ds\"",
+            "\"MMB_LilaAlchemy.3ds\"",
+            "\"MMB_RedAlchemy.3ds\"",
+            "\"MMB_RoseAlchemy.3ds\"",
+            "\"MMB_VioletAlchemy.3ds\""
+        };
+        public readonly static string[] PoitionsT4Visuals = new[] {
+            "\"MMB_BlueCaraf.3ds\"",
+            "\"MMB_BrownCaraf.3ds\"",
+            "\"MMB_GreenCaraf.3ds\"",
+            "\"MMB_LightBrownCaraf.3ds\"",
+            "\"MMB_LilaCaraf.3ds\"",
+            "\"MMB_RedCaraf.3ds\"",
+            "\"MMB_RoseCaraf.3ds\"",
+            "\"MMB_VioletCaraf.3ds\""
         };
 
         public const string Amulet_IdPrefix = "itam_stext_rnd_";
@@ -117,7 +142,9 @@ namespace MagicBalanceConfigurator.Generators
         public const string ItemLootTableMock2 = @"func int StExt_CreateRand_[Tier][ItemType]() { };";
 
         public const string ItemModTextString_Text = @"text[[Index]] = [ModText_[Index]];";
+        public const string ItemModTextString_Text2 = @"text[[Index]] = [ModText];";
         public const string ItemModTextString_Value = @"count[[Index]] = [ModValue_[Index]];";
+        public const string ItemModTextString_Value2 = @"count[[Index]] = [ModValue];";
         public const string ItemModEquipString = @"[ModEquip_[Index]];";
         public const string ItemModUnEquipString = @"[ModUnEquip_[Index]];";
 
@@ -133,6 +160,18 @@ namespace MagicBalanceConfigurator.Generators
         public const string ItemCondAtr_Crosbow = "aivrx_npc_atr_crossbow";
         public const string ItemCondAtr_Shield = "aivrx_npc_atr_shield";
         public readonly static string[] ItemCondAtributes = new string[] { ItemCondAtr_Mana, ItemCondAtr_Hp, ItemCondAtr_Str, ItemCondAtr_Agi, ItemCondAtr_Stamina, };
+
+        public readonly static Dictionary<string, string> CondTextPair = new Dictionary<string, string>()
+        {
+            { ItemCondAtr_Mana, "StExt_Str_DisplayManaReq" },
+            { ItemCondAtr_Str, "StExt_Str_DisplayStrReq" },
+            { ItemCondAtr_Agi , "StExt_Str_DisplayAgiReq" },
+            { ItemCondAtr_Hp , "StExt_Str_DisplayHpReq" },
+            { ItemCondAtr_Stamina , "StExt_Str_DisplayStamReq" },
+            { ItemCondAtr_Bow , "StExt_Str_DisplayBowReq" },
+            { ItemCondAtr_Crosbow , "StExt_Str_DisplayCBowReq" },
+            { ItemCondAtr_Shield , "StExt_Str_DisplayShieldReq" }
+        };
 
         /// <summary>
         /// Value represent damage index in item damage array
@@ -183,6 +222,7 @@ instance [IdPrefix][Id](c_item)
     visual = [Visual];
 	on_equip = equip_[IdPrefix][Id];
     on_unequip = unequip_[IdPrefix][Id];
+    spell = [WeapModsData];
     munition = itrw_bolt;
     value = [Price];
     text[5] = StExt_Enchanted_Name_Value;
@@ -222,6 +262,7 @@ instance [IdPrefix][Id](c_item)
     visual = [Visual];
 	on_equip = equip_[IdPrefix][Id];
     on_unequip = unequip_[IdPrefix][Id];
+    spell = [WeapModsData];
     munition = itrw_arrow;
     value = [Price];
     text[5] = StExt_Enchanted_Name_Value;
@@ -261,6 +302,7 @@ instance [IdPrefix][Id](c_item)
     visual = [Visual];
 	on_equip = equip_[IdPrefix][Id];
     on_unequip = unequip_[IdPrefix][Id];
+    spell = [WeapModsData];
     range = [WeaponRange];
     value = [Price];
     text[5] = StExt_Enchanted_Name_Value;
@@ -300,6 +342,7 @@ instance [IdPrefix][Id](c_item)
     visual = [Visual];
 	on_equip = equip_[IdPrefix][Id];
     on_unequip = unequip_[IdPrefix][Id];
+    spell = [WeapModsData];
     range = [WeaponRange];
     value = [Price];
     text[5] = StExt_Enchanted_Name_Value;
@@ -473,7 +516,7 @@ func void unequip_[IdPrefix][Id]()
     [ProtectionSection]
     description = name;
     value = [Price];
-[ModsText]
+[ShieldText]
     text[5] = StExt_Enchanted_Name_Value;
     count[5] = [Price];
 };

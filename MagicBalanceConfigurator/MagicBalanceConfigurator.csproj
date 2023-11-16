@@ -79,6 +79,7 @@
     <Compile Include="Generators\Armors\Armor__Body_T1_Generator.cs" />
     <Compile Include="Generators\BaseArmorGenerator.cs" />
     <Compile Include="Generators\BaseItemGenerator.cs" />
+    <Compile Include="Generators\BaseShieldGenerator.cs" />
     <Compile Include="Generators\Jewelery\Aml_T1_Generator .cs" />
     <Compile Include="Generators\BaseWeaponGenerator.cs" />
     <Compile Include="Generators\Jewelery\Blt_T1_Generator.cs" />

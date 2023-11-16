@@ -15,7 +15,7 @@ namespace MagicBalanceConfigurator.Generators
             BaseOnEquipFunc = "equip_1h_heavy();";
             BaseOnUnEquipFunc = "unequip_1h_heavy();";
             SetWeaponDamageRange(125, 225);
-            SetWeaponRangeRange(80, 100);
+            SetWeaponRangeRange(85, 110);
             SetItemCondRange(100, 150);
             SetModsCountRange(3, 4);
         }

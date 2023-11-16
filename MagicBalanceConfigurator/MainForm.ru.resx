@@ -119,7 +119,11 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="CleanUpAutorunBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 239</value>
+    <value>6, 268</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="CleanUpAutorunBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="CleanUpAutorunBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>318, 22</value>
@@ -128,26 +132,28 @@
     <value>Очистить 'Autorun' перед установкой</value>
   </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 375</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>265, 378</value>
   </data>
   <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 41</value>
+    <value>59, 50</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 313</value>
+    <value>7, 302</value>
+  </data>
+  <data name="label3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>253, 57</value>
+    <value>337, 70</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>«Чистая компиляция» позволяет скомпилировать скрипты с выбранным архивом из резервной копии. Без этой опции используется текущий архив игры!</value>
   </data>
   <data name="CleanInstallBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>386, 348</value>
+    <value>387, 345</value>
+  </data>
+  <data name="CleanInstallBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="CleanInstallBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 22</value>
@@ -156,25 +162,19 @@
     <value>Чистая компиляция</value>
   </data>
   <data name="SelectBackupArchBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 375</value>
-  </data>
-  <data name="SelectBackupArchBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>6, 378</value>
   </data>
   <data name="SelectBackupArchBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>205, 41</value>
+    <value>255, 50</value>
   </data>
   <data name="SelectBackupArchBtn.Text" xml:space="preserve">
     <value>Выбрать архив...</value>
   </data>
   <data name="RunPatchBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>261, 375</value>
-  </data>
-  <data name="RunPatchBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>328, 378</value>
   </data>
   <data name="RunPatchBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>307, 41</value>
+    <value>241, 50</value>
   </data>
   <data name="RunPatchBtn.Text" xml:space="preserve">
     <value>Компилировать Моды ⏵</value>
@@ -183,13 +183,7 @@
     <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
   </data>
   <data name="InstallPackagesBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>353, 230</value>
-  </data>
-  <data name="InstallPackagesBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="InstallPackagesBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 40</value>
+    <value>354, 259</value>
   </data>
   <data name="InstallPackagesBtn.Text" xml:space="preserve">
     <value>Установить пакеты</value>
@@ -209,44 +203,23 @@
   <data name="PackageDescriptionColumn.HeaderText" xml:space="preserve">
     <value>Описание</value>
   </data>
-  <data name="PackagesGridView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 5</value>
-  </data>
-  <data name="PackagesGridView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
   <data name="PackagesGridView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>562, 221</value>
-  </data>
-  <data name="InstallPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="InstallPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="InstallPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>576, 423</value>
+    <value>563, 250</value>
   </data>
   <data name="InstallPage.Text" xml:space="preserve">
     <value>Установка</value>
   </data>
   <data name="ItemsCountBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>364, 261</value>
-  </data>
-  <data name="ItemsCountBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>382, 244</value>
   </data>
   <data name="ItemsCountBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 23</value>
+    <value>69, 23</value>
   </data>
   <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>295, 263</value>
-  </data>
-  <data name="label5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>291, 248</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>87, 15</value>
@@ -255,34 +228,19 @@
     <value>Кол-во вещей</value>
   </data>
   <data name="ItemNamesBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>455, 297</value>
-  </data>
-  <data name="ItemNamesBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="ItemNamesBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 30</value>
+    <value>456, 275</value>
   </data>
   <data name="ItemNamesBtn.Text" xml:space="preserve">
     <value>Имена</value>
   </data>
   <data name="ItemModConfigsBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>455, 263</value>
-  </data>
-  <data name="ItemModConfigsBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="ItemModConfigsBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 30</value>
+    <value>456, 241</value>
   </data>
   <data name="ItemModConfigsBtn.Text" xml:space="preserve">
     <value>Опции</value>
   </data>
   <data name="BuildRandomItemsPackageBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 284</value>
-  </data>
-  <data name="BuildRandomItemsPackageBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>6, 272</value>
   </data>
   <data name="BuildRandomItemsPackageBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>395, 38</value>
@@ -292,19 +250,13 @@
 Иначе файлы будут записаны в ‘Autorun ’</value>
   </data>
   <data name="ItemPriceRangeBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>172, 262</value>
-  </data>
-  <data name="ItemPriceRangeBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>227, 244</value>
   </data>
   <data name="ItemPriceRangeBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 23</value>
+    <value>60, 23</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 263</value>
-  </data>
-  <data name="label6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>3, 246</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 17</value>
@@ -313,13 +265,10 @@
     <value>Модификатор разброса цен (%)</value>
   </data>
   <data name="ProgressLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>420, 336</value>
-  </data>
-  <data name="ProgressLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>414, 344</value>
   </data>
   <data name="ProgressLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 18</value>
+    <value>158, 18</value>
   </data>
   <data name="IsActiveColumn.HeaderText" xml:space="preserve">
     <value>Активен</value>
@@ -363,119 +312,59 @@
   <data name="SeedColumn.HeaderText" xml:space="preserve">
     <value>Сид</value>
   </data>
-  <data name="GeneratorDataGrid.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 5</value>
-  </data>
-  <data name="GeneratorDataGrid.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
   <data name="GeneratorDataGrid.Size" type="System.Drawing.Size, System.Drawing">
-    <value>566, 252</value>
+    <value>560, 232</value>
   </data>
   <data name="GenerationProgressBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>419, 355</value>
-  </data>
-  <data name="GenerationProgressBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>414, 364</value>
   </data>
   <data name="GenerationProgressBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 24</value>
+    <value>158, 24</value>
   </data>
   <data name="ConsoleTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 331</value>
-  </data>
-  <data name="ConsoleTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>6, 314</value>
   </data>
   <data name="ConsoleTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>410, 90</value>
+    <value>404, 115</value>
   </data>
   <data name="GenerateBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>419, 383</value>
-  </data>
-  <data name="GenerateBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>414, 392</value>
   </data>
   <data name="GenerateBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 37</value>
+    <value>158, 37</value>
   </data>
   <data name="GenerateBtn.Text" xml:space="preserve">
     <value>Генерировать!</value>
   </data>
-  <data name="RandomPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="RandomPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="RandomPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>576, 423</value>
-  </data>
   <data name="RandomPage.Text" xml:space="preserve">
     <value>Генератор вещей</value>
-  </data>
-  <data name="ModConfigsTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="ModConfigsTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>576, 423</value>
-  </data>
-  <data name="ModConfigsPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="ModConfigsPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>576, 423</value>
   </data>
   <data name="ModConfigsPage.Text" xml:space="preserve">
     <value>Настройки мода</value>
   </data>
+  <data name="linkLabel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 386</value>
+  </data>
   <data name="linkLabel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 401</value>
-  </data>
-  <data name="linkLabel3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 8, 0</value>
-  </data>
-  <data name="linkLabel3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 8, 0</value>
+    <value>7, 366</value>
   </data>
   <data name="linkLabel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>566, 20</value>
+    <value>567, 20</value>
   </data>
   <data name="linkLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 381</value>
-  </data>
-  <data name="linkLabel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 8, 0</value>
-  </data>
-  <data name="linkLabel2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 8, 0</value>
+    <value>7, 346</value>
   </data>
   <data name="linkLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>566, 20</value>
+    <value>567, 20</value>
   </data>
   <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 353</value>
-  </data>
-  <data name="label8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>8, 318</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>562, 28</value>
-  </data>
-  <data name="OutputFilesCodepageBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>177, 110</value>
-  </data>
-  <data name="OutputFilesCodepageBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>563, 28</value>
   </data>
   <data name="OutputFilesCodepageBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>186, 25</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 113</value>
-  </data>
-  <data name="label4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>247, 25</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 17</value>
@@ -483,20 +372,8 @@
   <data name="label4.Text" xml:space="preserve">
     <value>Кодировка файлов</value>
   </data>
-  <data name="VdfsArchiveBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>110, 42</value>
-  </data>
-  <data name="VdfsArchiveBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
   <data name="VdfsArchiveBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>414, 23</value>
-  </data>
-  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 45</value>
-  </data>
-  <data name="label10.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>356, 23</value>
   </data>
   <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
     <value>77, 17</value>
@@ -505,40 +382,19 @@
     <value>Vdfs архив</value>
   </data>
   <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 314</value>
-  </data>
-  <data name="linkLabel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 8, 0</value>
-  </data>
-  <data name="linkLabel1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 8, 0</value>
+    <value>7, 272</value>
   </data>
   <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>566, 20</value>
+    <value>567, 20</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 269</value>
-  </data>
-  <data name="label7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>7, 227</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>566, 45</value>
-  </data>
-  <data name="LanguageSelectBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>109, 69</value>
-  </data>
-  <data name="LanguageSelectBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>567, 45</value>
   </data>
   <data name="LanguageSelectBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 25</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 72</value>
-  </data>
-  <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>188, 25</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>42, 17</value>
@@ -547,28 +403,10 @@
     <value>Язык</value>
   </data>
   <data name="SetGothicDirBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>528, 42</value>
-  </data>
-  <data name="SetGothicDirBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="SetGothicDirBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 23</value>
-  </data>
-  <data name="GamePathTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>110, 15</value>
-  </data>
-  <data name="GamePathTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>333, 42</value>
   </data>
   <data name="GamePathTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>463, 23</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 18</value>
-  </data>
-  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>421, 23</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 17</value>
@@ -576,26 +414,8 @@
   <data name="label1.Text" xml:space="preserve">
     <value>Путь к Готике</value>
   </data>
-  <data name="AppConfigsPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="AppConfigsPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>576, 423</value>
-  </data>
   <data name="AppConfigsPage.Text" xml:space="preserve">
     <value>Настройки приложения</value>
-  </data>
-  <data name="TabsPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="TabsPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>584, 453</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>584, 453</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1235,14 +1055,5 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
 </value>
-  </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>998, 691</value>
-  </data>
-  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>600, 492</value>
   </data>
 </root>

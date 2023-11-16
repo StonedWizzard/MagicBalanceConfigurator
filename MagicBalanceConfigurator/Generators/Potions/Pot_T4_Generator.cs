@@ -14,6 +14,6 @@
             SetModsCountRange(3, 4);
         }
 
-        protected override string GetItemVisual() => CommonTemplates.PoitionsT3Visuals.GetRandomElement();
+        protected override string GetItemVisual() => CommonTemplates.PoitionsT4Visuals.GetRandomElement();
     }
 }

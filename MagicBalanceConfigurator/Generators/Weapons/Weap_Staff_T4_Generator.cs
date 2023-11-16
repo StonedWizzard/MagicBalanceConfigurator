@@ -14,7 +14,7 @@ namespace MagicBalanceConfigurator.Generators
             ModPower = 5;
             ItemsPrice = 5000;
             BaseOnEquipFunc = "equip_zauberstab_dragon();";
-            BaseOnUnEquipFunc = "equip_zauberstab_dragon();";
+            BaseOnUnEquipFunc = "unequip_zauberstab_dragon();";
             SetWeaponDamageRange(300, 450);
             SetWeaponRangeRange(130, 150);
             SetItemCondRange(250, 400);

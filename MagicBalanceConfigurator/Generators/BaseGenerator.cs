@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -109,9 +110,10 @@ namespace MagicBalanceConfigurator.Generators
         private Random Rand;        
         private readonly int NotifyRate;
         private int RandomSeed;
+        private readonly int MaxItemsSectionSize;
 
         protected StringBuilder Output;
-        protected StringBuilder ItemSection;
+        protected List<StringBuilder> ItemSections;
         protected StringBuilder LootTableSection;
         protected StringBuilder LootTableSection2;
         protected StringBuilder StringSection;
@@ -136,6 +138,7 @@ namespace MagicBalanceConfigurator.Generators
             ItemsPrice = 100;
             ItemsCount = 100;
             UseUniqName = false;
+            MaxItemsSectionSize = (int)Math.Pow(2, 21);
         }
 
         /// <summary>
@@ -145,7 +148,7 @@ namespace MagicBalanceConfigurator.Generators
         {
             RandController.SendStatusMessage($"{GeneratorSchemaName}: start items generation({ItemsCount})");
             Output = new StringBuilder();
-            ItemSection = new StringBuilder();
+            ItemSections = new List<StringBuilder>();
             LootTableSection = new StringBuilder();
             LootTableSection2 = new StringBuilder();
             StringSection = new StringBuilder();
@@ -175,8 +178,6 @@ namespace MagicBalanceConfigurator.Generators
             RandController.AppendRandItemsMeta(GetMeta());
             Output.Append(CommonTemplates.RndFileMetaBlock);
             Output.Append("\r\n");
-            Output.Append(ItemSection);
-            Output.Append("\r\n");
             Output.Append(LootTableSection);
             Output.Append("\r\n");
             Output.Append(LootTableSection2);
@@ -201,6 +202,8 @@ namespace MagicBalanceConfigurator.Generators
         }
 
         public string GetFilePath() => $"{OutputDir}\\{FileName}";
+        public string GetItemsSectionFilePath(int id) => GetFilePath().Replace(".d", $"_{id.ToString("00")}.d");
+
         public string GetFileFallbackPath() => $"{Application.StartupPath}\\{FileName}";
 
         /// <summary>
@@ -209,7 +212,17 @@ namespace MagicBalanceConfigurator.Generators
         protected void SaveResult()
         {
             RandController.SendStatusMessage($"{GeneratorSchemaName}: saving results...");
-            try { File.WriteAllText(GetFilePath(), Output.ToString(), Encoding.GetEncoding(AppConfigsProvider.Configs.OutputFilesEncoding)); }
+            try 
+            { 
+                File.WriteAllText(GetFilePath(), Output.ToString(), Encoding.GetEncoding(AppConfigsProvider.Configs.OutputFilesEncoding));
+                int id = 0;
+                foreach(var block in ItemSections)
+                {
+                    File.WriteAllText(GetItemsSectionFilePath(id), block.ToString(),
+                        Encoding.GetEncoding(AppConfigsProvider.Configs.OutputFilesEncoding));
+                    id += 1;
+                }
+            }
             catch (DirectoryNotFoundException) { File.WriteAllText(GetFileFallbackPath(), Output.ToString()); }
             catch (Exception ex)
             {
@@ -256,13 +269,10 @@ namespace MagicBalanceConfigurator.Generators
             ProcessTemplateMods(template, modsSet);
             ProcessTemplateName(itemIdInfo, template);
             PostProcessTemplate(template);
-            ItemSection.AppendLine(template.ToString());
+            AppendItemBlock(template.ToString());
         }
 
-        protected virtual void PostProcessTemplate(StringBuilder template) 
-        {
-
-        }
+        protected virtual void PostProcessTemplate(StringBuilder template) { }
 
         /// <summary>
         /// Add itemInfo to loot table
@@ -432,6 +442,22 @@ namespace MagicBalanceConfigurator.Generators
             ItemModsSet set = new ItemModsSet { ItemMods = itemMods, ModsCount = modsCount };
             return set;
         }
+
+        private void AppendItemBlock(string itemData)
+        {
+            if (ItemSections.Count <= 0) 
+                ItemSections.Add(new StringBuilder());
+
+            var block = ItemSections.Last();
+            if(block.Length > MaxItemsSectionSize)
+            {
+                ItemSections.Add(new StringBuilder());
+                block = ItemSections.Last();
+            }
+
+            block.AppendLine(itemData);
+        }
+
         /// <summary>
         /// Check if mod can be applied to mods set
         /// </summary>

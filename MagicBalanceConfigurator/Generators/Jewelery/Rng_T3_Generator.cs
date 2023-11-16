@@ -15,7 +15,7 @@
             SetModsCountRange(2, 3);
         }
 
-        protected override string GetItemVisual() => CommonTemplates.AmuletVisuals.GetRandomElement();
+        protected override string GetItemVisual() => CommonTemplates.RingVisuals.GetRandomElement();
 
         public override string GetTemplate() => CommonTemplates.RingTemplate;
     }

@@ -75,8 +75,12 @@
             this.ConsoleTextBox = new System.Windows.Forms.RichTextBox();
             this.GenerateBtn = new System.Windows.Forms.Button();
             this.ModConfigsPage = new System.Windows.Forms.TabPage();
+            this.ConfigPresetsBox = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.ModConfigsTextBox = new System.Windows.Forms.RichTextBox();
             this.AppConfigsPage = new System.Windows.Forms.TabPage();
+            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.label8 = new System.Windows.Forms.Label();
@@ -454,9 +458,29 @@
             // ModConfigsPage
             // 
             resources.ApplyResources(this.ModConfigsPage, "ModConfigsPage");
+            this.ModConfigsPage.Controls.Add(this.ConfigPresetsBox);
+            this.ModConfigsPage.Controls.Add(this.label9);
             this.ModConfigsPage.Controls.Add(this.ModConfigsTextBox);
             this.ModConfigsPage.Name = "ModConfigsPage";
             this.ModConfigsPage.UseVisualStyleBackColor = true;
+            // 
+            // ConfigPresetsBox
+            // 
+            resources.ApplyResources(this.ConfigPresetsBox, "ConfigPresetsBox");
+            this.ConfigPresetsBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ConfigPresetsBox.FormattingEnabled = true;
+            this.ConfigPresetsBox.Items.AddRange(new object[] {
+            resources.GetString("ConfigPresetsBox.Items"),
+            resources.GetString("ConfigPresetsBox.Items1"),
+            resources.GetString("ConfigPresetsBox.Items2"),
+            resources.GetString("ConfigPresetsBox.Items3")});
+            this.ConfigPresetsBox.Name = "ConfigPresetsBox";
+            this.ConfigPresetsBox.SelectedIndexChanged += new System.EventHandler(this.ConfigPresetsBox_SelectedIndexChanged);
+            // 
+            // label9
+            // 
+            resources.ApplyResources(this.label9, "label9");
+            this.label9.Name = "label9";
             // 
             // ModConfigsTextBox
             // 
@@ -468,6 +492,8 @@
             // AppConfigsPage
             // 
             resources.ApplyResources(this.AppConfigsPage, "AppConfigsPage");
+            this.AppConfigsPage.Controls.Add(this.linkLabel5);
+            this.AppConfigsPage.Controls.Add(this.linkLabel4);
             this.AppConfigsPage.Controls.Add(this.linkLabel3);
             this.AppConfigsPage.Controls.Add(this.linkLabel2);
             this.AppConfigsPage.Controls.Add(this.label8);
@@ -485,9 +511,26 @@
             this.AppConfigsPage.Name = "AppConfigsPage";
             this.AppConfigsPage.UseVisualStyleBackColor = true;
             // 
+            // linkLabel5
+            // 
+            resources.ApplyResources(this.linkLabel5, "linkLabel5");
+            this.linkLabel5.LinkColor = System.Drawing.Color.SlateBlue;
+            this.linkLabel5.Name = "linkLabel5";
+            this.linkLabel5.TabStop = true;
+            this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_LinkClicked);
+            // 
+            // linkLabel4
+            // 
+            resources.ApplyResources(this.linkLabel4, "linkLabel4");
+            this.linkLabel4.LinkColor = System.Drawing.Color.ForestGreen;
+            this.linkLabel4.Name = "linkLabel4";
+            this.linkLabel4.TabStop = true;
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
+            // 
             // linkLabel3
             // 
             resources.ApplyResources(this.linkLabel3, "linkLabel3");
+            this.linkLabel3.LinkColor = System.Drawing.Color.DarkRed;
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.TabStop = true;
             this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
@@ -611,6 +654,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ItemPriceRangeBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GeneratorDataGrid)).EndInit();
             this.ModConfigsPage.ResumeLayout(false);
+            this.ModConfigsPage.PerformLayout();
             this.AppConfigsPage.ResumeLayout(false);
             this.AppConfigsPage.PerformLayout();
             this.ResumeLayout(false);
@@ -682,6 +726,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemNameColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn UseUniqNameColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn SeedColumn;
+        private System.Windows.Forms.ComboBox ConfigPresetsBox;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.LinkLabel linkLabel4;
+        private System.Windows.Forms.LinkLabel linkLabel5;
     }
 }
 

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace MagicBalanceConfigurator
 {
@@ -11,17 +12,31 @@ namespace MagicBalanceConfigurator
     {
         private static char[] SplitSeparator = { ',' };
         private static Random Random = new Random();
+        private static int RandomSeed;
+
+        private static int GetRandomSeed()
+        {
+            Task.Delay(1);
+            RandomSeed += 1;
+            int result = new Random(RandomSeed).Next();
+            RandomSeed += Random.Next() + result + (int)DateTime.Now.Ticks;
+            if (RandomSeed >= Int32.MaxValue) RandomSeed /= 2;
+            if (RandomSeed < 0)
+                RandomSeed *= -1;         
+            return result;
+        }
 
         public static string GetRandomElement(this string[] strings)
         {
             if (strings == null || strings?.Length == 0) return string.Empty;
-            return strings[Random.Next(strings.Count())];
+            int index = new Random(GetRandomSeed()).Next(strings.Count());
+            return strings[index];
         }
         public static object GetRandomObj(this IEnumerable<object> array)
         {
             if (array == null || array?.Count() == 0) 
                 throw new IndexOutOfRangeException();
-            int index = Random.Next(array.Count());
+            int index = new Random(GetRandomSeed()).Next(array.Count());
             return array.ElementAt(index);
         }
         public static string[] ParseStringToArray(this string str) => 

@@ -13,17 +13,38 @@ namespace MagicBalanceConfigurator
         private PackagesInstaller PckgInstaller { get; set; }
         private PackagesLoader PckgLoader { get; set; }
         private PackageBuilder PckgBuilder { get; set; }
+        private FileSystemWatcher Watcher { get; set; }
+
         public bool RequireUpdate { get; private set; }
+        private bool FSwasChanged { get; set; }
+        private readonly string PackagesDir;
 
         public PackagesController() 
         {
             PckgLoader = new PackagesLoader();
             PckgInstaller = new PackagesInstaller();
             PckgBuilder = new PackageBuilder();
-            Directory.CreateDirectory(AppConfigsProvider.GetPackagesDir());
+            PackagesDir = AppConfigsProvider.GetPackagesDir();
+            Directory.CreateDirectory(PackagesDir);
             Packages = PckgLoader.LoadPackages();
             RequireUpdate = true;
+
+            Watcher = new FileSystemWatcher(PackagesDir);
+            Watcher.NotifyFilter = NotifyFilters.Attributes
+                                 | NotifyFilters.CreationTime
+                                 | NotifyFilters.DirectoryName
+                                 | NotifyFilters.FileName
+                                 | NotifyFilters.LastAccess
+                                 | NotifyFilters.LastWrite
+                                 | NotifyFilters.Security
+                                 | NotifyFilters.Size;
+            Watcher.Changed += Watcher_Changed;
+            Watcher.Created += Watcher_Changed;
+            Watcher.Deleted += Watcher_Changed;
+            Watcher.Renamed += Watcher_Changed;
         }
+
+        private void Watcher_Changed(object sender, FileSystemEventArgs e) => FSwasChanged = true;
 
         public void InstallSelectedPackages(bool cleanUpAutorun)
         {
@@ -49,6 +70,8 @@ namespace MagicBalanceConfigurator
             bool hasNewPckgs = newPckgs?.Count > 0;
             bool hasIncompatibles = false;
             bool hasRequired = false;
+            bool fsHasChanged = FSwasChanged;
+            if(FSwasChanged) FSwasChanged = false;
 
             if (hasNewPckgs)
                 Packages.AddRange(newPckgs);
@@ -57,7 +80,7 @@ namespace MagicBalanceConfigurator
 
             hasRequired = EnableRequiredPackages();
             hasIncompatibles = DisableIncompatiblePackages();
-            RequireUpdate = hasNewPckgs || hasMissingPckgs || hasIncompatibles || hasRequired;
+            RequireUpdate = hasNewPckgs || hasMissingPckgs || hasIncompatibles || hasRequired || fsHasChanged;
         }
 
         public List<PackageInfo> GetSortedPackages() => Packages.OrderBy(p => p.LoadOrder).ToList();
@@ -83,10 +106,12 @@ namespace MagicBalanceConfigurator
             {
                 if (package?.RequiredPackages?.Count() == 0) continue;
 
-                var requiredPckgs = Packages.Where(x => package.RequiredPackages.Contains(x.Name));
+                var requiredPckgs = Packages.Where(x => package.RequiredPackages.Contains(x.Name) && !x.IsEnabled);
                 foreach (var pckg in requiredPckgs)
+                {
                     pckg.IsEnabled = true;
-                hasRequired = true;
+                    hasRequired = true;
+                }
             }
             SavePackagesMeta();
             return hasRequired;
@@ -102,12 +127,14 @@ namespace MagicBalanceConfigurator
                 incompatiblePackages.AddRange(package.IncompatiblePackages);
             }
 
-            if(incompatiblePackages.Count > 0)
+            if (incompatiblePackages.Count > 0)
             {
-                updateReq = true;
                 var incompatibleResult = Packages.Where(x => x.IsEnabled && incompatiblePackages.Contains(x.Name));
                 foreach (var pckg in incompatibleResult)
+                {
                     pckg.IsEnabled = false;
+                    updateReq = true;
+                }
             }
             return updateReq;
         }
