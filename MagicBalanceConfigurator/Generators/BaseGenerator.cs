@@ -1,4 +1,5 @@
 ﻿using MagicBalanceConfigurator.Configs;
+using MagicBalanceConfigurator.Generators.SerealizebleGenerators;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace MagicBalanceConfigurator.Generators
 {
-    public abstract class BaseGenerator
+    public abstract class BaseGenerator : ISerealizebleGenerator
     {
         protected const int MaxItems = 9999;
         protected const int MaxModsCount = 10;
@@ -121,6 +122,8 @@ namespace MagicBalanceConfigurator.Generators
         protected string ItemIdPrefix;
         protected string ItemTemplate;
         protected string ItemGenericNameId;
+        protected List<int> ProhibitedMods { get; set; }
+        protected string[] ItemVisuals { get; set; }
 
         public BaseGenerator(RandomController controller, string fileName)
         {
@@ -139,6 +142,8 @@ namespace MagicBalanceConfigurator.Generators
             ItemsCount = 100;
             UseUniqName = false;
             MaxItemsSectionSize = (int)Math.Pow(2, 21);
+            ProhibitedMods = new List<int>();
+            ItemVisuals = new string[] { };
         }
 
         /// <summary>
@@ -240,7 +245,7 @@ namespace MagicBalanceConfigurator.Generators
         /// <summary>
         /// Get specific items visual strings
         /// </summary>
-        protected abstract string GetItemVisual();
+        protected virtual string GetItemVisual() => ItemVisuals.GetRandomElement();
 
         /// <summary>
         /// Returns pre-processed item template
@@ -366,7 +371,7 @@ namespace MagicBalanceConfigurator.Generators
             int textIndex = modsSet.ModsCount < 5 ? 1 : 0;
             for (int modIndex = 0; modIndex < modsSet.ModsCount; modIndex++)
             {
-                modValue = GetItemModValue(modsSet.ItemMods[modIndex]);
+                modValue = GetItemModValue(modsSet.ItemMods[modIndex], modsSet.ModsCount);
                 template.Replace($"[ModText_{textIndex}]", modsSet.ItemMods[modIndex].Template_Text);
                 template.Replace($"[ModValue_{textIndex}]", modValue);
                 template.Replace($"[ModEquip_{modIndex}]", $"\t{GetItemModString_OnEquip(modsSet.ItemMods[modIndex], modValue)}");
@@ -434,9 +439,11 @@ namespace MagicBalanceConfigurator.Generators
             {
                 var mod = GetNextMod();
                 if (ValidateMod(mod, itemMods))
-                    continue;
-                else i++;
-                itemMods.Add(mod);
+                {
+                    i++;
+                    itemMods.Add(mod);
+                }
+                else continue;
             }
 
             ItemModsSet set = new ItemModsSet { ItemMods = itemMods, ModsCount = modsCount };
@@ -463,9 +470,11 @@ namespace MagicBalanceConfigurator.Generators
         /// </summary>
         private bool ValidateMod(ItemMod mod, List<ItemMod> mods)
         {
-            if (Rand.Next(100) <= mod.ModRarity) return false;
+            if(Rand.Next(100) <= mod.ModRarity) return false;
             bool modExist = mods.Any(x => x.Id == mod.Id);
-            return modExist;
+            bool modProhibited = ProhibitedMods.Contains((int)mod.Id);
+            if (modExist || modProhibited) return false;
+            else return true;
         }
 
         private int GetItemPrice()
@@ -481,16 +490,29 @@ namespace MagicBalanceConfigurator.Generators
             return (itemFullId, itemId);
         }
 
-        private string GetItemModValue(ItemMod itemMod)
+        private string GetItemModValue(ItemMod itemMod, int modsCount)
         {
-            int result = 1;
+            double result = 1;
+            double randPower = (new Random(GetRandomSeed()).NextDouble() + 0.01) / 4;
+            if(ModPower >= 2)
+            {
+                if (randPower > 0.25) randPower = 0.25;
+                if (new Random(GetRandomSeed()).Next(100) >= 50)
+                    randPower *= (-1);
+            }
+            int modSlots = ModsCountMax - ModsCountMin;
+            double modSlotPower = modSlots > 0 ? 1.0 / modSlots : 1.0;
+            double modsCountMult = 1 + (modSlots - (modsCount - ModsCountMin)) * modSlotPower;
             result = new Random(GetRandomSeed()).Next(itemMod.ValueMin, itemMod.ValueMax);
-            result = (int)(ModPower * result);
+            result = result * modsCountMult;
+            result = (ModPower + randPower) * result;            
 
-            if(result < 1) result = 1;
-            return result.ToString();
+            if (result < 1) result = 1;
+            return ((int)Math.Floor(result)).ToString();
         }
-            
+
+        private double Lerp(double first, double second, double by) => first * (1 - by) + second  * by;
+
         private string GetItemModString_OnEquip(ItemMod itemMod, string value) =>
             itemMod.Template_OnEquip?.Replace("[Value]", value);        
         private string GetItemModString_OnUnequip(ItemMod itemMod, string value) =>        
@@ -508,8 +530,10 @@ namespace MagicBalanceConfigurator.Generators
             if (rand <= RandController.UniqNameFullnessMagnitude) name = $"{midlname} {sufix}";
             else if (rand <= RandController.UniqNameFullnessMagnitude * 2) name = $"{prefix} {midlname}";
             else name = $"{prefix} {midlname} {sufix}";
-            return $"{ItemName} - '{name}'";
+            return $"{GetItemName()} - '{name}'";
         }
+
+        protected virtual string GetItemName() => ItemName;
 
         protected virtual string GetSchemaName() => this.GetType().Name;
 
@@ -541,6 +565,36 @@ namespace MagicBalanceConfigurator.Generators
             result.Min = min;
             result.Max = max;
             return result;
+        }
+
+        public virtual GeneratorConfig GetGeneratorConfig()
+        {
+            return new GeneratorConfig()
+            {
+                ItemName = ItemName,
+                IsActive = IsActive,
+                ItemsCount = ItemsCount,
+                ItemsPrice = ItemsPrice,
+                ModPower = ModPower,
+                ModsCountMax = ModsCountMax,
+                ModsCountMin = ModsCountMin,
+                SchemaName = GeneratorSchemaName,
+                UseUniqName = UseUniqName,
+                ProhibitedMods = ProhibitedMods,
+                ItemVisuals = ItemVisuals.ToList(),
+            };
+        }
+        public virtual void ApplyGeneratorConfig(GeneratorConfig generatorConfig)
+        {
+            ItemName = generatorConfig.ItemName;
+            IsActive = generatorConfig.IsActive;
+            ItemsCount = generatorConfig.ItemsCount;
+            ItemsPrice = generatorConfig.ItemsPrice;
+            ModPower = generatorConfig.ModPower;
+            UseUniqName = UseUniqName;
+            ProhibitedMods = ProhibitedMods == null ? new List<int>() : generatorConfig.ProhibitedMods;
+            SetModsCountRange(generatorConfig.ModsCountMin, generatorConfig.ModsCountMax);
+            ItemVisuals = generatorConfig.ItemVisuals.ToArray();
         }
     }
 }

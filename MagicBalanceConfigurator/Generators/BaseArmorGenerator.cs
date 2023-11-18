@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using MagicBalanceConfigurator.Generators.SerealizebleGenerators;
+using System;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace MagicBalanceConfigurator.Generators
 {
     public abstract class BaseArmorGenerator : BaseItemGenerator
     {
-        protected const int MaxArmorProtection = 500;
+        protected const int MaxArmorProtection = 1000;
         public double ArmorProtectionMult { get; set; }
 
         protected int _minArmorProtectionValue;
@@ -68,6 +67,21 @@ namespace MagicBalanceConfigurator.Generators
             var val = SetValueRange(min, max, MaxArmorProtection);
             _minArmorProtectionValue = val.Min;
             _maxArmorProtectionValue = val.Max;
+        }
+
+        public override GeneratorConfig GetGeneratorConfig()
+        {
+            var result = base.GetGeneratorConfig();
+            result.ArmorProtectionMult = ArmorProtectionMult;
+            result.MinArmorProtectionValue = MinArmorProtectionValue;
+            result.MaxArmorProtectionValue = MaxArmorProtectionValue;
+            return result;
+        }
+        public override void ApplyGeneratorConfig(GeneratorConfig generatorConfig)
+        {
+            base.ApplyGeneratorConfig(generatorConfig);
+            ArmorProtectionMult = generatorConfig.ArmorProtectionMult;
+            SetArmorProtectionRange(generatorConfig.MinArmorProtectionValue, generatorConfig.MaxArmorProtectionValue);
         }
     }
 }

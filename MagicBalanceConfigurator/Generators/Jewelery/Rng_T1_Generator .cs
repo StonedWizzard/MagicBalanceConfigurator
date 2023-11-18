@@ -13,9 +13,8 @@
             ModPower = 1;
             ItemsPrice = 500;
             SetModsCountRange(1, 1);
+            ItemVisuals = CommonTemplates.RingVisuals;
         }
-
-        protected override string GetItemVisual() => CommonTemplates.RingVisuals.GetRandomElement();
 
         public override string GetTemplate() => CommonTemplates.RingTemplate;
 

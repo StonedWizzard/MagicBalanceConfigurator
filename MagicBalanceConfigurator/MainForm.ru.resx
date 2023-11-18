@@ -209,6 +209,18 @@
   <data name="InstallPage.Text" xml:space="preserve">
     <value>Установка</value>
   </data>
+  <data name="EnableColorfullPotionsBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="EnableColorfullPotionsBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 315</value>
+  </data>
+  <data name="EnableColorfullPotionsBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>258, 21</value>
+  </data>
+  <data name="EnableColorfullPotionsBox.Text" xml:space="preserve">
+    <value>Включить зелья с яркой тексторуй</value>
+  </data>
   <data name="ItemsCountBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>382, 244</value>
   </data>
@@ -288,6 +300,9 @@
   <data name="PowerColumn.HeaderText" xml:space="preserve">
     <value>Сила опций</value>
   </data>
+  <data name="CondPower.HeaderText" xml:space="preserve">
+    <value>Сила требований</value>
+  </data>
   <data name="DamagePower.HeaderText" xml:space="preserve">
     <value>Множитель урона</value>
   </data>
@@ -322,10 +337,10 @@
     <value>158, 24</value>
   </data>
   <data name="ConsoleTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 314</value>
+    <value>6, 341</value>
   </data>
   <data name="ConsoleTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>404, 115</value>
+    <value>404, 88</value>
   </data>
   <data name="GenerateBtn.Location" type="System.Drawing.Point, System.Drawing">
     <value>414, 392</value>
@@ -392,6 +407,10 @@
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>567, 45</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>App Version - 1.2.0
+© StonedWizzard, 2023</value>
   </data>
   <data name="LanguageSelectBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>188, 25</value>

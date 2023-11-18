@@ -18,6 +18,7 @@ namespace MagicBalanceConfigurator.Generators
             SetArmorProtectionRange(60, 90);
             SetItemCondRange(50, 100);
             SetModsCountRange(2, 3);
+            ProhibitedMods = new List<int> { 326, 328, 329 };
         }
 
         protected override List<ItemTemplatePreset> BuildItemTemplatePresets() => new List<ItemTemplatePreset>()

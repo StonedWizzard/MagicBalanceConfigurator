@@ -1,4 +1,6 @@
-﻿namespace MagicBalanceConfigurator.Generators
+﻿using System.Linq;
+
+namespace MagicBalanceConfigurator.Generators
 {
     public class Pot_T3_Generator : BasePotionGenerator
     {
@@ -12,8 +14,7 @@
             ItemsPrice = 1500;
             SetDurationRange(100, 220);
             SetModsCountRange(3, 4);
+            ItemVisuals = CommonTemplates.PoitionsT3Visuals;
         }
-
-        protected override string GetItemVisual() => CommonTemplates.PoitionsT3Visuals.GetRandomElement();
     }
 }

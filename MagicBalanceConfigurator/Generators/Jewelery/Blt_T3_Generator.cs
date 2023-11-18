@@ -13,9 +13,8 @@
             ModPower = 4;
             ItemsPrice = 2500;
             SetModsCountRange(3, 4);
+            ItemVisuals = CommonTemplates.BeltVisuals;
         }
-
-        protected override string GetItemVisual() => CommonTemplates.BeltVisuals.GetRandomElement();
 
         public override string GetTemplate() => CommonTemplates.BeltTemplate;
     }

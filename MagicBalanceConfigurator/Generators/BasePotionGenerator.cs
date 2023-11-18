@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MagicBalanceConfigurator.Generators.SerealizebleGenerators;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
@@ -41,8 +43,19 @@ namespace MagicBalanceConfigurator.Generators
             UseUniqName = true;
         }
 
+        protected override string GetItemVisual() =>
+            RandController.EnableColorfullPotions ? ItemVisuals.GetRandomElement() :
+            ItemVisuals.Except(CommonTemplates.ColorfullPotions).ToArray().GetRandomElement();
+
         protected override ItemMod[] GetItemsMods() =>
             ItemModsProvider.ItemMods.Where(x => x.IsEnabled && x.Id > 100 && x.Id < 200).ToArray();
+
+        protected override string PreProcessTemplate(ItemModsSet modsSet)
+        {
+            StringBuilder template = new StringBuilder(base.PreProcessTemplate(modsSet));
+            template.Replace("[SpecialSection]", CommonTemplates.InvScaleTemplate);
+            return template.ToString();
+        }
 
         protected override void PostProcessTemplate(StringBuilder template)
         {
@@ -64,7 +77,21 @@ namespace MagicBalanceConfigurator.Generators
             _potionMaxDuration = val.Max;
         }
 
-        public override string GetTemplate() => CommonTemplates.PotionTemplate; 
+        public override string GetTemplate() => CommonTemplates.PotionTemplate;
 
+        public override GeneratorConfig GetGeneratorConfig()
+        {
+            var result = base.GetGeneratorConfig();
+            result.PotionDurationMult = PotionDurationMult;
+            result.PotionMinDuration = PotionMinDuration;
+            result.PotionMaxDuration = PotionMaxDuration;
+            return result;
+        }
+        public override void ApplyGeneratorConfig(GeneratorConfig generatorConfig)
+        {
+            base.ApplyGeneratorConfig(generatorConfig);
+            PotionDurationMult = generatorConfig.PotionDurationMult;
+            SetDurationRange(generatorConfig.PotionMinDuration, generatorConfig.PotionMaxDuration);
+        }
     }
 }

@@ -1,6 +1,8 @@
 ﻿using MagicBalanceConfigurator.Configs;
 using MagicBalanceConfigurator.Generators;
+using MagicBalanceConfigurator.Generators.SerealizebleGenerators;
 using MagicBalanceConfigurator.Packages;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -35,6 +37,7 @@ namespace MagicBalanceConfigurator
         public int RandomPriceMagnitude { get; set; }
         public int UniqNameFullnessMagnitude { get; set; }
         public bool BuildPackage { get; set; }
+        public bool EnableColorfullPotions { get; set; }
 
         public RandomController(Form winForm) 
         {
@@ -115,6 +118,20 @@ namespace MagicBalanceConfigurator
                 new Armor_Body_T3_Generator(this),
                 new Armor_Body_T4_Generator(this),
             };
+
+            var configs = GetGeneratorConfigsBundle();
+            if (configs == null)
+            {
+                SaveGeneratorsConfigs();
+                return;
+            }
+
+            foreach (var generator in Generators)
+            {
+                var config = configs.GeneratorConfigs.FirstOrDefault(x => x.SchemaName == generator.GeneratorSchemaName);
+                if(config != null)
+                    generator.ApplyGeneratorConfig(config);
+            }
         }
 
         public void StartGeneration()
@@ -289,6 +306,27 @@ namespace MagicBalanceConfigurator
                 return;
             }
             SendStatusMessage($"{Consts.RandMetaFileName} saved!");
+        }
+
+        public void SaveGeneratorsConfigs()
+        {
+            GeneratorConfigsBundle generatorConfigsBundle = new GeneratorConfigsBundle();
+            foreach(var generator in Generators)
+                generatorConfigsBundle.GeneratorConfigs.Add(generator.GetGeneratorConfig());
+            string path = $"{Consts.GeneratorsConfigsPath}";
+            string raw = JsonConvert.SerializeObject(generatorConfigsBundle);
+            File.WriteAllText(path, raw);
+        }
+
+        private GeneratorConfigsBundle GetGeneratorConfigsBundle()
+        {
+            try
+            {
+                string raw = File.ReadAllText($"{Consts.GeneratorsConfigsPath}");
+                GeneratorConfigsBundle package = JsonConvert.DeserializeObject<GeneratorConfigsBundle>(raw);
+                return package;
+            }
+            catch { return null; }
         }
     }
 }

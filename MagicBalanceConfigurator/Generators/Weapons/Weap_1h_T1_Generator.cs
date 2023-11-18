@@ -18,6 +18,7 @@ namespace MagicBalanceConfigurator.Generators
             SetWeaponRangeRange(60, 80);
             SetItemCondRange(25, 50);
             SetModsCountRange(1, 2);
+            ProhibitedMods = new List<int> { 226, 228, 229 };
         }
 
         protected override List<ItemTemplatePreset> BuildItemTemplatePresets() => new List<ItemTemplatePreset>()
@@ -25,6 +26,7 @@ namespace MagicBalanceConfigurator.Generators
             // swords
             new ItemTemplatePreset()
             {
+                ItemNamePlaceholder = "Меч",
                 ItemCondStat = CommonTemplates.ItemCondAtr_Str,
                 WeaponDamageType = "dam_edge",
                 ItemType = "item_swd",
@@ -34,6 +36,7 @@ namespace MagicBalanceConfigurator.Generators
             // dex swords
             new ItemTemplatePreset()
             {
+                ItemNamePlaceholder = "Меч",
                 ItemCondStat = CommonTemplates.ItemCondAtr_Agi,
                 WeaponDamageType = "dam_edge",
                 ItemType = "item_swd",
@@ -46,6 +49,7 @@ namespace MagicBalanceConfigurator.Generators
             // axes
             new ItemTemplatePreset()
             {
+                ItemNamePlaceholder = "Топор",
                 ItemCondStat = CommonTemplates.ItemCondAtr_Str,
                 WeaponDamageType = "dam_edge",
                 ItemType = "item_axe",
@@ -56,6 +60,7 @@ namespace MagicBalanceConfigurator.Generators
             // maces
             new ItemTemplatePreset()
             {
+                ItemNamePlaceholder = "Булава",
                 ItemCondStat = CommonTemplates.ItemCondAtr_Str,
                 WeaponDamageType = "dam_blunt",
                 ItemType = "item_axe",
@@ -67,6 +72,7 @@ namespace MagicBalanceConfigurator.Generators
             // rapiers
             new ItemTemplatePreset()
             {
+                ItemNamePlaceholder = "Шпага",
                 ItemCondStat = CommonTemplates.ItemCondAtr_Agi,
                 WeaponDamageType = "dam_edge",
                 ItemType = "item_swd",

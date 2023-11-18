@@ -25,6 +25,7 @@ namespace MagicBalanceConfigurator.Generators
             // armor mana
             new ItemTemplatePreset()
             {
+                ItemNamePlaceholder = "Роба",
                 ItemCondStat = CommonTemplates.ItemCondAtr_Mana,
                 Visuals = new string[] { "ItAr_VLK_L.3DS", "ItAr_VLK_M.3DS", "ItAr_VLK_H.3DS", "ItAr_Alch.3DS", "ItAr_Governor.3DS",
                     "ItAr_Nov_L.3ds", "ItAr_NDW_L.3ds", "ItAr_NDM_L.3ds", "ItAr_Uniform_L.3DS" },

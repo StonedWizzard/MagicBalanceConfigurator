@@ -1,4 +1,6 @@
-﻿namespace MagicBalanceConfigurator.Generators
+﻿using System.Linq;
+
+namespace MagicBalanceConfigurator.Generators
 {
     public class Aml_T3_Generator : BaseGenerator
     {
@@ -13,9 +15,8 @@
             ModPower = 4;
             ItemsPrice = 2500;
             SetModsCountRange(3 , 4);
+            ItemVisuals = CommonTemplates.AmuletVisuals;
         }
-
-        protected override string GetItemVisual() => CommonTemplates.AmuletVisuals.GetRandomElement();
 
         public override string GetTemplate() => CommonTemplates.AmuletTemplate;
     }

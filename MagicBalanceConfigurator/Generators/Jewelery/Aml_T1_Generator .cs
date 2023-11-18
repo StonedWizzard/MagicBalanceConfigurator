@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Linq;
+using System.Windows.Forms;
 
 namespace MagicBalanceConfigurator.Generators
 {
@@ -15,9 +16,8 @@ namespace MagicBalanceConfigurator.Generators
             ModPower = 2;
             ItemsPrice = 1000;
             SetModsCountRange(1, 2);
+            ItemVisuals = CommonTemplates.AmuletVisuals;
         }
-
-        protected override string GetItemVisual() => CommonTemplates.AmuletVisuals.GetRandomElement();
 
         public override string GetTemplate() => CommonTemplates.AmuletTemplate;
 

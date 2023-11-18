@@ -1,5 +1,6 @@
 ﻿using MagicBalanceConfigurator.Configs;
 using MagicBalanceConfigurator.Generators;
+using Newtonsoft.Json.Linq;
 using System;
 using System.ComponentModel;
 using System.Globalization;
@@ -86,6 +87,7 @@ namespace MagicBalanceConfigurator
             GenerateBtn.Enabled = !IsRandUiBlocked;
             ItemPriceRangeBox.Enabled = !IsRandUiBlocked;
             ItemsCountBox.Enabled = !IsRandUiBlocked;
+            EnableColorfullPotionsBox.Enabled = !IsRandUiBlocked;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -150,6 +152,7 @@ namespace MagicBalanceConfigurator
         private void GenerateBtn_Click(object sender, EventArgs e)
         {
             ConsoleTextBox.Clear();
+            RandomController.SaveGeneratorsConfigs();
             RandomController.StartGeneration();
         }
 
@@ -179,59 +182,86 @@ namespace MagicBalanceConfigurator
         {
             string schemaName = GeneratorDataGrid.Rows[e.RowIndex].Cells[1].Value.ToString();
             var generator = RandomController.GetGenerator(schemaName);
+            bool saveRequired = false;
 
             if (GeneratorDataGrid.Columns[e.ColumnIndex].Name == "IsActiveColumn")
-                e.Value = TrySetValue(e.Value, generator.IsActive, () => {
+                e.Value = TrySetValue(e.Value, generator.IsActive, () => 
+                {
+                    var valBefore = generator.IsActive;
                     generator.IsActive = Convert.ToBoolean(e.Value);
+                    saveRequired = valBefore != generator.IsActive;
                     return generator.IsActive;
                 });
 
             else if (GeneratorDataGrid.Columns[e.ColumnIndex].Name == "QuantityColumn")
-                e.Value = TrySetValue(e.Value, generator.ItemsCount, () => {
+                e.Value = TrySetValue(e.Value, generator.ItemsCount, () => 
+                {
+                    var valBefore = generator.ItemsCount;
                     generator.ItemsCount = Convert.ToInt32(e.Value);
+                    saveRequired = valBefore != generator.ItemsCount;
                     return generator.ItemsCount;
                 });
 
             else if (GeneratorDataGrid.Columns[e.ColumnIndex].Name == "PriceColumn")
-                e.Value = TrySetValue(e.Value, generator.ItemsPrice, () => {
+                e.Value = TrySetValue(e.Value, generator.ItemsPrice, () => 
+                {
+                    var valBefore = generator.ItemsPrice;
                     generator.ItemsPrice = Convert.ToInt32(e.Value);
+                    saveRequired = valBefore != generator.ItemsPrice;
                     return generator.ItemsPrice;
                 });
 
             else if (GeneratorDataGrid.Columns[e.ColumnIndex].Name == "PowerColumn")
                 e.Value = TrySetValue(e.Value, generator.ModPower, () =>
                 {
+                    var valBefore = generator.ModPower;
                     generator.ModPower = Convert.ToDouble(e.Value);
+                    saveRequired = valBefore != generator.ModPower;
                     return generator.ModPower;
                 });
 
             else if (GeneratorDataGrid.Columns[e.ColumnIndex].Name == "ItemNameColumn")
-                e.Value = TrySetValue(e.Value, generator.IsActive, () => {
+                e.Value = TrySetValue(e.Value, generator.ItemName, () => 
+                {
+                    var valBefore = generator.ItemName;
                     generator.ItemName = Convert.ToString(e.Value);
+                    saveRequired = valBefore != generator.ItemName;
                     return generator.ItemName;
                 });
 
             else if (GeneratorDataGrid.Columns[e.ColumnIndex].Name == "UseUniqNameColumn")
-                e.Value = TrySetValue(e.Value, generator.IsActive, () => {
+                e.Value = TrySetValue(e.Value, generator.UseUniqName, () => 
+                {
+                    var valBefore = generator.UseUniqName;
                     generator.UseUniqName = Convert.ToBoolean(e.Value);
+                    saveRequired = valBefore != generator.UseUniqName;
                     return generator.UseUniqName;
                 });
 
             else if (GeneratorDataGrid.Columns[e.ColumnIndex].Name == "SeedColumn")
-                e.Value = TrySetValue(e.Value, generator.Seed, () => {
+                e.Value = TrySetValue(e.Value, generator.Seed, () => 
+                {
+                    var valBefore = generator.Seed;
                     generator.Seed = Convert.ToInt32(e.Value);
+                    saveRequired = valBefore != generator.Seed;
                     return generator.Seed;
                 });
 
             else if (GeneratorDataGrid.Columns[e.ColumnIndex].Name == "ModsMaxColumn")
-                e.Value = TrySetValue(e.Value, generator.ModsCountMax, () => {
+                e.Value = TrySetValue(e.Value, generator.ModsCountMax, () => 
+                {
+                    var valBefore = generator.ModsCountMax;
                     generator.ModsCountMax = Convert.ToInt32(e.Value);
+                    saveRequired = valBefore != generator.ModsCountMax;
                     return generator.ModsCountMax;
                 });
 
             else if (GeneratorDataGrid.Columns[e.ColumnIndex].Name == "ModsMinColumn")
-                e.Value = TrySetValue(e.Value, generator.ModsCountMin, () => {
+                e.Value = TrySetValue(e.Value, generator.ModsCountMin, () => 
+                {
+                    var valBefore = generator.ModsCountMin;
                     generator.ModsCountMin = Convert.ToInt32(e.Value);
+                    saveRequired = valBefore != generator.ModsCountMin;
                     return generator.ModsCountMin;
                 });
 
@@ -239,8 +269,11 @@ namespace MagicBalanceConfigurator
             if (baseItemGenerator != null)
             {
                 if (GeneratorDataGrid.Columns[e.ColumnIndex].Name == "CondPower")
-                    e.Value = TrySetValue(e.Value, baseItemGenerator.ItemCondMultiplier, () => {
+                    e.Value = TrySetValue(e.Value, baseItemGenerator.ItemCondMultiplier, () => 
+                    {
+                        var valBefore = baseItemGenerator.ItemCondMultiplier;
                         baseItemGenerator.ItemCondMultiplier = Convert.ToDouble(e.Value);
+                        saveRequired = valBefore != baseItemGenerator.ItemCondMultiplier;
                         return baseItemGenerator.ItemCondMultiplier;
                     });
             }
@@ -249,13 +282,19 @@ namespace MagicBalanceConfigurator
             if (baseWeaponGenerator != null)
             {
                 if (GeneratorDataGrid.Columns[e.ColumnIndex].Name == "DamagePower")
-                    e.Value = TrySetValue(e.Value, baseWeaponGenerator.WeaponDamageMult, () => {
+                    e.Value = TrySetValue(e.Value, baseWeaponGenerator.WeaponDamageMult, () => 
+                    {
+                        var valBefore = baseWeaponGenerator.WeaponDamageMult;
                         baseWeaponGenerator.WeaponDamageMult = Convert.ToDouble(e.Value);
+                        saveRequired = valBefore != baseWeaponGenerator.WeaponDamageMult;
                         return baseWeaponGenerator.WeaponDamageMult;
                     });
                 else if (GeneratorDataGrid.Columns[e.ColumnIndex].Name == "RangePower")
-                    e.Value = TrySetValue(e.Value, baseWeaponGenerator.WeaponRangeMult, () => {
+                    e.Value = TrySetValue(e.Value, baseWeaponGenerator.WeaponRangeMult, () => 
+                    {
+                        var valBefore = baseWeaponGenerator.WeaponRangeMult;
                         baseWeaponGenerator.WeaponRangeMult = Convert.ToDouble(e.Value);
+                        saveRequired = valBefore != baseWeaponGenerator.WeaponRangeMult;
                         return baseWeaponGenerator.WeaponRangeMult;
                     });
             }
@@ -264,8 +303,11 @@ namespace MagicBalanceConfigurator
             if (baseArmorGenerator != null)
             {
                 if (GeneratorDataGrid.Columns[e.ColumnIndex].Name == "ProtPower")
-                    e.Value = TrySetValue(e.Value, baseArmorGenerator.ArmorProtectionMult, () => {
+                    e.Value = TrySetValue(e.Value, baseArmorGenerator.ArmorProtectionMult, () => 
+                    {
+                        var valBefore = baseArmorGenerator.ArmorProtectionMult;
                         baseArmorGenerator.ArmorProtectionMult = Convert.ToDouble(e.Value);
+                        saveRequired = valBefore != baseArmorGenerator.ArmorProtectionMult;
                         return baseArmorGenerator.ArmorProtectionMult;
                     });
             }
@@ -274,12 +316,17 @@ namespace MagicBalanceConfigurator
             if(basePotionGenerator != null)
             {
                 if (GeneratorDataGrid.Columns[e.ColumnIndex].Name == "PotionDurationPower")
-                    e.Value = TrySetValue(e.Value, basePotionGenerator.PotionDurationMult, () => {
+                    e.Value = TrySetValue(e.Value, basePotionGenerator.PotionDurationMult, () => 
+                    {
+                        var valBefore = basePotionGenerator.PotionDurationMult;
                         basePotionGenerator.PotionDurationMult = Convert.ToDouble(e.Value);
+                        saveRequired = valBefore != basePotionGenerator.PotionDurationMult;
                         return basePotionGenerator.PotionDurationMult;
                     });
-                
             }
+
+            if (saveRequired)
+                RandomController.SaveGeneratorsConfigs();
         }
         private void PackagesGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
@@ -469,7 +516,11 @@ namespace MagicBalanceConfigurator
         }
 
         private void ItemsCountBox_ValueChanged(object sender, EventArgs e)
-        { RandomController.SetItemsCount((int)ItemsCountBox.Value); UpdateRandomList(); }
+        { 
+            RandomController.SetItemsCount((int)ItemsCountBox.Value); 
+            UpdateRandomList(); 
+            RandomController.SaveGeneratorsConfigs();
+        }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) => System.Diagnostics.Process.Start(Consts.DonationLink1);
 
@@ -509,6 +560,11 @@ namespace MagicBalanceConfigurator
         {
             Clipboard.SetText("3HZFxPqyJnrNLSw7L8hJt9A2hZJjGgdGJe");
             MessageBox.Show("Adress copied to clipboard!");
+        }
+
+        private void EnableColorfullPotionsBox_CheckedChanged(object sender, EventArgs e)
+        {
+            RandomController.EnableColorfullPotions = EnableColorfullPotionsBox.Checked;
         }
     }
 }

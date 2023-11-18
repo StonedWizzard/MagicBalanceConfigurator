@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MagicBalanceConfigurator.Generators.SerealizebleGenerators;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,8 +8,8 @@ namespace MagicBalanceConfigurator.Generators
 {
     public abstract class BaseWeaponGenerator : BaseItemGenerator
     {
-        protected const int MaxWeaponDamage = 500;
-        protected const int MaxWeaponRange = 200;
+        protected const int MaxWeaponDamage = 1000;
+        protected const int MaxWeaponRange = 250;
 
         public double WeaponDamageMult { get; set; }
         public double WeaponRangeMult { get; set; }
@@ -171,6 +172,28 @@ namespace MagicBalanceConfigurator.Generators
                     result = result | mod.ModDataFlag;
             }
             return result;
+        }
+
+        public override GeneratorConfig GetGeneratorConfig()
+        {
+            var result = base.GetGeneratorConfig();
+            result.WeaponDamageMult = WeaponDamageMult;
+            result.WeaponRangeMult = WeaponRangeMult;
+            result.MinWeaponDamageValue = MinWeaponDamageValue;
+            result.MaxWeaponDamageValue = MaxWeaponDamageValue;
+            result.MaxWeaponRangeValue = MaxWeaponRangeValue;
+            result.MinWeaponRangeValue = MinWeaponRangeValue;
+            result.ProhibitedDamageTypes = ProhibitedDamageTypes;
+            return result;
+        }
+        public override void ApplyGeneratorConfig(GeneratorConfig generatorConfig)
+        {
+            base.ApplyGeneratorConfig(generatorConfig);
+            WeaponDamageMult = generatorConfig.WeaponDamageMult;
+            WeaponRangeMult = generatorConfig.WeaponRangeMult;
+            SetWeaponDamageRange(generatorConfig.MinWeaponDamageValue, generatorConfig.MaxWeaponDamageValue);
+            SetWeaponRangeRange(generatorConfig.MinWeaponRangeValue, generatorConfig.MaxWeaponRangeValue);
+            ProhibitedDamageTypes = generatorConfig.ProhibitedDamageTypes == null ? new List<string>() : generatorConfig.ProhibitedDamageTypes;
         }
 
         private class DamageInfo

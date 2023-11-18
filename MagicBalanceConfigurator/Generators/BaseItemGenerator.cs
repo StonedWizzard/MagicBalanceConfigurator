@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MagicBalanceConfigurator.Generators.SerealizebleGenerators;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -137,7 +139,7 @@ namespace MagicBalanceConfigurator.Generators
             if (atr == CommonTemplates.ItemCondAtr_Stamina)
                 mult = 0.3;
             else if (atr == CommonTemplates.ItemCondAtr_Mana)
-                mult += 4;
+                mult += 2;
             else if (atr == CommonTemplates.ItemCondAtr_Hp)
                 mult += 6;
             else if (atr == CommonTemplates.ItemCondAtr_Bow)
@@ -164,11 +166,80 @@ namespace MagicBalanceConfigurator.Generators
 
         protected override string GetItemVisual() => $"\"{CurrentItemPreset.Visuals.GetRandomElement()}\"";
         protected virtual string GetItemVisualChange() => $"\"{CurrentItemPreset.VisualChanges?.GetRandomElement()}\"";
+        protected override string GetItemName()
+        {
+            if (!String.IsNullOrEmpty(CurrentItemPreset.ItemNamePlaceholder))
+                return CurrentItemPreset.ItemNamePlaceholder;
+            return base.GetItemName();
+        }
+
+        public override GeneratorConfig GetGeneratorConfig()
+        {
+            var result = base.GetGeneratorConfig();
+            result.ItemTemplates = ItemTemplatePresets.
+                ConvertAll(new Converter<ItemTemplatePreset, ItemTemplateConfigs>(ItemTemplatePresetToConfigs)).ToList();
+            result.ItemCondMultiplier = ItemCondMultiplier;
+            return result;
+        }
+        public override void ApplyGeneratorConfig(GeneratorConfig generatorConfig)
+        {
+            base.ApplyGeneratorConfig(generatorConfig);
+            ItemTemplatePresets = generatorConfig.ItemTemplates == null ? new List<ItemTemplatePreset>() :
+                generatorConfig.ItemTemplates.ConvertAll(new Converter<ItemTemplateConfigs, ItemTemplatePreset>(ItemTemplateConfigsToPreset)).ToList();
+            ItemCondMultiplier = generatorConfig.ItemCondMultiplier;
+        }
+        protected static ItemTemplateConfigs ItemTemplatePresetToConfigs(ItemTemplatePreset preset)
+        {
+            return new ItemTemplateConfigs()
+            {
+                AltOnEquipFunc = preset.AltOnEquipFunc,
+                AltOnUnEquipFunc = preset.AltOnUnEquipFunc,
+                ExtraConditions = preset.ExtraConditions,
+                ItemCondStat = preset.ItemCondStat,
+                ItemType = preset.ItemType,
+                ProtBluntMult = preset.ProtBluntMult,
+                ProtEdgeMult = preset.ProtEdgeMult,
+                ProtFireMult = preset.ProtFireMult,
+                ProtFlyMult = preset.ProtFlyMult,
+                ProtMagicMult = preset.ProtMagicMult,
+                ProtPointMult = preset.ProtPointMult,
+                SpecialSection = preset.SpecialSection,
+                VisualChanges = preset.VisualChanges,
+                Visuals = preset.Visuals,
+                WeaponDamageType = preset.WeaponDamageType,
+                WeaponExtraRange = preset.WeaponExtraRange,
+                ItemNamePlaceholder = preset.ItemNamePlaceholder,
+            };
+        }
+        protected static ItemTemplatePreset ItemTemplateConfigsToPreset(ItemTemplateConfigs config)
+        {
+            return new ItemTemplatePreset()
+            {
+                AltOnEquipFunc = config.AltOnEquipFunc,
+                AltOnUnEquipFunc = config.AltOnUnEquipFunc,
+                ExtraConditions = config.ExtraConditions,
+                ItemCondStat = config.ItemCondStat,
+                ItemType = config.ItemType,
+                ProtBluntMult = config.ProtBluntMult,
+                ProtEdgeMult = config.ProtEdgeMult,
+                ProtFireMult = config.ProtFireMult,
+                ProtFlyMult = config.ProtFlyMult,
+                ProtMagicMult = config.ProtMagicMult,
+                ProtPointMult = config.ProtPointMult,
+                SpecialSection = config.SpecialSection,
+                VisualChanges = config.VisualChanges,
+                Visuals = config.Visuals,
+                WeaponDamageType = config.WeaponDamageType,
+                WeaponExtraRange = config.WeaponExtraRange,
+                ItemNamePlaceholder = config.ItemNamePlaceholder,
+            };
+        }
 
         protected virtual ItemTemplatePreset GetItemTemplatePreset() => (ItemTemplatePreset)ItemTemplatePresets.GetRandomObj();
         protected abstract List<ItemTemplatePreset> BuildItemTemplatePresets();
         protected class ItemTemplatePreset
         {
+            public string ItemNamePlaceholder { get; set; }
             public string[] Visuals { get; set; } = new string[] { };
             public string[] VisualChanges { get; set; } = new string[] { };
             public string[] ExtraConditions { get; set; } = new string[] { };

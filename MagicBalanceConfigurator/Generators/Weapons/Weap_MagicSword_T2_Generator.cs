@@ -18,6 +18,7 @@ namespace MagicBalanceConfigurator.Generators
             SetWeaponRangeRange(50, 80);
             SetItemCondRange(75, 150);
             SetModsCountRange(3, 4);
+            ProhibitedMods = new List<int> { 226, 228, 229 };
         }
 
         protected override List<ItemTemplatePreset> BuildItemTemplatePresets() => new List<ItemTemplatePreset>()
@@ -25,6 +26,7 @@ namespace MagicBalanceConfigurator.Generators
             // magic swords
             new ItemTemplatePreset()
             {
+                ItemNamePlaceholder = "Меч",
                 ItemCondStat = CommonTemplates.ItemCondAtr_Mana,
                 WeaponDamageType = "dam_magic",
                 ItemType = "item_swd",
@@ -33,6 +35,7 @@ namespace MagicBalanceConfigurator.Generators
             },
             new ItemTemplatePreset()
             {
+                ItemNamePlaceholder = "Меч",
                 ItemCondStat = CommonTemplates.ItemCondAtr_Mana,
                 WeaponDamageType = "dam_fire",
                 ItemType = "item_swd",

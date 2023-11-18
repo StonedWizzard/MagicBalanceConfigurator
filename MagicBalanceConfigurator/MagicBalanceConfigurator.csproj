@@ -24,7 +24,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationVersion>1.2.0.%2a</ApplicationVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -105,6 +105,10 @@
     <Compile Include="Generators\Armors\Armor_Shield_T3_Generator.cs" />
     <Compile Include="Generators\Armors\Armor_Shield_T2_Generator.cs" />
     <Compile Include="Generators\Armors\Armor__Helm_T1_Generator.cs" />
+    <Compile Include="Generators\SerealizebleGenerators\GeneratorConfig.cs" />
+    <Compile Include="Generators\SerealizebleGenerators\GeneratorConfigsBundle.cs" />
+    <Compile Include="Generators\SerealizebleGenerators\ISerealizebleGenerator.cs" />
+    <Compile Include="Generators\SerealizebleGenerators\ItemTemplateConfigs.cs" />
     <Compile Include="Generators\Weapons\Weap_1h_T4_Generator .cs" />
     <Compile Include="Generators\Weapons\Weap_1h_T3_Generator .cs" />
     <Compile Include="Generators\Weapons\Weap_1h_T2_Generator .cs" />

@@ -90,6 +90,22 @@ namespace MagicBalanceConfigurator.Generators
             "\"MMB_VioletCaraf.3ds\""
         };
 
+        public readonly static string[] ColorfullPotions = new[]
+        {
+            "\"MMB_RoseCaraf.3ds\"",
+            "\"MMB_VioletCaraf.3ds\"",
+            "\"MMB_LilaCaraf.3ds\"",
+            "\"MMB_RoseAlchemy.3ds\"",
+            "\"MMB_VioletAlchemy.3ds\"",
+            "\"MMB_LilaAlchemy.3ds\"",
+            "\"MMB_LilaSphere.3ds\"",
+            "\"MMB_RoseSphere.3ds\"",
+            "\"MMB_VioletSphere.3ds\"",
+            "\"MMB_LilaVino.3ds\"",
+            "\"MMB_RoseVino.3ds\"",
+            "\"MMB_VioletVino.3ds\""
+        };
+
         public const string Amulet_IdPrefix = "itam_stext_rnd_";
         public const string Ring_IdPrefix = "itri_stext_rnd_";
         public const string Belt_IdPrefix = "itbe_stext_rnd_";
@@ -204,7 +220,7 @@ namespace MagicBalanceConfigurator.Generators
 };";
 
         public const string EquipInfoTemplate = "ai_printbonus(concatstrings([EquipNameStr], inttostring([Value])))";
-
+        public const string InvScaleTemplate = "inv_zbias = 150;";
 
         public const string CrosbowTempalte = @"
 instance [IdPrefix][Id](c_item) 
@@ -382,6 +398,7 @@ func void unequip_[IdPrefix][Id]()
     text[5] = name_value;
     count[5] = value;
     inv_animate = 1;
+    [SpecialSection]
 };
 func void use[IdPrefix][Id]() 
 {

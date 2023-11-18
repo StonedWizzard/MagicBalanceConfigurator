@@ -18,8 +18,7 @@ namespace MagicBalanceConfigurator.Generators
             ItemsPrice = 500;
             SetDurationRange(60, 180);
             SetModsCountRange(1, 2);
+            ItemVisuals = CommonTemplates.PoitionsT1Visuals;
         }
-
-        protected override string GetItemVisual() => CommonTemplates.PoitionsT1Visuals.GetRandomElement();
     }
 }

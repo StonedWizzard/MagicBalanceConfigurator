@@ -12,6 +12,8 @@ namespace MagicBalanceConfigurator
 
         public const string AppConfigsPath = "StExt_MagicBalanceConfigs.json";
         public const string ItemModsConfigsPath = "StExt_ItemsModsConfigs.json";
+        public const string GeneratorsConfigsPath = "StExt_GeneratorsConfigs.json";
+
         public const string PackagesDir = "StExt Packages";
         public const string PackageInfoFile = "Package.json";
         public const string RandomItemsPackageDir = "StExtMod - RandItemPack";

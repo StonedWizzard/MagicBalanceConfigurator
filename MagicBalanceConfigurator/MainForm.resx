@@ -117,1275 +117,1798 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="SeedColumn.HeaderText" xml:space="preserve">
-    <value>Seed</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="CleanUpAutorunBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
   </data>
-  <data name="&gt;&gt;ModConfigsTextBox.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="CleanUpAutorunBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="GenerateBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 37</value>
+  <data name="CleanUpAutorunBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="linkLabel2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>562, 28</value>
-  </data>
-  <data name="linkLabel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>566, 20</value>
-  </data>
-  <data name="&gt;&gt;SelectBackupArchBtn.Parent" xml:space="preserve">
-    <value>InstallPage</value>
+  <data name="CleanUpAutorunBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="CleanUpAutorunBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 282</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="PackagesGridView.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="SeedColumn.Width" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <data name="label7.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="ItemNamesBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>455, 297</value>
-  </data>
-  <data name="PowerColumn.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="label10.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="linkLabel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>566, 23</value>
-  </data>
-  <data name="label8.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="ItemNameColumn.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="label8.Text" xml:space="preserve">
-    <value>Just in case if you want support author and future mod development</value>
-  </data>
-  <data name="GeneratorDataGrid.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 5</value>
-  </data>
-  <data name="&gt;&gt;IsPackageEnabledColumn.Name" xml:space="preserve">
-    <value>IsPackageEnabledColumn</value>
-  </data>
-  <data name="RunPatchBtn.Text" xml:space="preserve">
-    <value>Compile Mods ⏵</value>
-  </data>
-  <data name="&gt;&gt;PackageListUpdater.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ItemsCountBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.2pt</value>
-  </data>
-  <data name="&gt;&gt;ItemModConfigsBtn.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="GeneratorDataGrid.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="PackageNameColumn.Width" type="System.Int32, mscorlib">
-    <value>200</value>
-  </data>
-  <data name="ItemModConfigsBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="InstallPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="ItemModConfigsBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="&gt;&gt;VdfsArchiveBox.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="linkLabel1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="InstallPackagesBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="LanguageSelectBox.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="OutputFilesCodepageBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="ModConfigsTextBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
-  </data>
-  <data name="RunPatchBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="&gt;&gt;AppConfigsPage.Name" xml:space="preserve">
-    <value>AppConfigsPage</value>
-  </data>
-  <data name="DamagePower.Width" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <data name="GenerateBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>419, 388</value>
-  </data>
-  <data name="ConfigPresetsBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;UseUniqNameColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ItemNamesBtn.Parent" xml:space="preserve">
-    <value>RandomPage</value>
-  </data>
-  <data name="IsActiveColumn.HeaderText" xml:space="preserve">
-    <value>IsActive</value>
-  </data>
-  <data name="CleanInstallBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
-  </data>
-  <data name="GamePathTextBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.2pt</value>
-  </data>
-  <data name="linkLabel2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="label5.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
-  </data>
-  <data name="ConfigPresetsBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>444, 25</value>
-  </data>
-  <data name="&gt;&gt;GeneratorDataGrid.Name" xml:space="preserve">
-    <value>GeneratorDataGrid</value>
-  </data>
-  <data name="&gt;&gt;DamagePower.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ModConfigsTextBox.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;linkLabel2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="SetGothicDirBtn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.2pt</value>
-  </data>
-  <data name="LanguageSelectBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.2pt</value>
-  </data>
-  <data name="&gt;&gt;button1.Name" xml:space="preserve">
-    <value>button1</value>
-  </data>
-  <data name="&gt;&gt;CondPower.Name" xml:space="preserve">
-    <value>CondPower</value>
-  </data>
-  <data name="&gt;&gt;RunPatchBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="PackageNameColumn.HeaderText" xml:space="preserve">
-    <value>Name</value>
-  </data>
-  <data name="&gt;&gt;ItemsCountBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>566, 20</value>
-  </data>
-  <data name="GenerationProgressBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="LanguageSelectBox.Items1" xml:space="preserve">
-    <value>Rus</value>
-  </data>
-  <data name="ConsoleTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>410, 98</value>
-  </data>
-  <data name="&gt;&gt;DirBrowserDialog.Name" xml:space="preserve">
-    <value>DirBrowserDialog</value>
-  </data>
-  <data name="&gt;&gt;ItemPriceRangeBox.Parent" xml:space="preserve">
-    <value>RandomPage</value>
-  </data>
-  <data name="&gt;&gt;ModConfigsPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ItemNameColumn.HeaderText" xml:space="preserve">
-    <value>Item Name</value>
-  </data>
-  <data name="ItemPriceRangeBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="PotionDurationPower.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;OutputFilesCodepageBox.Parent" xml:space="preserve">
-    <value>AppConfigsPage</value>
-  </data>
-  <data name="&gt;&gt;PotionDurationPower.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="TabsPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;PackageDescriptionColumn.Name" xml:space="preserve">
-    <value>PackageDescriptionColumn</value>
-  </data>
-  <data name="VdfsArchiveBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.2pt</value>
-  </data>
-  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>566, 45</value>
-  </data>
-  <data name="LoadOrderColumn.MinimumWidth" type="System.Int32, mscorlib">
-    <value>40</value>
-  </data>
-  <data name="OutputFilesCodepageBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>186, 25</value>
-  </data>
-  <data name="&gt;&gt;RunPatchBtn.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;QuantityColumn.Name" xml:space="preserve">
-    <value>QuantityColumn</value>
-  </data>
-  <data name="ItemsCountBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 45</value>
-  </data>
-  <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="GenerateBtn.Text" xml:space="preserve">
-    <value>Randomize!</value>
-  </data>
-  <data name="label5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="&gt;&gt;RangePower.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="CleanUpAutorunBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>298, 22</value>
   </data>
-  <data name="button1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="TabsPanel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.2pt</value>
-  </data>
-  <data name="linkLabel3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 8, 0</value>
-  </data>
-  <data name="linkLabel4.Text" xml:space="preserve">
-    <value>WMZ: Z756674559775</value>
-  </data>
-  <data name="&gt;&gt;ProtPower.Name" xml:space="preserve">
-    <value>ProtPower</value>
-  </data>
-  <data name="&gt;&gt;SetGothicDirBtn.Name" xml:space="preserve">
-    <value>SetGothicDirBtn</value>
-  </data>
-  <data name="GeneratorDataGrid.RowHeadersWidth" type="System.Int32, mscorlib">
-    <value>51</value>
-  </data>
-  <data name="&gt;&gt;TabsPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label10.Name" xml:space="preserve">
-    <value>label10</value>
-  </data>
-  <data name="SelectBackupArchBtn.Text" xml:space="preserve">
-    <value>Select archive...</value>
-  </data>
-  <data name="RandomPage.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="CleanInstallBox.Text" xml:space="preserve">
-    <value>Enable clear Compilation</value>
-  </data>
-  <data name="&gt;&gt;label7.Name" xml:space="preserve">
-    <value>label7</value>
-  </data>
-  <data name="&gt;&gt;ProtPower.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;linkLabel1.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;linkLabel4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="DamagePower.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="linkLabel3.Text" xml:space="preserve">
-    <value>https://send.monobank.ua/jar/AWepYzH61P</value>
-  </data>
-  <data name="AppConfigsPage.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;GeneratorDataGrid.ZOrder" xml:space="preserve">
+  <data name="CleanUpAutorunBox.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="SetGothicDirBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="&gt;&gt;label9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
-    <value>AppConfigsPage</value>
-  </data>
-  <data name="CondPower.Width" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <data name="&gt;&gt;label7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ProgressLabel.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;PackageVersionColumn.Name" xml:space="preserve">
-    <value>PackageVersionColumn</value>
-  </data>
-  <data name="InstallPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="&gt;&gt;ItemNamesBtn.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 17</value>
-  </data>
-  <data name="&gt;&gt;ModsMinColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ProgressLabel.Text" xml:space="preserve">
-    <value>0 / 0</value>
-  </data>
-  <data name="&gt;&gt;LoadOrderColumn.Name" xml:space="preserve">
-    <value>LoadOrderColumn</value>
-  </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="linkLabel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left, Right</value>
-  </data>
-  <data name="label6.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="ConfigPresetsBox.Items3" xml:space="preserve">
-    <value>StExtMod - Hell configs</value>
-  </data>
-  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>584, 461</value>
-  </data>
-  <data name="linkLabel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 385</value>
-  </data>
-  <data name="ItemModConfigsBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;GamePathTextBox.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;linkLabel4.Name" xml:space="preserve">
-    <value>linkLabel4</value>
-  </data>
-  <data name="RunPatchBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>261, 389</value>
-  </data>
-  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
-    <value>InstallPage</value>
-  </data>
-  <data name="RandomPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>576, 431</value>
-  </data>
-  <data name="RangePower.HeaderText" xml:space="preserve">
-    <value>Range Power</value>
-  </data>
-  <data name="&gt;&gt;LanguageSelectBox.Name" xml:space="preserve">
-    <value>LanguageSelectBox</value>
-  </data>
-  <data name="ItemsCountBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 23</value>
-  </data>
-  <data name="IsActiveColumn.Width" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <data name="&gt;&gt;GeneratorDataGrid.Parent" xml:space="preserve">
-    <value>RandomPage</value>
-  </data>
-  <data name="LoadOrderColumn.HeaderText" xml:space="preserve">
-    <value>#</value>
-  </data>
-  <data name="IsPackageEnabledColumn.MinimumWidth" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
-  <data name="&gt;&gt;OutputFilesCodepageBox.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label9.Text" xml:space="preserve">
-    <value>Configs preset</value>
-  </data>
-  <data name="&gt;&gt;IsPackageEnabledColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="SelectBackupArchBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="linkLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>566, 23</value>
-  </data>
-  <data name="&gt;&gt;PackageVersionColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;linkLabel3.Parent" xml:space="preserve">
-    <value>AppConfigsPage</value>
-  </data>
-  <data name="linkLabel2.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="GenerationProgressBar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="LanguageSelectBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="&gt;&gt;PackagesGridView.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;FileOpenDialog.Name" xml:space="preserve">
-    <value>FileOpenDialog</value>
-  </data>
-  <data name="ModConfigsTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="ProgressLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>280, 263</value>
-  </data>
-  <data name="ModConfigsTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;UseUniqNameColumn.Name" xml:space="preserve">
-    <value>UseUniqNameColumn</value>
-  </data>
-  <data name="RunPatchBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>307, 41</value>
-  </data>
-  <data name="&gt;&gt;InstallPackagesBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Gothic path</value>
-  </data>
-  <data name="&gt;&gt;PackageDescriptionColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;InstallPackagesBtn.Name" xml:space="preserve">
-    <value>InstallPackagesBtn</value>
-  </data>
-  <data name="PackagesGridView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 5</value>
-  </data>
-  <data name="CleanUpAutorunBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ItemNameColumn.Width" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 18</value>
-  </data>
-  <data name="PackagesGridView.ColumnHeadersHeight" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
-  <data name="&gt;&gt;GenerationProgressBar.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;linkLabel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ModConfigsPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="&gt;&gt;PriceColumn.Name" xml:space="preserve">
-    <value>PriceColumn</value>
-  </data>
-  <data name="&gt;&gt;OutputFilesCodepageBox.Name" xml:space="preserve">
-    <value>OutputFilesCodepageBox</value>
-  </data>
-  <data name="&gt;&gt;AppConfigsPage.Parent" xml:space="preserve">
-    <value>TabsPanel</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 17</value>
-  </data>
-  <data name="&gt;&gt;DirBrowserDialog.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ProtPower.Width" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <data name="ConsoleTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="&gt;&gt;linkLabel3.Name" xml:space="preserve">
-    <value>linkLabel3</value>
-  </data>
-  <data name="&gt;&gt;RandomPage.Name" xml:space="preserve">
-    <value>RandomPage</value>
-  </data>
-  <data name="&gt;&gt;SelectBackupArchBtn.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;PackageNameColumn.Name" xml:space="preserve">
-    <value>PackageNameColumn</value>
-  </data>
-  <data name="linkLabel2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="UseUniqNameColumn.HeaderText" xml:space="preserve">
-    <value>Uniq name</value>
-  </data>
-  <data name="InstallPackagesBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 40</value>
-  </data>
-  <data name="GenerationProgressBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>419, 360</value>
-  </data>
-  <data name="OutputFilesCodepageBox.Items1" xml:space="preserve">
-    <value>Windows-1250</value>
-  </data>
-  <data name="RangePower.Width" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="OutputFilesCodepageBox.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;ItemModConfigsBtn.Parent" xml:space="preserve">
-    <value>RandomPage</value>
-  </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
-    <value>RandomPage</value>
-  </data>
-  <data name="ProgressLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>420, 341</value>
-  </data>
-  <data name="PotionDurationPower.HeaderText" xml:space="preserve">
-    <value>Potion Duration Power</value>
-  </data>
-  <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="SetGothicDirBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="SelectBackupArchBtn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
-  </data>
-  <data name="SelectBackupArchBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 41</value>
-  </data>
-  <data name="InstallPackagesBtn.Text" xml:space="preserve">
-    <value>Install packages</value>
-  </data>
-  <data name="&gt;&gt;label9.Name" xml:space="preserve">
-    <value>label9</value>
-  </data>
-  <data name="&gt;&gt;RangePower.Name" xml:space="preserve">
-    <value>RangePower</value>
-  </data>
-  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;ConsoleTextBox.Name" xml:space="preserve">
-    <value>ConsoleTextBox</value>
-  </data>
-  <data name="ItemModConfigsBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="&gt;&gt;GamePathTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GamePathTextBox.Name" xml:space="preserve">
-    <value>GamePathTextBox</value>
-  </data>
-  <data name="button1.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="ConsoleTextBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.2pt</value>
-  </data>
-  <data name="ConfigPresetsBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>132, 3</value>
-  </data>
-  <data name="&gt;&gt;LanguageSelectBox.Parent" xml:space="preserve">
-    <value>AppConfigsPage</value>
-  </data>
-  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="ModsMaxColumn.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>RandomPage</value>
-  </data>
-  <data name="ModConfigsTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="label9.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="AppConfigsPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 26</value>
-  </data>
-  <data name="ItemModConfigsBtn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
-  </data>
-  <data name="PackageDescriptionColumn.HeaderText" xml:space="preserve">
-    <value>Description</value>
-  </data>
-  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.2pt</value>
-  </data>
-  <data name="&gt;&gt;PowerColumn.Name" xml:space="preserve">
-    <value>PowerColumn</value>
-  </data>
-  <data name="&gt;&gt;ConsoleTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ModConfigsPage.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="PackageDescriptionColumn.Width" type="System.Int32, mscorlib">
-    <value>500</value>
-  </data>
-  <data name="&gt;&gt;linkLabel3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="&gt;&gt;ItemsCountBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="AppConfigsPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 263</value>
-  </data>
-  <data name="label10.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ModsMinColumn.Width" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <data name="&gt;&gt;ItemPriceRangeBox.Name" xml:space="preserve">
-    <value>ItemPriceRangeBox</value>
-  </data>
-  <data name="PackageVersionColumn.MinimumWidth" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
-  <data name="&gt;&gt;InstallPage.Parent" xml:space="preserve">
-    <value>TabsPanel</value>
-  </data>
-  <data name="&gt;&gt;PackageAuthorColumn.Name" xml:space="preserve">
-    <value>PackageAuthorColumn</value>
-  </data>
-  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.2pt</value>
-  </data>
-  <data name="SetGothicDirBtn.Text" xml:space="preserve">
-    <value>...</value>
-  </data>
-  <data name="linkLabel1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 8, 0</value>
-  </data>
-  <data name="linkLabel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;ConfigPresetsBox.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="CleanUpAutorunBox.Text" xml:space="preserve">
+    <value>Cleanup 'Autorun' before installation</value>
   </data>
   <data name="&gt;&gt;CleanUpAutorunBox.Name" xml:space="preserve">
     <value>CleanUpAutorunBox</value>
   </data>
+  <data name="&gt;&gt;CleanUpAutorunBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CleanUpAutorunBox.Parent" xml:space="preserve">
+    <value>InstallPage</value>
+  </data>
+  <data name="&gt;&gt;CleanUpAutorunBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="button1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="button1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>207, 389</value>
+  </data>
   <data name="button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
-  <data name="&gt;&gt;ModConfigsPage.Parent" xml:space="preserve">
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 41</value>
+  </data>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>?</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>InstallPage</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 322</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>340, 63</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>'Clean compilation' allows compile scripts with selected archive from the backup. Without this option used current game archive!</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>InstallPage</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="CleanInstallBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="CleanInstallBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CleanInstallBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
+  </data>
+  <data name="CleanInstallBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>353, 363</value>
+  </data>
+  <data name="CleanInstallBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 22</value>
+  </data>
+  <data name="CleanInstallBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="CleanInstallBox.Text" xml:space="preserve">
+    <value>Enable clear Compilation</value>
+  </data>
+  <data name="&gt;&gt;CleanInstallBox.Name" xml:space="preserve">
+    <value>CleanInstallBox</value>
+  </data>
+  <data name="&gt;&gt;CleanInstallBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CleanInstallBox.Parent" xml:space="preserve">
+    <value>InstallPage</value>
+  </data>
+  <data name="&gt;&gt;CleanInstallBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="SelectBackupArchBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="SelectBackupArchBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="SelectBackupArchBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="SelectBackupArchBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 389</value>
+  </data>
+  <data name="SelectBackupArchBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="SelectBackupArchBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 41</value>
+  </data>
+  <data name="SelectBackupArchBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="SelectBackupArchBtn.Text" xml:space="preserve">
+    <value>Select archive...</value>
+  </data>
+  <data name="&gt;&gt;SelectBackupArchBtn.Name" xml:space="preserve">
+    <value>SelectBackupArchBtn</value>
+  </data>
+  <data name="&gt;&gt;SelectBackupArchBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SelectBackupArchBtn.Parent" xml:space="preserve">
+    <value>InstallPage</value>
+  </data>
+  <data name="&gt;&gt;SelectBackupArchBtn.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="RunPatchBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="RunPatchBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="RunPatchBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RunPatchBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>261, 389</value>
+  </data>
+  <data name="RunPatchBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="RunPatchBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>307, 41</value>
+  </data>
+  <data name="RunPatchBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="RunPatchBtn.Text" xml:space="preserve">
+    <value>Compile Mods ⏵</value>
+  </data>
+  <data name="&gt;&gt;RunPatchBtn.Name" xml:space="preserve">
+    <value>RunPatchBtn</value>
+  </data>
+  <data name="&gt;&gt;RunPatchBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RunPatchBtn.Parent" xml:space="preserve">
+    <value>InstallPage</value>
+  </data>
+  <data name="&gt;&gt;RunPatchBtn.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="InstallPackagesBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="InstallPackagesBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="InstallPackagesBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>353, 286</value>
+  </data>
+  <data name="InstallPackagesBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="InstallPackagesBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 40</value>
+  </data>
+  <data name="InstallPackagesBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="InstallPackagesBtn.Text" xml:space="preserve">
+    <value>Install packages</value>
+  </data>
+  <data name="&gt;&gt;InstallPackagesBtn.Name" xml:space="preserve">
+    <value>InstallPackagesBtn</value>
+  </data>
+  <data name="&gt;&gt;InstallPackagesBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;InstallPackagesBtn.Parent" xml:space="preserve">
+    <value>InstallPage</value>
+  </data>
+  <data name="&gt;&gt;InstallPackagesBtn.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="PackagesGridView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="PackagesGridView.ColumnHeadersHeight" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <metadata name="IsPackageEnabledColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="IsPackageEnabledColumn.HeaderText" xml:space="preserve">
+    <value>IsEnabled</value>
+  </data>
+  <data name="IsPackageEnabledColumn.MinimumWidth" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="IsPackageEnabledColumn.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <metadata name="LoadOrderColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="LoadOrderColumn.HeaderText" xml:space="preserve">
+    <value>#</value>
+  </data>
+  <data name="LoadOrderColumn.MinimumWidth" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="LoadOrderColumn.Width" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <metadata name="PackageNameColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="PackageNameColumn.HeaderText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="PackageNameColumn.MinimumWidth" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="PackageNameColumn.Width" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <metadata name="PackageVersionColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="PackageVersionColumn.HeaderText" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="PackageVersionColumn.MinimumWidth" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="PackageVersionColumn.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <metadata name="PackageAuthorColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="PackageAuthorColumn.HeaderText" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="PackageAuthorColumn.MinimumWidth" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="PackageAuthorColumn.Width" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
+  <metadata name="PackageDescriptionColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="PackageDescriptionColumn.HeaderText" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="PackageDescriptionColumn.MinimumWidth" type="System.Int32, mscorlib">
+    <value>400</value>
+  </data>
+  <data name="PackageDescriptionColumn.Width" type="System.Int32, mscorlib">
+    <value>500</value>
+  </data>
+  <data name="PackagesGridView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 5</value>
+  </data>
+  <data name="PackagesGridView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="PackagesGridView.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="PackagesGridView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>562, 272</value>
+  </data>
+  <data name="PackagesGridView.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;PackagesGridView.Name" xml:space="preserve">
+    <value>PackagesGridView</value>
+  </data>
+  <data name="&gt;&gt;PackagesGridView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PackagesGridView.Parent" xml:space="preserve">
+    <value>InstallPage</value>
+  </data>
+  <data name="&gt;&gt;PackagesGridView.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="InstallPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="InstallPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="InstallPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="InstallPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>576, 431</value>
+  </data>
+  <data name="InstallPage.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="InstallPage.Text" xml:space="preserve">
+    <value>Installation</value>
+  </data>
+  <data name="&gt;&gt;InstallPage.Name" xml:space="preserve">
+    <value>InstallPage</value>
+  </data>
+  <data name="&gt;&gt;InstallPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;InstallPage.Parent" xml:space="preserve">
     <value>TabsPanel</value>
+  </data>
+  <data name="&gt;&gt;InstallPage.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="EnableColorfullPotionsBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="EnableColorfullPotionsBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 327</value>
+  </data>
+  <data name="EnableColorfullPotionsBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>174, 21</value>
+  </data>
+  <data name="EnableColorfullPotionsBox.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="EnableColorfullPotionsBox.Text" xml:space="preserve">
+    <value>Enable colorfull potions</value>
+  </data>
+  <data name="&gt;&gt;EnableColorfullPotionsBox.Name" xml:space="preserve">
+    <value>EnableColorfullPotionsBox</value>
+  </data>
+  <data name="&gt;&gt;EnableColorfullPotionsBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EnableColorfullPotionsBox.Parent" xml:space="preserve">
+    <value>RandomPage</value>
+  </data>
+  <data name="&gt;&gt;EnableColorfullPotionsBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ItemsCountBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="ItemsCountBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="ItemsCountBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>364, 261</value>
+  </data>
+  <data name="ItemsCountBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="ItemsCountBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 23</value>
+  </data>
+  <data name="ItemsCountBox.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;ItemsCountBox.Name" xml:space="preserve">
+    <value>ItemsCountBox</value>
+  </data>
+  <data name="&gt;&gt;ItemsCountBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ItemsCountBox.Parent" xml:space="preserve">
+    <value>RandomPage</value>
+  </data>
+  <data name="&gt;&gt;ItemsCountBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>280, 263</value>
+  </data>
+  <data name="label5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 17</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Items count</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>RandomPage</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ItemNamesBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="ItemNamesBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="ItemNamesBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ItemNamesBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>455, 297</value>
+  </data>
+  <data name="ItemNamesBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="ItemNamesBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 30</value>
+  </data>
+  <data name="ItemNamesBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="ItemNamesBtn.Text" xml:space="preserve">
+    <value>Edit names</value>
+  </data>
+  <data name="&gt;&gt;ItemNamesBtn.Name" xml:space="preserve">
+    <value>ItemNamesBtn</value>
+  </data>
+  <data name="&gt;&gt;ItemNamesBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ItemNamesBtn.Parent" xml:space="preserve">
+    <value>RandomPage</value>
+  </data>
+  <data name="&gt;&gt;ItemNamesBtn.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="ItemModConfigsBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="ItemModConfigsBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="ItemModConfigsBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ItemModConfigsBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>455, 263</value>
+  </data>
+  <data name="ItemModConfigsBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="ItemModConfigsBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 30</value>
+  </data>
+  <data name="ItemModConfigsBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="ItemModConfigsBtn.Text" xml:space="preserve">
+    <value>Edit mods...</value>
+  </data>
+  <data name="&gt;&gt;ItemModConfigsBtn.Name" xml:space="preserve">
+    <value>ItemModConfigsBtn</value>
+  </data>
+  <data name="&gt;&gt;ItemModConfigsBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ItemModConfigsBtn.Parent" xml:space="preserve">
+    <value>RandomPage</value>
+  </data>
+  <data name="&gt;&gt;ItemModConfigsBtn.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="BuildRandomItemsPackageBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="BuildRandomItemsPackageBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="BuildRandomItemsPackageBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 284</value>
+  </data>
+  <data name="BuildRandomItemsPackageBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="BuildRandomItemsPackageBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>401, 38</value>
+  </data>
+  <data name="BuildRandomItemsPackageBox.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
   </data>
   <data name="BuildRandomItemsPackageBox.Text" xml:space="preserve">
     <value>Build or update 'Magic Balance - RandItems pack' package.
 Otherwise - files write to Gothic Autorun directory.</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PotionDurationPower.Name" xml:space="preserve">
-    <value>PotionDurationPower</value>
-  </data>
-  <data name="&gt;&gt;linkLabel4.Parent" xml:space="preserve">
-    <value>AppConfigsPage</value>
-  </data>
-  <data name="InstallPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>576, 431</value>
-  </data>
-  <data name="&gt;&gt;LanguageSelectBox.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 284</value>
-  </data>
-  <data name="&gt;&gt;TabsPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;linkLabel5.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 6</value>
-  </data>
-  <data name="&gt;&gt;ItemPriceRangeBox.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>AppConfigsPage</value>
-  </data>
-  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="RandomPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="ModConfigsPage.Text" xml:space="preserve">
-    <value>Mod configs</value>
-  </data>
-  <data name="&gt;&gt;ModConfigsTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 17</value>
-  </data>
-  <data name="VdfsArchiveBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>110, 42</value>
-  </data>
-  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 17</value>
-  </data>
-  <data name="CondPower.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="ConsoleTextBox.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;ConsoleTextBox.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="ItemPriceRangeBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>202, 261</value>
-  </data>
-  <data name="&gt;&gt;SetGothicDirBtn.Parent" xml:space="preserve">
-    <value>AppConfigsPage</value>
-  </data>
-  <data name="linkLabel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 8, 0</value>
-  </data>
-  <data name="&gt;&gt;ItemNamesBtn.Name" xml:space="preserve">
-    <value>ItemNamesBtn</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 72</value>
-  </data>
-  <data name="linkLabel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left, Right</value>
-  </data>
-  <data name="LanguageSelectBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 25</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Language</value>
-  </data>
-  <data name="ProgressLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.2pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;ModsMaxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>340, 63</value>
+  <data name="&gt;&gt;BuildRandomItemsPackageBox.Name" xml:space="preserve">
+    <value>BuildRandomItemsPackageBox</value>
   </data>
   <data name="&gt;&gt;BuildRandomItemsPackageBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 322</value>
+  <data name="&gt;&gt;BuildRandomItemsPackageBox.Parent" xml:space="preserve">
+    <value>RandomPage</value>
+  </data>
+  <data name="&gt;&gt;BuildRandomItemsPackageBox.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="ItemPriceRangeBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="ItemPriceRangeBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="ItemPriceRangeBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>202, 261</value>
+  </data>
+  <data name="ItemPriceRangeBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="ItemPriceRangeBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 23</value>
+  </data>
+  <data name="ItemPriceRangeBox.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;ItemPriceRangeBox.Name" xml:space="preserve">
+    <value>ItemPriceRangeBox</value>
+  </data>
+  <data name="&gt;&gt;ItemPriceRangeBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ItemPriceRangeBox.Parent" xml:space="preserve">
+    <value>RandomPage</value>
+  </data>
+  <data name="&gt;&gt;ItemPriceRangeBox.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="label6.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 263</value>
+  </data>
+  <data name="label6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 17</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Item price range modifier (%)</value>
   </data>
   <data name="&gt;&gt;label6.Name" xml:space="preserve">
     <value>label6</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>MainForm</value>
-  </data>
-  <data name="linkLabel5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="&gt;&gt;ItemModConfigsBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;label6.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="SchemaNameColumn.HeaderText" xml:space="preserve">
-    <value>Schema name</value>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>RandomPage</value>
   </data>
-  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 41</value>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
-  <data name="InstallPackagesBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>353, 286</value>
+  <data name="ProgressLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
   </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="ProgressLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt, style=Bold</value>
   </data>
-  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="ProgressLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>420, 341</value>
   </data>
-  <data name="ItemsCountBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>364, 261</value>
+  <data name="ProgressLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
   </data>
-  <data name="&gt;&gt;OutputFilesCodepageBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ProgressLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 18</value>
   </data>
-  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1200, 800</value>
+  <data name="ProgressLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
   </data>
-  <data name="&gt;&gt;PackagesGridView.Name" xml:space="preserve">
-    <value>PackagesGridView</value>
-  </data>
-  <data name="ItemsCountBox.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
-  </data>
-  <data name="ProtPower.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="CleanInstallBox.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;PriceColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="linkLabel3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="PackageVersionColumn.HeaderText" xml:space="preserve">
-    <value>Version</value>
-  </data>
-  <data name="&gt;&gt;VdfsArchiveBox.Parent" xml:space="preserve">
-    <value>AppConfigsPage</value>
-  </data>
-  <data name="&gt;&gt;CleanInstallBox.Name" xml:space="preserve">
-    <value>CleanInstallBox</value>
-  </data>
-  <data name="PowerColumn.Width" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <data name="PackagesGridView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="linkLabel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 8, 0</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>AppConfigsPage</value>
-  </data>
-  <data name="PotionDurationPower.Width" type="System.Int32, mscorlib">
-    <value>125</value>
+  <data name="ProgressLabel.Text" xml:space="preserve">
+    <value>0 / 0</value>
   </data>
   <data name="ProgressLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
-  <data name="CondPower.HeaderText" xml:space="preserve">
-    <value>Cond Power</value>
+  <data name="&gt;&gt;ProgressLabel.Name" xml:space="preserve">
+    <value>ProgressLabel</value>
   </data>
-  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="ConfigPresetsBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+  <data name="&gt;&gt;ProgressLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="TabsPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="label8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="linkLabel1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="InstallPage.Text" xml:space="preserve">
-    <value>Installation</value>
-  </data>
-  <data name="&gt;&gt;ModConfigsPage.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="CleanUpAutorunBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="label10.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="&gt;&gt;GenerationProgressBar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;InstallPackagesBtn.Parent" xml:space="preserve">
-    <value>InstallPage</value>
-  </data>
-  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
-    <value>AppConfigsPage</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>GII New Balance - Magic Balance mod Configurator</value>
-  </data>
-  <data name="BuildRandomItemsPackageBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="linkLabel5.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 8, 0</value>
-  </data>
-  <data name="BuildRandomItemsPackageBox.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>600, 500</value>
-  </data>
-  <data name="&gt;&gt;CleanUpAutorunBox.Parent" xml:space="preserve">
-    <value>InstallPage</value>
-  </data>
-  <data name="AppConfigsPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>576, 431</value>
-  </data>
-  <data name="&gt;&gt;TabsPanel.Name" xml:space="preserve">
-    <value>TabsPanel</value>
-  </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.2pt</value>
-  </data>
-  <data name="ItemNamesBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="&gt;&gt;ModConfigsTextBox.Name" xml:space="preserve">
-    <value>ModConfigsTextBox</value>
-  </data>
-  <data name="RangePower.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;BuildRandomItemsPackageBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;ProgressLabel.Parent" xml:space="preserve">
     <value>RandomPage</value>
   </data>
-  <data name="linkLabel2.Text" xml:space="preserve">
-    <value>https://stoned-wizzard.diaka.ua/donate</value>
+  <data name="&gt;&gt;ProgressLabel.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
-  <data name="&gt;&gt;DamagePower.Name" xml:space="preserve">
-    <value>DamagePower</value>
+  <data name="GeneratorDataGrid.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>AppConfigsPage</value>
+  <metadata name="IsActiveColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="IsActiveColumn.HeaderText" xml:space="preserve">
+    <value>IsActive</value>
   </data>
-  <data name="&gt;&gt;linkLabel1.Parent" xml:space="preserve">
-    <value>AppConfigsPage</value>
+  <data name="IsActiveColumn.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="IsActiveColumn.Width" type="System.Int32, mscorlib">
+    <value>125</value>
   </data>
-  <data name="PriceColumn.HeaderText" xml:space="preserve">
-    <value>Avg price</value>
+  <metadata name="SchemaNameColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="SchemaNameColumn.HeaderText" xml:space="preserve">
+    <value>Schema name</value>
   </data>
-  <data name="&gt;&gt;ModConfigsTextBox.Parent" xml:space="preserve">
-    <value>ModConfigsPage</value>
-  </data>
-  <data name="GeneratorDataGrid.Size" type="System.Drawing.Size, System.Drawing">
-    <value>566, 252</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;ItemModConfigsBtn.Name" xml:space="preserve">
-    <value>ItemModConfigsBtn</value>
-  </data>
-  <data name="OutputFilesCodepageBox.Items" xml:space="preserve">
-    <value>Windows-1251</value>
-  </data>
-  <data name="CleanInstallBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 22</value>
-  </data>
-  <data name="&gt;&gt;GenerateBtn.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="linkLabel1.Text" xml:space="preserve">
-    <value>http://www.stonedwizzard.somee.com/</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+  <data name="SchemaNameColumn.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
   <data name="SchemaNameColumn.Width" type="System.Int32, mscorlib">
     <value>125</value>
   </data>
-  <data name="SetGothicDirBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 23</value>
-  </data>
-  <data name="PackageAuthorColumn.HeaderText" xml:space="preserve">
-    <value>Author</value>
-  </data>
-  <data name="&gt;&gt;ConfigPresetsBox.Parent" xml:space="preserve">
-    <value>ModConfigsPage</value>
-  </data>
-  <data name="GamePathTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="&gt;&gt;PackagesGridView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ConfigPresetsBox.Name" xml:space="preserve">
-    <value>ConfigPresetsBox</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+  <metadata name="QuantityColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <data name="QuantityColumn.HeaderText" xml:space="preserve">
+    <value>Qantitty</value>
   </data>
-  <data name="BuildRandomItemsPackageBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+  <data name="QuantityColumn.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="&gt;&gt;ProgressLabel.Name" xml:space="preserve">
-    <value>ProgressLabel</value>
+  <data name="QuantityColumn.Width" type="System.Int32, mscorlib">
+    <value>125</value>
   </data>
-  <data name="ItemPriceRangeBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
+  <metadata name="ModsMinColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="ModsMinColumn.HeaderText" xml:space="preserve">
+    <value>Min mods</value>
   </data>
-  <data name="&gt;&gt;InstallPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ModsMinColumn.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="GamePathTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="ModsMinColumn.Width" type="System.Int32, mscorlib">
+    <value>125</value>
   </data>
-  <data name="LanguageSelectBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>109, 69</value>
+  <metadata name="ModsMaxColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="ModsMaxColumn.HeaderText" xml:space="preserve">
+    <value>Max mods</value>
   </data>
-  <data name="InstallPackagesBtn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  <data name="ModsMaxColumn.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="&gt;&gt;RandomPage.Parent" xml:space="preserve">
-    <value>TabsPanel</value>
+  <data name="ModsMaxColumn.Width" type="System.Int32, mscorlib">
+    <value>125</value>
   </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
+  <metadata name="PowerColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="PowerColumn.HeaderText" xml:space="preserve">
+    <value>Power</value>
   </data>
-  <data name="ItemNamesBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+  <data name="PowerColumn.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="CleanUpAutorunBox.Text" xml:space="preserve">
-    <value>Cleanup 'Autorun' before installation</value>
+  <data name="PowerColumn.Width" type="System.Int32, mscorlib">
+    <value>125</value>
   </data>
-  <data name="&gt;&gt;SchemaNameColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <metadata name="CondPower.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="CondPower.HeaderText" xml:space="preserve">
+    <value>Cond Power</value>
   </data>
-  <data name="&gt;&gt;SetGothicDirBtn.ZOrder" xml:space="preserve">
-    <value>13</value>
+  <data name="CondPower.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="linkLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 342</value>
+  <data name="CondPower.Width" type="System.Int32, mscorlib">
+    <value>125</value>
   </data>
-  <data name="PackageNameColumn.MinimumWidth" type="System.Int32, mscorlib">
-    <value>200</value>
+  <metadata name="DamagePower.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="DamagePower.HeaderText" xml:space="preserve">
+    <value>Damage Power</value>
   </data>
-  <data name="ConfigPresetsBox.Items" xml:space="preserve">
-    <value>StExtMod - User configs</value>
+  <data name="DamagePower.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="linkLabel4.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 8, 0</value>
+  <data name="DamagePower.Width" type="System.Int32, mscorlib">
+    <value>125</value>
   </data>
-  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <metadata name="RangePower.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="RangePower.HeaderText" xml:space="preserve">
+    <value>Range Power</value>
   </data>
-  <data name="PackagesGridView.RowHeadersWidth" type="System.Int32, mscorlib">
-    <value>51</value>
+  <data name="RangePower.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="linkLabel3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="RangePower.Width" type="System.Int32, mscorlib">
+    <value>125</value>
   </data>
-  <data name="AppConfigsPage.Text" xml:space="preserve">
-    <value>App Configs</value>
+  <metadata name="ProtPower.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="ProtPower.HeaderText" xml:space="preserve">
+    <value>Prot Power</value>
   </data>
-  <data name="&gt;&gt;VdfsArchiveBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ProtPower.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>'Clean compilation' allows compile scripts with selected archive from the backup. Without this option used current game archive!</value>
+  <data name="ProtPower.Width" type="System.Int32, mscorlib">
+    <value>125</value>
   </data>
-  <data name="&gt;&gt;linkLabel5.Name" xml:space="preserve">
-    <value>linkLabel5</value>
+  <metadata name="PotionDurationPower.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="PotionDurationPower.HeaderText" xml:space="preserve">
+    <value>Potion Duration Power</value>
   </data>
-  <data name="&gt;&gt;CondPower.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="PotionDurationPower.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="linkLabel1.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+  <data name="PotionDurationPower.Width" type="System.Int32, mscorlib">
+    <value>125</value>
   </data>
-  <data name="&gt;&gt;SelectBackupArchBtn.Name" xml:space="preserve">
-    <value>SelectBackupArchBtn</value>
+  <metadata name="PriceColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="PriceColumn.HeaderText" xml:space="preserve">
+    <value>Avg price</value>
   </data>
-  <data name="ConsoleTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
+  <data name="PriceColumn.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="&gt;&gt;linkLabel1.Name" xml:space="preserve">
-    <value>linkLabel1</value>
+  <data name="PriceColumn.Width" type="System.Int32, mscorlib">
+    <value>125</value>
   </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 113</value>
+  <metadata name="ItemNameColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="ItemNameColumn.HeaderText" xml:space="preserve">
+    <value>Item Name</value>
   </data>
-  <data name="&gt;&gt;CleanUpAutorunBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ItemNameColumn.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="BuildRandomItemsPackageBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>401, 38</value>
+  <data name="ItemNameColumn.Width" type="System.Int32, mscorlib">
+    <value>125</value>
   </data>
-  <data name="VdfsArchiveBox.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+  <metadata name="UseUniqNameColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="UseUniqNameColumn.HeaderText" xml:space="preserve">
+    <value>Uniq name</value>
   </data>
-  <data name="VdfsArchiveBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>414, 23</value>
+  <data name="UseUniqNameColumn.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="&gt;&gt;IsActiveColumn.Name" xml:space="preserve">
-    <value>IsActiveColumn</value>
+  <data name="UseUniqNameColumn.Width" type="System.Int32, mscorlib">
+    <value>125</value>
   </data>
-  <data name="label5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="ItemPriceRangeBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 23</value>
+  <metadata name="SeedColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="SeedColumn.HeaderText" xml:space="preserve">
+    <value>Seed</value>
   </data>
   <data name="SeedColumn.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
+  <data name="SeedColumn.Width" type="System.Int32, mscorlib">
+    <value>125</value>
+  </data>
+  <data name="GeneratorDataGrid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 5</value>
+  </data>
+  <data name="GeneratorDataGrid.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="GeneratorDataGrid.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="GeneratorDataGrid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>566, 252</value>
+  </data>
+  <data name="GeneratorDataGrid.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;GeneratorDataGrid.Name" xml:space="preserve">
+    <value>GeneratorDataGrid</value>
+  </data>
   <data name="&gt;&gt;GeneratorDataGrid.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="LoadOrderColumn.Width" type="System.Int32, mscorlib">
-    <value>40</value>
+  <data name="&gt;&gt;GeneratorDataGrid.Parent" xml:space="preserve">
+    <value>RandomPage</value>
   </data>
-  <data name="ItemModConfigsBtn.Text" xml:space="preserve">
-    <value>Edit mods...</value>
+  <data name="&gt;&gt;GeneratorDataGrid.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
-  <data name="RandomPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 26</value>
+  <data name="GenerationProgressBar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
   </data>
-  <data name="linkLabel3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+  <data name="GenerationProgressBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>419, 360</value>
   </data>
-  <data name="RunPatchBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="OutputFilesCodepageBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>177, 110</value>
-  </data>
-  <data name="linkLabel5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left, Right</value>
+  <data name="GenerationProgressBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="GenerationProgressBar.Size" type="System.Drawing.Size, System.Drawing">
     <value>152, 24</value>
   </data>
-  <data name="&gt;&gt;VdfsArchiveBox.Name" xml:space="preserve">
-    <value>VdfsArchiveBox</value>
+  <data name="GenerationProgressBar.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
   </data>
-  <data name="SchemaNameColumn.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="&gt;&gt;GenerationProgressBar.Name" xml:space="preserve">
+    <value>GenerationProgressBar</value>
   </data>
-  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;GenerationProgressBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GenerationProgressBar.Parent" xml:space="preserve">
+    <value>RandomPage</value>
+  </data>
+  <data name="&gt;&gt;GenerationProgressBar.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="ProgressLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="&gt;&gt;PackageListUpdater.Name" xml:space="preserve">
-    <value>PackageListUpdater</value>
-  </data>
-  <data name="InstallPackagesBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="SelectBackupArchBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="linkLabel4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="ConsoleTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left, Right</value>
   </data>
-  <data name="CleanUpAutorunBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
+  <data name="ConsoleTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
   </data>
-  <data name="RandomPage.Text" xml:space="preserve">
-    <value>Item Generator</value>
+  <data name="ConsoleTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 360</value>
   </data>
-  <data name="label3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
+  <data name="ConsoleTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="ConsoleTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>410, 69</value>
+  </data>
+  <data name="ConsoleTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="ConsoleTextBox.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;ConsoleTextBox.Name" xml:space="preserve">
+    <value>ConsoleTextBox</value>
+  </data>
+  <data name="&gt;&gt;ConsoleTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ConsoleTextBox.Parent" xml:space="preserve">
+    <value>RandomPage</value>
+  </data>
+  <data name="&gt;&gt;ConsoleTextBox.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="GenerateBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="GenerateBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="GenerateBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>419, 388</value>
+  </data>
+  <data name="GenerateBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="GenerateBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 37</value>
+  </data>
+  <data name="GenerateBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="GenerateBtn.Text" xml:space="preserve">
+    <value>Randomize!</value>
+  </data>
+  <data name="&gt;&gt;GenerateBtn.Name" xml:space="preserve">
+    <value>GenerateBtn</value>
   </data>
   <data name="&gt;&gt;GenerateBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;LoadOrderColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;GenerateBtn.Parent" xml:space="preserve">
+    <value>RandomPage</value>
+  </data>
+  <data name="&gt;&gt;GenerateBtn.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="RandomPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="RandomPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="RandomPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="RandomPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>576, 431</value>
+  </data>
+  <data name="RandomPage.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="RandomPage.Text" xml:space="preserve">
+    <value>Item Generator</value>
+  </data>
+  <data name="&gt;&gt;RandomPage.Name" xml:space="preserve">
+    <value>RandomPage</value>
+  </data>
+  <data name="&gt;&gt;RandomPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RandomPage.Parent" xml:space="preserve">
+    <value>TabsPanel</value>
+  </data>
+  <data name="&gt;&gt;RandomPage.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ConfigPresetsBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="ConfigPresetsBox.Items" xml:space="preserve">
+    <value>StExtMod - User configs</value>
+  </data>
+  <data name="ConfigPresetsBox.Items1" xml:space="preserve">
+    <value>StExtMod - Normal configs</value>
+  </data>
+  <data name="ConfigPresetsBox.Items2" xml:space="preserve">
+    <value>StExtMod - Nightmare configs</value>
+  </data>
+  <data name="ConfigPresetsBox.Items3" xml:space="preserve">
+    <value>StExtMod - Hell configs</value>
+  </data>
+  <data name="ConfigPresetsBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 3</value>
+  </data>
+  <data name="ConfigPresetsBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>444, 25</value>
+  </data>
+  <data name="ConfigPresetsBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;ConfigPresetsBox.Name" xml:space="preserve">
+    <value>ConfigPresetsBox</value>
+  </data>
+  <data name="&gt;&gt;ConfigPresetsBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ConfigPresetsBox.Parent" xml:space="preserve">
+    <value>ModConfigsPage</value>
+  </data>
+  <data name="&gt;&gt;ConfigPresetsBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label9.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 6</value>
+  </data>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 17</value>
+  </data>
+  <data name="label9.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Configs preset</value>
+  </data>
+  <data name="&gt;&gt;label9.Name" xml:space="preserve">
+    <value>label9</value>
+  </data>
+  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+    <value>ModConfigsPage</value>
+  </data>
+  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ModConfigsTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="ModConfigsTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="ModConfigsTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 30</value>
+  </data>
+  <data name="ModConfigsTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="ModConfigsTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>576, 401</value>
+  </data>
+  <data name="ModConfigsTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="ModConfigsTextBox.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;ModConfigsTextBox.Name" xml:space="preserve">
+    <value>ModConfigsTextBox</value>
+  </data>
+  <data name="&gt;&gt;ModConfigsTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ModConfigsTextBox.Parent" xml:space="preserve">
+    <value>ModConfigsPage</value>
+  </data>
+  <data name="&gt;&gt;ModConfigsTextBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ModConfigsPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="ModConfigsPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="ModConfigsPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>576, 431</value>
+  </data>
+  <data name="ModConfigsPage.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="ModConfigsPage.Text" xml:space="preserve">
+    <value>Mod configs</value>
+  </data>
+  <data name="&gt;&gt;ModConfigsPage.Name" xml:space="preserve">
+    <value>ModConfigsPage</value>
+  </data>
+  <data name="&gt;&gt;ModConfigsPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ModConfigsPage.Parent" xml:space="preserve">
+    <value>TabsPanel</value>
+  </data>
+  <data name="&gt;&gt;ModConfigsPage.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="linkLabel5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="linkLabel5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="linkLabel5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="linkLabel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 406</value>
+  </data>
+  <data name="linkLabel5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 8, 0</value>
+  </data>
+  <data name="linkLabel5.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 8, 0</value>
+  </data>
+  <data name="linkLabel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>566, 20</value>
+  </data>
+  <data name="linkLabel5.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="linkLabel5.Text" xml:space="preserve">
+    <value>BTC: 3HZFxPqyJnrNLSw7L8hJt9A2hZJjGgdGJe</value>
+  </data>
+  <data name="linkLabel5.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;linkLabel5.Name" xml:space="preserve">
+    <value>linkLabel5</value>
+  </data>
+  <data name="&gt;&gt;linkLabel5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;linkLabel5.Parent" xml:space="preserve">
+    <value>AppConfigsPage</value>
+  </data>
+  <data name="&gt;&gt;linkLabel5.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="linkLabel4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="linkLabel4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="linkLabel4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="linkLabel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 385</value>
+  </data>
+  <data name="linkLabel4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 8, 0</value>
+  </data>
+  <data name="linkLabel4.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 8, 0</value>
+  </data>
+  <data name="linkLabel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>566, 20</value>
+  </data>
+  <data name="linkLabel4.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="linkLabel4.Text" xml:space="preserve">
+    <value>WMZ: Z756674559775</value>
+  </data>
+  <data name="linkLabel4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;linkLabel4.Name" xml:space="preserve">
+    <value>linkLabel4</value>
+  </data>
+  <data name="&gt;&gt;linkLabel4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;linkLabel4.Parent" xml:space="preserve">
+    <value>AppConfigsPage</value>
+  </data>
+  <data name="&gt;&gt;linkLabel4.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="linkLabel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="linkLabel3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="linkLabel3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="linkLabel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 362</value>
+  </data>
+  <data name="linkLabel3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 8, 0</value>
+  </data>
+  <data name="linkLabel3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 8, 0</value>
+  </data>
+  <data name="linkLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>566, 23</value>
+  </data>
+  <data name="linkLabel3.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="linkLabel3.Text" xml:space="preserve">
+    <value>https://send.monobank.ua/jar/AWepYzH61P</value>
+  </data>
+  <data name="linkLabel3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;linkLabel3.Name" xml:space="preserve">
+    <value>linkLabel3</value>
+  </data>
+  <data name="&gt;&gt;linkLabel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;linkLabel3.Parent" xml:space="preserve">
+    <value>AppConfigsPage</value>
+  </data>
+  <data name="&gt;&gt;linkLabel3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="linkLabel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="linkLabel2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="linkLabel2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="linkLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 342</value>
+  </data>
+  <data name="linkLabel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 8, 0</value>
+  </data>
+  <data name="linkLabel2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 8, 0</value>
+  </data>
+  <data name="linkLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>566, 23</value>
+  </data>
+  <data name="linkLabel2.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="linkLabel2.Text" xml:space="preserve">
+    <value>https://stoned-wizzard.diaka.ua/donate</value>
+  </data>
+  <data name="linkLabel2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;linkLabel2.Name" xml:space="preserve">
+    <value>linkLabel2</value>
+  </data>
+  <data name="&gt;&gt;linkLabel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;linkLabel2.Parent" xml:space="preserve">
+    <value>AppConfigsPage</value>
+  </data>
+  <data name="&gt;&gt;linkLabel2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label8.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
+  </data>
+  <data name="label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 314</value>
+  </data>
+  <data name="label8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>562, 28</value>
+  </data>
+  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Just in case if you want support author and future mod development</value>
+  </data>
+  <data name="label8.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>AppConfigsPage</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="OutputFilesCodepageBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="OutputFilesCodepageBox.Items" xml:space="preserve">
+    <value>Windows-1251</value>
+  </data>
+  <data name="OutputFilesCodepageBox.Items1" xml:space="preserve">
+    <value>Windows-1250</value>
+  </data>
+  <data name="OutputFilesCodepageBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>177, 110</value>
+  </data>
+  <data name="OutputFilesCodepageBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="OutputFilesCodepageBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 25</value>
+  </data>
+  <data name="OutputFilesCodepageBox.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;OutputFilesCodepageBox.Name" xml:space="preserve">
+    <value>OutputFilesCodepageBox</value>
+  </data>
+  <data name="&gt;&gt;OutputFilesCodepageBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OutputFilesCodepageBox.Parent" xml:space="preserve">
+    <value>AppConfigsPage</value>
+  </data>
+  <data name="&gt;&gt;OutputFilesCodepageBox.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 113</value>
+  </data>
+  <data name="label4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 17</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Output files encoding</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>AppConfigsPage</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="VdfsArchiveBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="VdfsArchiveBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="VdfsArchiveBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>110, 42</value>
+  </data>
+  <data name="VdfsArchiveBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="VdfsArchiveBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>414, 23</value>
+  </data>
+  <data name="VdfsArchiveBox.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;VdfsArchiveBox.Name" xml:space="preserve">
+    <value>VdfsArchiveBox</value>
+  </data>
+  <data name="&gt;&gt;VdfsArchiveBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;VdfsArchiveBox.Parent" xml:space="preserve">
+    <value>AppConfigsPage</value>
+  </data>
+  <data name="&gt;&gt;VdfsArchiveBox.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="label10.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 45</value>
+  </data>
+  <data name="label10.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 17</value>
+  </data>
+  <data name="label10.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Vdfs archive</value>
+  </data>
+  <data name="&gt;&gt;label10.Name" xml:space="preserve">
+    <value>label10</value>
+  </data>
+  <data name="&gt;&gt;label10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
+    <value>AppConfigsPage</value>
+  </data>
+  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="linkLabel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="linkLabel1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 284</value>
+  </data>
+  <data name="linkLabel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 8, 0</value>
+  </data>
+  <data name="linkLabel1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 8, 0</value>
+  </data>
+  <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>566, 20</value>
+  </data>
+  <data name="linkLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="linkLabel1.Text" xml:space="preserve">
+    <value>http://www.stonedwizzard.somee.com/</value>
+  </data>
+  <data name="linkLabel1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;linkLabel1.Name" xml:space="preserve">
+    <value>linkLabel1</value>
+  </data>
+  <data name="&gt;&gt;linkLabel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;linkLabel1.Parent" xml:space="preserve">
+    <value>AppConfigsPage</value>
+  </data>
+  <data name="&gt;&gt;linkLabel1.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="label7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 239</value>
+  </data>
+  <data name="label7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>566, 45</value>
+  </data>
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>App Version - 1.2.0
+© StonedWizzard, 2023</value>
+  </data>
+  <data name="label7.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>AppConfigsPage</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="LanguageSelectBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="LanguageSelectBox.Items" xml:space="preserve">
+    <value>Eng</value>
+  </data>
+  <data name="LanguageSelectBox.Items1" xml:space="preserve">
+    <value>Rus</value>
+  </data>
+  <data name="LanguageSelectBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>109, 69</value>
+  </data>
+  <data name="LanguageSelectBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="LanguageSelectBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 25</value>
+  </data>
+  <data name="LanguageSelectBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;LanguageSelectBox.Name" xml:space="preserve">
+    <value>LanguageSelectBox</value>
+  </data>
+  <data name="&gt;&gt;LanguageSelectBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LanguageSelectBox.Parent" xml:space="preserve">
+    <value>AppConfigsPage</value>
+  </data>
+  <data name="&gt;&gt;LanguageSelectBox.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 72</value>
+  </data>
+  <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 17</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>AppConfigsPage</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="SetGothicDirBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="SetGothicDirBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="SetGothicDirBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>528, 42</value>
+  </data>
+  <data name="SetGothicDirBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="SetGothicDirBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 23</value>
+  </data>
+  <data name="SetGothicDirBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="SetGothicDirBtn.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="&gt;&gt;SetGothicDirBtn.Name" xml:space="preserve">
+    <value>SetGothicDirBtn</value>
+  </data>
+  <data name="&gt;&gt;SetGothicDirBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SetGothicDirBtn.Parent" xml:space="preserve">
+    <value>AppConfigsPage</value>
+  </data>
+  <data name="&gt;&gt;SetGothicDirBtn.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="GamePathTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="GamePathTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="GamePathTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>110, 15</value>
+  </data>
+  <data name="GamePathTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="GamePathTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>463, 23</value>
+  </data>
+  <data name="GamePathTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;GamePathTextBox.Name" xml:space="preserve">
+    <value>GamePathTextBox</value>
+  </data>
+  <data name="&gt;&gt;GamePathTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GamePathTextBox.Parent" xml:space="preserve">
+    <value>AppConfigsPage</value>
+  </data>
+  <data name="&gt;&gt;GamePathTextBox.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 18</value>
+  </data>
+  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 17</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Gothic path</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>AppConfigsPage</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="AppConfigsPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="AppConfigsPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="AppConfigsPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>576, 431</value>
+  </data>
+  <data name="AppConfigsPage.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="AppConfigsPage.Text" xml:space="preserve">
+    <value>App Configs</value>
+  </data>
+  <data name="&gt;&gt;AppConfigsPage.Name" xml:space="preserve">
+    <value>AppConfigsPage</value>
+  </data>
+  <data name="&gt;&gt;AppConfigsPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AppConfigsPage.Parent" xml:space="preserve">
+    <value>TabsPanel</value>
+  </data>
+  <data name="&gt;&gt;AppConfigsPage.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="TabsPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="TabsPanel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="TabsPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="TabsPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="TabsPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>584, 461</value>
+  </data>
+  <data name="TabsPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;TabsPanel.Name" xml:space="preserve">
+    <value>TabsPanel</value>
+  </data>
+  <data name="&gt;&gt;TabsPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabsPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TabsPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="DirBrowserDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="PackageListUpdater.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>162, 17</value>
+  </metadata>
+  <metadata name="FileOpenDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>320, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>584, 461</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2026,665 +2549,166 @@ Otherwise - files write to Gothic Autorun directory.</value>
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
 </value>
   </data>
-  <data name="ModsMinColumn.HeaderText" xml:space="preserve">
-    <value>Min mods</value>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
-  <data name="&gt;&gt;IsActiveColumn.Type" xml:space="preserve">
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1200, 800</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>600, 500</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>GII New Balance - Magic Balance mod Configurator</value>
+  </data>
+  <data name="&gt;&gt;IsPackageEnabledColumn.Name" xml:space="preserve">
+    <value>IsPackageEnabledColumn</value>
+  </data>
+  <data name="&gt;&gt;IsPackageEnabledColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;AppConfigsPage.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;LoadOrderColumn.Name" xml:space="preserve">
+    <value>LoadOrderColumn</value>
   </data>
-  <data name="PriceColumn.Width" type="System.Int32, mscorlib">
-    <value>125</value>
+  <data name="&gt;&gt;LoadOrderColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="IsPackageEnabledColumn.HeaderText" xml:space="preserve">
-    <value>IsEnabled</value>
-  </data>
-  <data name="linkLabel5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 8, 0</value>
-  </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>?</value>
-  </data>
-  <data name="GamePathTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>110, 15</value>
-  </data>
-  <data name="&gt;&gt;CleanUpAutorunBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;CleanInstallBox.Parent" xml:space="preserve">
-    <value>InstallPage</value>
-  </data>
-  <data name="label4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="PriceColumn.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;BuildRandomItemsPackageBox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;linkLabel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="LanguageSelectBox.Items" xml:space="preserve">
-    <value>Eng</value>
-  </data>
-  <data name="&gt;&gt;linkLabel4.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
-  </data>
-  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 239</value>
-  </data>
-  <data name="ItemNamesBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 30</value>
-  </data>
-  <data name="&gt;&gt;AppConfigsPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ModsMaxColumn.HeaderText" xml:space="preserve">
-    <value>Max mods</value>
-  </data>
-  <data name="label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;PackageNameColumn.Name" xml:space="preserve">
+    <value>PackageNameColumn</value>
   </data>
   <data name="&gt;&gt;PackageNameColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="GenerateBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
+  <data name="&gt;&gt;PackageVersionColumn.Name" xml:space="preserve">
+    <value>PackageVersionColumn</value>
   </data>
-  <data name="ModConfigsTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>576, 401</value>
-  </data>
-  <data name="UseUniqNameColumn.Width" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <data name="&gt;&gt;RandomPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="SetGothicDirBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="&gt;&gt;linkLabel5.Parent" xml:space="preserve">
-    <value>AppConfigsPage</value>
-  </data>
-  <data name="label6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="InstallPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 26</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>Items count</value>
-  </data>
-  <data name="&gt;&gt;FileOpenDialog.Type" xml:space="preserve">
-    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="GenerateBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="GenerateBtn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
-  </data>
-  <data name="linkLabel5.Text" xml:space="preserve">
-    <value>BTC: 3HZFxPqyJnrNLSw7L8hJt9A2hZJjGgdGJe</value>
-  </data>
-  <data name="RunPatchBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="QuantityColumn.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="button1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;BuildRandomItemsPackageBox.Name" xml:space="preserve">
-    <value>BuildRandomItemsPackageBox</value>
-  </data>
-  <data name="label7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;ModConfigsPage.Name" xml:space="preserve">
-    <value>ModConfigsPage</value>
-  </data>
-  <data name="&gt;&gt;button1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 314</value>
-  </data>
-  <data name="DamagePower.HeaderText" xml:space="preserve">
-    <value>Damage Power</value>
-  </data>
-  <data name="&gt;&gt;ProgressLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabsPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="ConsoleTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left, Right</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 17</value>
-  </data>
-  <data name="&gt;&gt;GenerationProgressBar.Name" xml:space="preserve">
-    <value>GenerationProgressBar</value>
-  </data>
-  <data name="&gt;&gt;QuantityColumn.Type" xml:space="preserve">
+  <data name="&gt;&gt;PackageVersionColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;InstallPackagesBtn.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Output files encoding</value>
-  </data>
-  <data name="&gt;&gt;CleanInstallBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="QuantityColumn.Width" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <data name="linkLabel5.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="&gt;&gt;ConsoleTextBox.Parent" xml:space="preserve">
-    <value>RandomPage</value>
-  </data>
-  <data name="&gt;&gt;ItemsCountBox.Parent" xml:space="preserve">
-    <value>RandomPage</value>
-  </data>
-  <data name="label10.Text" xml:space="preserve">
-    <value>Vdfs archive</value>
-  </data>
-  <data name="RandomPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="linkLabel4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>App Version - 1.1.0
-© StonedWizzard, 2023</value>
-  </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="TabsPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="linkLabel4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="InstallPackagesBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="ItemsCountBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="ItemNamesBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
-  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
-    <value>ModConfigsPage</value>
-  </data>
-  <data name="label8.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left, Right</value>
-  </data>
-  <data name="TabsPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>584, 461</value>
-  </data>
-  <data name="CleanInstallBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="ItemNamesBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;RandomPage.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>Item price range modifier (%)</value>
-  </data>
-  <data name="&gt;&gt;linkLabel5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="CleanInstallBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>InstallPage</value>
-  </data>
-  <data name="ItemNamesBtn.Text" xml:space="preserve">
-    <value>Edit names</value>
+  <data name="&gt;&gt;PackageAuthorColumn.Name" xml:space="preserve">
+    <value>PackageAuthorColumn</value>
   </data>
   <data name="&gt;&gt;PackageAuthorColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;SelectBackupArchBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;PackageDescriptionColumn.Name" xml:space="preserve">
+    <value>PackageDescriptionColumn</value>
   </data>
-  <data name="ItemPriceRangeBox.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="linkLabel2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 8, 0</value>
-  </data>
-  <data name="PackageDescriptionColumn.MinimumWidth" type="System.Int32, mscorlib">
-    <value>400</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="VdfsArchiveBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="&gt;&gt;ProgressLabel.Parent" xml:space="preserve">
-    <value>RandomPage</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="QuantityColumn.HeaderText" xml:space="preserve">
-    <value>Qantitty</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="CleanUpAutorunBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;InstallPage.Name" xml:space="preserve">
-    <value>InstallPage</value>
-  </data>
-  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
-    <value>AppConfigsPage</value>
-  </data>
-  <data name="&gt;&gt;linkLabel2.Name" xml:space="preserve">
-    <value>linkLabel2</value>
-  </data>
-  <data name="label8.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;SeedColumn.Name" xml:space="preserve">
-    <value>SeedColumn</value>
-  </data>
-  <data name="&gt;&gt;PowerColumn.Type" xml:space="preserve">
+  <data name="&gt;&gt;PackageDescriptionColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="PowerColumn.HeaderText" xml:space="preserve">
-    <value>Power</value>
+  <data name="&gt;&gt;IsActiveColumn.Name" xml:space="preserve">
+    <value>IsActiveColumn</value>
   </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;ItemNameColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label7.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="SelectBackupArchBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 389</value>
-  </data>
-  <data name="linkLabel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 406</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="BuildRandomItemsPackageBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="ProtPower.HeaderText" xml:space="preserve">
-    <value>Prot Power</value>
-  </data>
-  <data name="IsPackageEnabledColumn.Width" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
-  <data name="linkLabel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 362</value>
+  <data name="&gt;&gt;IsActiveColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;SchemaNameColumn.Name" xml:space="preserve">
     <value>SchemaNameColumn</value>
   </data>
-  <data name="linkLabel3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 8, 0</value>
+  <data name="&gt;&gt;SchemaNameColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="CleanInstallBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>353, 363</value>
+  <data name="&gt;&gt;QuantityColumn.Name" xml:space="preserve">
+    <value>QuantityColumn</value>
   </data>
-  <data name="GenerateBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="linkLabel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>566, 20</value>
-  </data>
-  <data name="&gt;&gt;GenerationProgressBar.Parent" xml:space="preserve">
-    <value>RandomPage</value>
-  </data>
-  <data name="label6.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="&gt;&gt;InstallPage.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label10.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.2pt</value>
-  </data>
-  <data name="GeneratorDataGrid.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;linkLabel3.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;GamePathTextBox.Parent" xml:space="preserve">
-    <value>AppConfigsPage</value>
-  </data>
-  <data name="ItemPriceRangeBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.2pt</value>
-  </data>
-  <data name="RunPatchBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left, Right</value>
-  </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 17</value>
-  </data>
-  <data name="PackagesGridView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>190, 17</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="SelectBackupArchBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;ItemPriceRangeBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RunPatchBtn.Name" xml:space="preserve">
-    <value>RunPatchBtn</value>
-  </data>
-  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.2pt</value>
-  </data>
-  <data name="label9.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="CleanUpAutorunBox.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="ProgressLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="ItemModConfigsBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>455, 263</value>
-  </data>
-  <data name="&gt;&gt;label10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SetGothicDirBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RunPatchBtn.Parent" xml:space="preserve">
-    <value>InstallPage</value>
-  </data>
-  <data name="linkLabel4.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="&gt;&gt;ItemNamesBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ItemModConfigsBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 30</value>
+  <data name="&gt;&gt;QuantityColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ModsMinColumn.Name" xml:space="preserve">
     <value>ModsMinColumn</value>
   </data>
-  <data name="PackageVersionColumn.Width" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
-  <data name="PackagesGridView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>562, 272</value>
-  </data>
-  <data name="SetGothicDirBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>528, 42</value>
-  </data>
-  <data name="PackageAuthorColumn.Width" type="System.Int32, mscorlib">
-    <value>150</value>
-  </data>
-  <data name="ProgressLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 18</value>
-  </data>
-  <data name="ModsMaxColumn.Width" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <data name="&gt;&gt;PackagesGridView.Parent" xml:space="preserve">
-    <value>InstallPage</value>
-  </data>
-  <data name="&gt;&gt;LanguageSelectBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="linkLabel4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 8, 0</value>
-  </data>
-  <data name="InstallPage.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="SelectBackupArchBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="ModsMinColumn.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="linkLabel5.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;ConfigPresetsBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;ModsMinColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ModsMaxColumn.Name" xml:space="preserve">
     <value>ModsMaxColumn</value>
   </data>
-  <data name="linkLabel3.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
+  <data name="&gt;&gt;ModsMaxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;GenerateBtn.Name" xml:space="preserve">
-    <value>GenerateBtn</value>
+  <data name="&gt;&gt;PowerColumn.Name" xml:space="preserve">
+    <value>PowerColumn</value>
   </data>
-  <data name="UseUniqNameColumn.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="&gt;&gt;PowerColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label8.Name" xml:space="preserve">
-    <value>label8</value>
+  <data name="&gt;&gt;CondPower.Name" xml:space="preserve">
+    <value>CondPower</value>
   </data>
-  <data name="PackageAuthorColumn.MinimumWidth" type="System.Int32, mscorlib">
-    <value>50</value>
+  <data name="&gt;&gt;CondPower.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;GenerateBtn.Parent" xml:space="preserve">
-    <value>RandomPage</value>
+  <data name="&gt;&gt;DamagePower.Name" xml:space="preserve">
+    <value>DamagePower</value>
   </data>
-  <data name="ConfigPresetsBox.Items1" xml:space="preserve">
-    <value>StExtMod - Normal configs</value>
+  <data name="&gt;&gt;DamagePower.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="VdfsArchiveBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+  <data name="&gt;&gt;RangePower.Name" xml:space="preserve">
+    <value>RangePower</value>
   </data>
-  <data name="ModConfigsPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 26</value>
+  <data name="&gt;&gt;RangePower.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ConfigPresetsBox.Items2" xml:space="preserve">
-    <value>StExtMod - Nightmare configs</value>
+  <data name="&gt;&gt;ProtPower.Name" xml:space="preserve">
+    <value>ProtPower</value>
   </data>
-  <data name="IsActiveColumn.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="&gt;&gt;ProtPower.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ModConfigsPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>576, 431</value>
+  <data name="&gt;&gt;PotionDurationPower.Name" xml:space="preserve">
+    <value>PotionDurationPower</value>
   </data>
-  <data name="OutputFilesCodepageBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.2pt</value>
+  <data name="&gt;&gt;PotionDurationPower.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="GenerationProgressBar.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
+  <data name="&gt;&gt;PriceColumn.Name" xml:space="preserve">
+    <value>PriceColumn</value>
+  </data>
+  <data name="&gt;&gt;PriceColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ItemNameColumn.Name" xml:space="preserve">
     <value>ItemNameColumn</value>
   </data>
-  <data name="RunPatchBtn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  <data name="&gt;&gt;ItemNameColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ConsoleTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 331</value>
+  <data name="&gt;&gt;UseUniqNameColumn.Name" xml:space="preserve">
+    <value>UseUniqNameColumn</value>
   </data>
-  <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;UseUniqNameColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="TabsPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="&gt;&gt;CleanInstallBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.2pt</value>
-  </data>
-  <data name="GamePathTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>463, 23</value>
-  </data>
-  <data name="linkLabel5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>207, 389</value>
-  </data>
-  <data name="BuildRandomItemsPackageBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 284</value>
-  </data>
-  <data name="ModConfigsTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 30</value>
-  </data>
-  <data name="GamePathTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="GeneratorDataGrid.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="linkLabel4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;linkLabel2.Parent" xml:space="preserve">
-    <value>AppConfigsPage</value>
+  <data name="&gt;&gt;SeedColumn.Name" xml:space="preserve">
+    <value>SeedColumn</value>
   </data>
   <data name="&gt;&gt;SeedColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ItemsCountBox.Name" xml:space="preserve">
-    <value>ItemsCountBox</value>
+  <data name="&gt;&gt;DirBrowserDialog.Name" xml:space="preserve">
+    <value>DirBrowserDialog</value>
   </data>
-  <data name="ItemNamesBtn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  <data name="&gt;&gt;DirBrowserDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <metadata name="PriceColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="IsPackageEnabledColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="PotionDurationPower.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="QuantityColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="FileOpenDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>320, 17</value>
-  </metadata>
-  <metadata name="DamagePower.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ProtPower.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="PackageDescriptionColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="PackageNameColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ModsMinColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>ru</value>
-  </metadata>
-  <metadata name="RangePower.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="IsActiveColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="PowerColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ModsMaxColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="PackageVersionColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="CondPower.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="UseUniqNameColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="LoadOrderColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ItemNameColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="SeedColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="SchemaNameColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="DirBrowserDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="PackageAuthorColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="PackageListUpdater.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>162, 17</value>
-  </metadata>
+  <data name="&gt;&gt;PackageListUpdater.Name" xml:space="preserve">
+    <value>PackageListUpdater</value>
+  </data>
+  <data name="&gt;&gt;PackageListUpdater.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FileOpenDialog.Name" xml:space="preserve">
+    <value>FileOpenDialog</value>
+  </data>
+  <data name="&gt;&gt;FileOpenDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
