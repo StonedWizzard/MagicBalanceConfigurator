@@ -8,6 +8,7 @@ namespace MagicBalanceConfigurator.Generators.SerealizebleGenerators
         public string ItemNamePlaceholder { get; set; }
         public string[] Visuals { get; set; } = new string[] { };
         public string[] VisualChanges { get; set; } = new string[] { };
+        public string[] VisualsExtra { get; set; } = new string[] { };
         public string[] ExtraConditions { get; set; } = new string[] { };
         public string ItemType { get; set; }
         public string WeaponDamageType { get; set; }

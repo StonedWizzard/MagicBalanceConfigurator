@@ -19,6 +19,7 @@ namespace MagicBalanceConfigurator.Generators
             SetItemCondRange(100, 200);
             SetModsCountRange(3, 4);
             ProhibitedMods = new List<int> { 326, 328, 329 };
+            ItemModType = "StExt_ItemType_Shield";
         }
 
         protected override List<ItemTemplatePreset> BuildItemTemplatePresets() => new List<ItemTemplatePreset>()

@@ -14,12 +14,13 @@ namespace MagicBalanceConfigurator.Generators
             ModPower = 1;
             ItemsPrice = 1000;
             BaseOnEquipFunc = "equip_bow_medium();";
-            BaseOnUnEquipFunc = "equip_bow_medium();";
+            BaseOnUnEquipFunc = "unequip_bow_medium();";
             SetWeaponDamageRange(60, 120);
             SetItemCondRange(50, 75);
             SetModsCountRange(2, 3);
             ProhibitedDamageTypes = new List<string>() { "dam_fire" };
             ProhibitedMods = new List<int> { 226, 227, 229 };
+            ItemModType = "StExt_ItemType_RangeWeap";
         }
 
         protected override List<ItemTemplatePreset> BuildItemTemplatePresets() => new List<ItemTemplatePreset>()

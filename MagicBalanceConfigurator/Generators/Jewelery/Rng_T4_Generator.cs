@@ -14,6 +14,7 @@
             ItemsPrice = 2000;
             SetModsCountRange(3, 4);
             ItemVisuals = CommonTemplates.RingVisuals;
+            ItemModType = "StExt_ItemType_Ring";
         }
 
         public override string GetTemplate() => CommonTemplates.RingTemplate;

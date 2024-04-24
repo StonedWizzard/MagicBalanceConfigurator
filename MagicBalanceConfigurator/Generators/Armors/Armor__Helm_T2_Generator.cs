@@ -18,6 +18,7 @@ namespace MagicBalanceConfigurator.Generators
             SetArmorProtectionRange(15, 40);
             SetItemCondRange(50, 100);
             SetModsCountRange(2, 3);
+            ItemModType = "StExt_ItemType_Helm";
         }
 
         protected override List<ItemTemplatePreset> BuildItemTemplatePresets() => new List<ItemTemplatePreset>()

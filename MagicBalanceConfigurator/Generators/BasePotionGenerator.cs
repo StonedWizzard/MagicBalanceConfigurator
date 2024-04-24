@@ -57,7 +57,7 @@ namespace MagicBalanceConfigurator.Generators
             return template.ToString();
         }
 
-        protected override void PostProcessTemplate(StringBuilder template)
+        protected override void PostProcessTemplate(StringBuilder template, (string FullId, string Id)? itemIdInfo = null)
         {
             string duration = GetRandomDuration();
             template.Replace("[Duration]", duration);

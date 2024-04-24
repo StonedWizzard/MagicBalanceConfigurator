@@ -133,7 +133,7 @@ namespace MagicBalanceConfigurator.Generators
 
         private double GetNextDamageMult()
         {
-            double val = new Random(GetRandomSeed()).Next(250, 750);
+            double val = new Random(GetRandomSeed()).Next(150, 850);
             double result = val / 1000;
             return result;
         }

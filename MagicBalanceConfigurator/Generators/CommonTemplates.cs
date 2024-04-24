@@ -112,6 +112,7 @@ namespace MagicBalanceConfigurator.Generators
         public const string Poition_IdPrefix = "itpo_stext_rnd_";
         public const string Weapon_1h_IdPrefix = "itmw_1h_stext_rnd_";
         public const string Weapon_2h_IdPrefix = "itmw_2h_stext_rnd_";
+        public const string Weapon_dual_IdPrefix = "itmw_dual_stext_rnd_";
         public const string Weapon_bow_IdPrefix = "itrw_bow_stext_rnd_";
         public const string Weapon_crossbow_IdPrefix = "itrw_crossbow_stext_rnd_";
         public const string Weapon_Staff_IdPrefix = "itmw_staff_stext_rnd_";
@@ -126,6 +127,7 @@ namespace MagicBalanceConfigurator.Generators
         public const string Poition_RandSufix = "Pot";
         public const string Weapon_1h_RandSufix = "Weap_1h";
         public const string Weapon_2h_RandSufix = "Weap_2h";
+        public const string Weapon_dual_RandSufix = "Weap_Dual";
         public const string Weapon_bow_RandSufix = "Bow";
         public const string Weapon_crossbow_RandSufix = "Crossbow";
         public const string Weapon_staff_RandSufix = "Staff";
@@ -214,12 +216,17 @@ namespace MagicBalanceConfigurator.Generators
 
         public const string StExt_CreateRandomItemMock = @"func void StExt_CreateRandomItem(var c_npc slf, var int item, var int max, var int chest) { };";
         public const string StExt_ApplyPotionEffectMock = @"func void StExt_ApplyPotionEffect(var int effectId, var int power, var int duration) { };";
+        public const string StExt_ClearItemInfoMock = @"func void StExt_ClearItemInfo(var int itemPointer, var int itemType) { };";
+        public const string StExt_RegisterItemBonus = @"func void StExt_RegisterItemBonus(var int itemPointer, var int itemType, var string optName, var int optValue) { };";
+        public const string StExt_ItemsGeneratedConst = @"const int StExt_RandomItemsGenerated = true;";
+
         public const string RndFileMetaBlock = @"META
 {
     After = StExt_RndItems_Meta.d;
 };";
 
-        public const string EquipInfoTemplate = "ai_printbonus(concatstrings([EquipNameStr], inttostring([Value])))";
+        public const string EquipInfoTemplate = "StExt_RegisterItemBonus([ItemPointer], [ItemOptionsType], [EquipNameStr], [Value])";
+        public const string UnequipInfoTemplate = "StExt_ClearItemInfo([ItemPointer], [ItemOptionsType]);";
         public const string InvScaleTemplate = "inv_zbias = 150;";
 
         public const string CrosbowTempalte = @"
@@ -257,6 +264,7 @@ func void unequip_[IdPrefix][Id]()
     [BaseOnUnEquipFunc]
 	if(self.id == 0) 
 	{
+        [ModsOptionsUnEquip]
 [ModsUnEquip]
 	};
 };";
@@ -297,6 +305,7 @@ func void unequip_[IdPrefix][Id]()
     [BaseOnUnEquipFunc]
 	if(self.id == 0) 
 	{
+        [ModsOptionsUnEquip]
 [ModsUnEquip]
 	};
 };";
@@ -338,6 +347,7 @@ func void unequip_[IdPrefix][Id]()
     [BaseOnUnEquipFunc]
 	if(self.id == 0) 
 	{
+        [ModsOptionsUnEquip]
 [ModsUnEquip]
 	};
 };";
@@ -377,6 +387,7 @@ func void unequip_[IdPrefix][Id]()
     [BaseOnUnEquipFunc]
 	if(self.id == 0) 
 	{
+        [ModsOptionsUnEquip]
 [ModsUnEquip]
 	};
 };";
@@ -440,6 +451,7 @@ func void unequip_[IdPrefix][Id]()
 {
     if(self.id == 0) 
 	{
+        [ModsOptionsUnEquip]
 [ModsUnEquip]
     };
 };";
@@ -477,6 +489,7 @@ func void unequip_[IdPrefix][Id]()
 {
     if(self.id == 0) 
 	{
+        [ModsOptionsUnEquip]
 [ModsUnEquip]
     };
 };";
@@ -512,6 +525,7 @@ func void unequip_[IdPrefix][Id]()
 {
     if(self.id == 0) 
 	{
+        [ModsOptionsUnEquip]
 [ModsUnEquip]
     };
 };";
@@ -550,6 +564,7 @@ func void unequip_[IdPrefix][Id]()
     [BaseOnUnEquipFunc]
     if(self.id == 0) 
 	{
+        [ModsOptionsUnEquip]
 [ModsUnEquip]
     };
 };";
@@ -587,6 +602,7 @@ func void unequip_[IdPrefix][Id]()
     [BaseOnUnEquipFunc]
     if(self.id == 0) 
 	{
+        [ModsOptionsUnEquip]
 [ModsUnEquip]
     };
 };";
@@ -626,8 +642,126 @@ func void unequip_[IdPrefix][Id]()
     [BaseOnUnEquipFunc]
     if(self.id == 0) 
 	{
+        [ModsOptionsUnEquip]
 [ModsUnEquip]
     };
 };";
+
+        public const string DualWeaponTemplate = @"instance [IdPrefix][Id]_left(c_item) 
+{
+    name = [NameId_L];
+[CondSection]
+[DamageSection]
+    damagetotal = [DamageTotal];
+    damagetype = [DamageTotalType];
+    description = name;
+    flags = item_throw;
+    inv_animate = 1;
+    mainflag = item_kat_nf;
+    material = mat_metal;
+    on_equip = equip_[IdPrefix][Id]_left;
+    on_unequip = unequip_[IdPrefix][Id]_left;
+    ownerguild = 123;
+	visual = [VisualL];	
+    spell = [WeapModsData];
+    range = [WeaponRange];
+    value = 0;
+    text[5] = StExt_Enchanted_Name_Value;
+    count[5] = 0;
+    [SpecialSection]
+};
+instance [IdPrefix][Id]_right(c_item) 
+{
+    name = [NameId_R];
+[CondSection]
+[DamageSection]
+    damagetotal = [DamageTotal];
+    damagetype = [DamageTotalType];
+    description = name;
+    flags = item_dag;
+    inv_animate = 1;
+    mainflag = item_kat_nf;
+    material = mat_metal;
+    ownerguild = 123;
+    weight = 1;
+	visual = [Visual];
+	on_equip = equip_[IdPrefix][Id]_right;
+    on_unequip = unequip_[IdPrefix][Id]_right;
+    spell = [WeapModsData];
+    range = [WeaponRange];
+    value = [Price];
+    text[5] = StExt_Enchanted_Name_Value;
+    count[5] = [Price];
+    [SpecialSection]
+};
+
+func void equip_[IdPrefix][Id]_left() 
+{
+    if(self.id == 0) 
+	{
+        if((rh_ready_2x2 == true) && (aiv_twohandsfirst == true)) 
+		{
+            lh_ready_2x2 = true;
+            equipedindex_1h = false;
+            meleeweaponindex = 5;
+            rx_applyanim_weapons(self, -1);
+        }
+        else 
+		{
+            if(aiv_twohandsfirst == true) 
+			{
+                ai_print(print_missing_dualweapon);
+                b_say(hero, hero, ""$DONTWORK"");
+            }
+            else 
+			{
+                ai_print(print_missing_skill);
+                b_say(hero, hero, ""$DONTREADYFORTHIS"");
+            };
+            rx_unequipweapon(self);
+            ai_unequipweapons(hero);
+        };
+    }
+    else { mdl_applyoverlaymds(self, ""Humans_2x2ST3.MDS""); };
+};
+func void unequip_[IdPrefix][Id]_left() 
+{
+    if(self.id == 0) 
+	{
+        if(rh_ready_2x2 == true) 
+		{
+            lh_ready_2x2 = false;
+            equipedindex_1h = true;
+            rx_applyanim_weapons(self, -1);
+        }
+        else { rx_unequipweapon(self); };
+    }
+    else { mdl_removeoverlaymds(self, ""Humans_2x2ST3.MDS""); };
+};
+func void equip_[IdPrefix][Id]_right() 
+{
+    if(self.id == 0) 
+	{
+        if(npc_hasitems(hero, [IdPrefix][Id]_left) <= 0) { createinvitems(hero, [IdPrefix][Id]_left, 1); };
+[ModsEquip]
+        rh_ready_2x2 = true;
+        equipedindex_1h = true;
+        meleeweaponindex = 4;
+        rx_applyanim_weapons(self, -1);
+    };
+};
+func void unequip_[IdPrefix][Id]_right() 
+{
+    if(self.id == 0) 
+	{
+        [ModsOptionsUnEquip]
+[ModsUnEquip]
+        if(lh_ready_2x2 == true) { unequip_[IdPrefix][Id]_left(); };
+        rx_unequipweapon(self);
+        ai_unequipweapons(hero);
+    }
+    else { mdl_removeoverlaymds(self, ""Humans_1x2ST3.MDS""); };
+};";
+
     }
 }

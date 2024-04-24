@@ -14,6 +14,7 @@
             ItemsPrice = 1500;
             SetModsCountRange(2, 3);
             ItemVisuals = CommonTemplates.BeltVisuals;
+            ItemModType = "StExt_ItemType_Belt";
         }
 
         public override string GetTemplate() => CommonTemplates.BeltTemplate;

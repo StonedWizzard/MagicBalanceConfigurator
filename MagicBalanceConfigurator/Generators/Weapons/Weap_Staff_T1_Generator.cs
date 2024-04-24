@@ -20,6 +20,7 @@ namespace MagicBalanceConfigurator.Generators
             SetItemCondRange(25, 50);
             SetModsCountRange(2, 3);
             ProhibitedMods = new List<int> { 227, 228, 229 };
+            ItemModType = "StExt_ItemType_MeleeWeap";
         }
 
         protected override List<ItemTemplatePreset> BuildItemTemplatePresets() => new List<ItemTemplatePreset>()

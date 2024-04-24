@@ -17,6 +17,7 @@ namespace MagicBalanceConfigurator.Generators
             ItemsPrice = 1750;
             SetModsCountRange(2, 3);
             ItemVisuals = CommonTemplates.AmuletVisuals;
+            ItemModType = "StExt_ItemType_Amulet";
         }
 
         public override string GetTemplate() => CommonTemplates.AmuletTemplate;

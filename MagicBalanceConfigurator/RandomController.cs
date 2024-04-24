@@ -78,6 +78,11 @@ namespace MagicBalanceConfigurator
                 new Weap_1h_T3_Generator(this),
                 new Weap_1h_T4_Generator(this),
 
+                new Weap_Dual_T1_Generator(this),
+                new Weap_Dual_T2_Generator(this),
+                new Weap_Dual_T3_Generator(this),
+                new Weap_Dual_T4_Generator(this),
+
                 new Weap_2h_T1_Generator(this),
                 new Weap_2h_T2_Generator(this),
                 new Weap_2h_T3_Generator(this),
@@ -150,7 +155,7 @@ namespace MagicBalanceConfigurator
                 PackageBuilder packageBuilder = new PackageBuilder();
                 packageInfo = packageBuilder.BuildPackage(Consts.RandomItemsPackageDir, OutputDir, "StonedWizzard", new List<string>() { "StExtMod - Core" },
                     new List<string>() { "StExtMod - RandItemPack Patch", "StExtMod - Main", "StExtMod - User configs", "StExtMod - English" },
-                    "2.1.5", "StExtMod - Random items. Required 'StExtMod - Core'", true);
+                    "2.3", "StExtMod - Random items. Required 'StExtMod - Core'", true);
             }
 
             Generators.ForEach(g =>
@@ -237,6 +242,7 @@ namespace MagicBalanceConfigurator
         private object AppendRandItemsMetaLocker = new object();
         public void AppendRandItemsMeta(StringBuilder randItemsMeta)
         {
+            RandItemsMeta.Append($"const int StExt_RandomItemsGenerated = true;\r\n");
             lock (AppendRandItemsMetaLocker)
                 RandItemsMeta.Append($"{randItemsMeta}\r\n");
         }
@@ -295,9 +301,12 @@ namespace MagicBalanceConfigurator
         {
             string path = $"{savePath}\\{Consts.RandMetaFileName}";
             string fallbackPath = $"{Application.StartupPath}\\{Consts.RandMetaFileName}";
-
+            RandItemsMeta.AppendLine(String.Empty);
+            RandItemsMeta.AppendLine(CommonTemplates.StExt_ItemsGeneratedConst);
             RandItemsMeta.AppendLine(CommonTemplates.StExt_CreateRandomItemMock); 
             RandItemsMeta.AppendLine(CommonTemplates.StExt_ApplyPotionEffectMock);
+            RandItemsMeta.AppendLine(CommonTemplates.StExt_RegisterItemBonus);
+            RandItemsMeta.AppendLine(CommonTemplates.StExt_ClearItemInfoMock);            
             try { File.WriteAllText(path, RandItemsMeta.ToString()); }
             catch (DirectoryNotFoundException) { File.WriteAllText(fallbackPath, RandItemsMeta.ToString()); }
             catch (Exception ex)

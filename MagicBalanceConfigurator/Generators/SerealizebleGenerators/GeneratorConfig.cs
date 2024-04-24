@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MagicBalanceConfigurator.Generators.SerealizebleGenerators
 {
@@ -17,6 +14,7 @@ namespace MagicBalanceConfigurator.Generators.SerealizebleGenerators
         public double ModPower { get; set; }
         public int ModsCountMin { get; set; }
         public int ModsCountMax { get; set; }
+        public string ItemModType { get; set; }
         public string ItemName { get; set; }
         public double ItemCondMultiplier { get; set; }
 

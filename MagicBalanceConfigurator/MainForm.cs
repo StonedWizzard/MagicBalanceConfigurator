@@ -558,13 +558,25 @@ namespace MagicBalanceConfigurator
         }
         private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Clipboard.SetText("3HZFxPqyJnrNLSw7L8hJt9A2hZJjGgdGJe");
+            Clipboard.SetText("bc1qkd4au6aw023let40mfe69j28xjgp8d5k072j8m");
             MessageBox.Show("Adress copied to clipboard!");
         }
 
         private void EnableColorfullPotionsBox_CheckedChanged(object sender, EventArgs e)
         {
             RandomController.EnableColorfullPotions = EnableColorfullPotionsBox.Checked;
+        }
+
+        private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Clipboard.SetText("TGXxotEkEiUY7d8iFxv7CN4ae3DofbFjJD");
+            MessageBox.Show("Adress copied to clipboard!");
+        }
+
+        private void linkLabel7_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Clipboard.SetText("0x11D7d13b4d6d23eCCAFa5025e5Fe990aD183343f");
+            MessageBox.Show("Adress copied to clipboard!");
         }
     }
 }

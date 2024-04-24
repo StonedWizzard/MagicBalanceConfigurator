@@ -19,6 +19,7 @@ namespace MagicBalanceConfigurator.Generators
             SetItemCondRange(25, 50);
             SetModsCountRange(1, 2);
             ProhibitedMods = new List<int> { 226, 228, 229 };
+            ItemModType = "StExt_ItemType_MeleeWeap";
         }
 
         protected override List<ItemTemplatePreset> BuildItemTemplatePresets() => new List<ItemTemplatePreset>()
@@ -42,7 +43,7 @@ namespace MagicBalanceConfigurator.Generators
                 ItemType = "item_swd",
                 Visuals = new string[] { "ItMw_020_1h_sword_old_01.3DS", "ItMw_ShortSword2_New.3DS", "ItMw_ShortSword3_New.3DS",
                     "ItMw_PirCutlas.3DS", "ItMW_1H_DexSword_17.3DS" },
-                SpecialSection = "setitemvartrue([IdPrefix][Id], bit_item_dex_sword);",
+                SpecialSection = "setitemvartrue([IdPrefix][Id], bit_item_dex_sword);\r\n\townerguild = 123;",
                 AltOnEquipFunc = "equip_1h_light();",
                 AltOnUnEquipFunc = "unequip_1h_light();",
             },

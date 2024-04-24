@@ -357,23 +357,29 @@
   <data name="ModConfigsPage.Text" xml:space="preserve">
     <value>Настройки мода</value>
   </data>
+  <data name="linkLabel6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 400</value>
+  </data>
+  <data name="linkLabel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 374</value>
+  </data>
   <data name="linkLabel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 386</value>
+    <value>7, 349</value>
   </data>
   <data name="linkLabel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 366</value>
+    <value>7, 329</value>
   </data>
   <data name="linkLabel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>567, 20</value>
   </data>
   <data name="linkLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 346</value>
+    <value>7, 309</value>
   </data>
   <data name="linkLabel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>567, 20</value>
   </data>
   <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 318</value>
+    <value>8, 281</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
     <value>563, 28</value>
@@ -396,21 +402,11 @@
   <data name="label10.Text" xml:space="preserve">
     <value>Vdfs архив</value>
   </data>
-  <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 272</value>
-  </data>
   <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>567, 20</value>
   </data>
-  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 227</value>
-  </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>567, 45</value>
-  </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>App Version - 1.2.0
-© StonedWizzard, 2023</value>
   </data>
   <data name="LanguageSelectBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>188, 25</value>

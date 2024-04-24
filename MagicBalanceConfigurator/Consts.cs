@@ -58,6 +58,10 @@ namespace MagicBalanceConfigurator
         public const string Weap_1h_T2_FileName = "StExt_Weap_1h_T2_generated.d";
         public const string Weap_1h_T3_FileName = "StExt_Weap_1h_T3_generated.d";
         public const string Weap_1h_T4_FileName = "StExt_Weap_1h_T4_generated.d";
+        public const string Weap_dual_T1_FileName = "StExt_Weap_dual_T1_generated.d";
+        public const string Weap_dual_T2_FileName = "StExt_Weap_dual_T2_generated.d";
+        public const string Weap_dual_T3_FileName = "StExt_Weap_dual_T3_generated.d";
+        public const string Weap_dual_T4_FileName = "StExt_Weap_dual_T4_generated.d";
         public const string Weap_2h_T1_FileName = "StExt_Weap_2h_T1_generated.d";
         public const string Weap_2h_T2_FileName = "StExt_Weap_2h_T2_generated.d";
         public const string Weap_2h_T3_FileName = "StExt_Weap_2h_T3_generated.d";

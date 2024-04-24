@@ -80,6 +80,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.ModConfigsTextBox = new System.Windows.Forms.RichTextBox();
             this.AppConfigsPage = new System.Windows.Forms.TabPage();
+            this.linkLabel7 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel8 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel6 = new System.Windows.Forms.LinkLabel();
             this.linkLabel5 = new System.Windows.Forms.LinkLabel();
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
@@ -112,17 +115,18 @@
             // 
             // TabsPanel
             // 
+            resources.ApplyResources(this.TabsPanel, "TabsPanel");
             this.TabsPanel.Controls.Add(this.InstallPage);
             this.TabsPanel.Controls.Add(this.RandomPage);
             this.TabsPanel.Controls.Add(this.ModConfigsPage);
             this.TabsPanel.Controls.Add(this.AppConfigsPage);
-            resources.ApplyResources(this.TabsPanel, "TabsPanel");
             this.TabsPanel.Name = "TabsPanel";
             this.TabsPanel.SelectedIndex = 0;
             this.TabsPanel.Selected += new System.Windows.Forms.TabControlEventHandler(this.TabsPanel_Selected);
             // 
             // InstallPage
             // 
+            resources.ApplyResources(this.InstallPage, "InstallPage");
             this.InstallPage.Controls.Add(this.CleanUpAutorunBox);
             this.InstallPage.Controls.Add(this.button1);
             this.InstallPage.Controls.Add(this.label3);
@@ -131,7 +135,6 @@
             this.InstallPage.Controls.Add(this.RunPatchBtn);
             this.InstallPage.Controls.Add(this.InstallPackagesBtn);
             this.InstallPage.Controls.Add(this.PackagesGridView);
-            resources.ApplyResources(this.InstallPage, "InstallPage");
             this.InstallPage.Name = "InstallPage";
             this.InstallPage.UseVisualStyleBackColor = true;
             // 
@@ -185,9 +188,9 @@
             // 
             // PackagesGridView
             // 
+            resources.ApplyResources(this.PackagesGridView, "PackagesGridView");
             this.PackagesGridView.AllowUserToAddRows = false;
             this.PackagesGridView.AllowUserToDeleteRows = false;
-            resources.ApplyResources(this.PackagesGridView, "PackagesGridView");
             this.PackagesGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IsPackageEnabledColumn,
             this.LoadOrderColumn,
@@ -236,6 +239,7 @@
             // 
             // RandomPage
             // 
+            resources.ApplyResources(this.RandomPage, "RandomPage");
             this.RandomPage.Controls.Add(this.EnableColorfullPotionsBox);
             this.RandomPage.Controls.Add(this.ItemsCountBox);
             this.RandomPage.Controls.Add(this.label5);
@@ -249,7 +253,6 @@
             this.RandomPage.Controls.Add(this.GenerationProgressBar);
             this.RandomPage.Controls.Add(this.ConsoleTextBox);
             this.RandomPage.Controls.Add(this.GenerateBtn);
-            resources.ApplyResources(this.RandomPage, "RandomPage");
             this.RandomPage.Name = "RandomPage";
             this.RandomPage.UseVisualStyleBackColor = true;
             // 
@@ -342,9 +345,9 @@
             // 
             // GeneratorDataGrid
             // 
+            resources.ApplyResources(this.GeneratorDataGrid, "GeneratorDataGrid");
             this.GeneratorDataGrid.AllowUserToAddRows = false;
             this.GeneratorDataGrid.AllowUserToDeleteRows = false;
-            resources.ApplyResources(this.GeneratorDataGrid, "GeneratorDataGrid");
             this.GeneratorDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GeneratorDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IsActiveColumn,
@@ -466,10 +469,10 @@
             // 
             // ModConfigsPage
             // 
+            resources.ApplyResources(this.ModConfigsPage, "ModConfigsPage");
             this.ModConfigsPage.Controls.Add(this.ConfigPresetsBox);
             this.ModConfigsPage.Controls.Add(this.label9);
             this.ModConfigsPage.Controls.Add(this.ModConfigsTextBox);
-            resources.ApplyResources(this.ModConfigsPage, "ModConfigsPage");
             this.ModConfigsPage.Name = "ModConfigsPage";
             this.ModConfigsPage.UseVisualStyleBackColor = true;
             // 
@@ -500,6 +503,10 @@
             // 
             // AppConfigsPage
             // 
+            resources.ApplyResources(this.AppConfigsPage, "AppConfigsPage");
+            this.AppConfigsPage.Controls.Add(this.linkLabel7);
+            this.AppConfigsPage.Controls.Add(this.linkLabel8);
+            this.AppConfigsPage.Controls.Add(this.linkLabel6);
             this.AppConfigsPage.Controls.Add(this.linkLabel5);
             this.AppConfigsPage.Controls.Add(this.linkLabel4);
             this.AppConfigsPage.Controls.Add(this.linkLabel3);
@@ -516,9 +523,31 @@
             this.AppConfigsPage.Controls.Add(this.SetGothicDirBtn);
             this.AppConfigsPage.Controls.Add(this.GamePathTextBox);
             this.AppConfigsPage.Controls.Add(this.label1);
-            resources.ApplyResources(this.AppConfigsPage, "AppConfigsPage");
             this.AppConfigsPage.Name = "AppConfigsPage";
             this.AppConfigsPage.UseVisualStyleBackColor = true;
+            // 
+            // linkLabel7
+            // 
+            resources.ApplyResources(this.linkLabel7, "linkLabel7");
+            this.linkLabel7.LinkColor = System.Drawing.Color.Navy;
+            this.linkLabel7.Name = "linkLabel7";
+            this.linkLabel7.TabStop = true;
+            this.linkLabel7.VisitedLinkColor = System.Drawing.Color.MidnightBlue;
+            this.linkLabel7.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel7_LinkClicked_1);
+            // 
+            // linkLabel8
+            // 
+            resources.ApplyResources(this.linkLabel8, "linkLabel8");
+            this.linkLabel8.Name = "linkLabel8";
+            // 
+            // linkLabel6
+            // 
+            resources.ApplyResources(this.linkLabel6, "linkLabel6");
+            this.linkLabel6.LinkColor = System.Drawing.Color.RoyalBlue;
+            this.linkLabel6.Name = "linkLabel6";
+            this.linkLabel6.TabStop = true;
+            this.linkLabel6.VisitedLinkColor = System.Drawing.Color.Cyan;
+            this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel6_LinkClicked);
             // 
             // linkLabel5
             // 
@@ -597,8 +626,8 @@
             // 
             // LanguageSelectBox
             // 
-            this.LanguageSelectBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.LanguageSelectBox, "LanguageSelectBox");
+            this.LanguageSelectBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.LanguageSelectBox.FormattingEnabled = true;
             this.LanguageSelectBox.Items.AddRange(new object[] {
             resources.GetString("LanguageSelectBox.Items"),
@@ -629,6 +658,10 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
+            // DirBrowserDialog
+            // 
+            resources.ApplyResources(this.DirBrowserDialog, "DirBrowserDialog");
+            // 
             // PackageListUpdater
             // 
             this.PackageListUpdater.Interval = 2500;
@@ -638,6 +671,7 @@
             // 
             this.FileOpenDialog.DefaultExt = " \"Vdf files|*.vdf|Mod files (*.mod*)|*.mod*\"";
             this.FileOpenDialog.FileName = "openFileDialog1";
+            resources.ApplyResources(this.FileOpenDialog, "FileOpenDialog");
             // 
             // MainForm
             // 
@@ -735,6 +769,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemNameColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn UseUniqNameColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn SeedColumn;
+        private System.Windows.Forms.LinkLabel linkLabel6;
+        private System.Windows.Forms.LinkLabel linkLabel8;
+        private System.Windows.Forms.LinkLabel linkLabel7;
     }
 }
 

@@ -1,7 +1,6 @@
 ﻿using MagicBalanceConfigurator.Generators.SerealizebleGenerators;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -206,6 +205,7 @@ namespace MagicBalanceConfigurator.Generators
                 SpecialSection = preset.SpecialSection,
                 VisualChanges = preset.VisualChanges,
                 Visuals = preset.Visuals,
+                VisualsExtra = preset.VisualsExtra,
                 WeaponDamageType = preset.WeaponDamageType,
                 WeaponExtraRange = preset.WeaponExtraRange,
                 ItemNamePlaceholder = preset.ItemNamePlaceholder,
@@ -229,6 +229,7 @@ namespace MagicBalanceConfigurator.Generators
                 SpecialSection = config.SpecialSection,
                 VisualChanges = config.VisualChanges,
                 Visuals = config.Visuals,
+                VisualsExtra = config.VisualsExtra,
                 WeaponDamageType = config.WeaponDamageType,
                 WeaponExtraRange = config.WeaponExtraRange,
                 ItemNamePlaceholder = config.ItemNamePlaceholder,
@@ -241,6 +242,7 @@ namespace MagicBalanceConfigurator.Generators
         {
             public string ItemNamePlaceholder { get; set; }
             public string[] Visuals { get; set; } = new string[] { };
+            public string[] VisualsExtra { get; set; } = new string[] { };
             public string[] VisualChanges { get; set; } = new string[] { };
             public string[] ExtraConditions { get; set; } = new string[] { };
             public string ItemType { get; set; }

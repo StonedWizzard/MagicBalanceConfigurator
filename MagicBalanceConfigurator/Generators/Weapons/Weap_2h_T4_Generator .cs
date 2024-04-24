@@ -19,6 +19,7 @@ namespace MagicBalanceConfigurator.Generators
             SetItemCondRange(150, 250);
             SetModsCountRange(4, 5);
             ProhibitedMods = new List<int> { 227, 228, 229 };
+            ItemModType = "StExt_ItemType_MeleeWeap";
         }
 
         protected override List<ItemTemplatePreset> BuildItemTemplatePresets() => new List<ItemTemplatePreset>()
@@ -45,7 +46,7 @@ namespace MagicBalanceConfigurator.Generators
                 ItemType = "item_2hd_swd",
                 Visuals = new string[] { "ITMW_2H_G3_LONGHALBERD_01.3DS", "ItMw_Speer_Silver.3DS", "ItMw_Speer_Silver_Strong.3DS", "ITMW_2H_SPEAR_RUNIC.3DS", "ItMw_Speer_GoblinDemon_01.3DS",
                     "ItMw_Speer_04.3DS", "ItMw_Speer_03.3DS", "ItMw_Speer_03.3DS", "ItMw_DemonSpear.3DS", "ItMw_Speer_Guardian_01.3DS", "ItMw_Speer_05.3DS"},
-                SpecialSection = "setitemvartrue([IdPrefix][Id], bit_item_speer);",
+                SpecialSection = "setitemvartrue([IdPrefix][Id], bit_item_speer);\r\n\townerguild = 123;",
                 AltOnEquipFunc = "equip_2h_heavy_speer();",
                 AltOnUnEquipFunc = "unequip_2h_heavy_speer();",
                 WeaponExtraRange = 35

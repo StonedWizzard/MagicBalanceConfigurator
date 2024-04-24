@@ -122,6 +122,7 @@ namespace MagicBalanceConfigurator.Generators
         protected string ItemIdPrefix;
         protected string ItemTemplate;
         protected string ItemGenericNameId;
+        protected string ItemModType;
         protected List<int> ProhibitedMods { get; set; }
         protected string[] ItemVisuals { get; set; }
 
@@ -269,15 +270,20 @@ namespace MagicBalanceConfigurator.Generators
             template.Replace("[IdPrefix]", ItemIdPrefix);
             template.Replace("[Id]", itemIdInfo.Id);
             template.Replace("[Price]", GetItemPrice().ToString());
-            template.Replace("[Visual]", GetItemVisual());            
-
+            template.Replace("[Visual]", GetItemVisual());
+            
             ProcessTemplateMods(template, modsSet);
             ProcessTemplateName(itemIdInfo, template);
-            PostProcessTemplate(template);
+            PostProcessTemplate(template, itemIdInfo);
             AppendItemBlock(template.ToString());
         }
 
-        protected virtual void PostProcessTemplate(StringBuilder template) { }
+        protected virtual void PostProcessTemplate(StringBuilder template, (string FullId, string Id)? itemIdInfo = null) 
+        {
+            template.Replace("[ModsOptionsUnEquip]", CommonTemplates.UnequipInfoTemplate);
+            template.Replace("[ItemPointer]", GetItemPointer(itemIdInfo?.FullId));
+            template.Replace("[ItemOptionsType]", ItemModType);
+        }
 
         /// <summary>
         /// Add itemInfo to loot table
@@ -419,6 +425,8 @@ namespace MagicBalanceConfigurator.Generators
         protected virtual ItemMod[] GetItemsMods() => 
             ItemModsProvider.ItemMods.Where(x => x.IsEnabled && x.Id < 100).ToArray();
 
+        protected virtual string GetItemPointer(string fullId) => fullId; 
+
         /// <summary>
         /// Get any random mod from allowed list
         /// </summary>
@@ -428,6 +436,7 @@ namespace MagicBalanceConfigurator.Generators
             ItemMod mod = GetItemsMods()[modIndex];
             return mod;
         }
+
         /// <summary>
         /// Compile set of item mods, depends on generator settings
         /// </summary>
@@ -578,6 +587,7 @@ namespace MagicBalanceConfigurator.Generators
                 ModPower = ModPower,
                 ModsCountMax = ModsCountMax,
                 ModsCountMin = ModsCountMin,
+                ItemModType = ItemModType,
                 SchemaName = GeneratorSchemaName,
                 UseUniqName = UseUniqName,
                 ProhibitedMods = ProhibitedMods,
@@ -591,6 +601,7 @@ namespace MagicBalanceConfigurator.Generators
             ItemsCount = generatorConfig.ItemsCount;
             ItemsPrice = generatorConfig.ItemsPrice;
             ModPower = generatorConfig.ModPower;
+            ItemModType = generatorConfig.ItemModType;
             UseUniqName = UseUniqName;
             ProhibitedMods = ProhibitedMods == null ? new List<int>() : generatorConfig.ProhibitedMods;
             SetModsCountRange(generatorConfig.ModsCountMin, generatorConfig.ModsCountMax);

@@ -78,6 +78,7 @@
     <Compile Include="Generators\Armors\Armor__Body_T2_Generator.cs" />
     <Compile Include="Generators\Armors\Armor__Body_T1_Generator.cs" />
     <Compile Include="Generators\BaseArmorGenerator.cs" />
+    <Compile Include="Generators\BaseDualWeaponGenerator.cs" />
     <Compile Include="Generators\BaseItemGenerator.cs" />
     <Compile Include="Generators\BaseShieldGenerator.cs" />
     <Compile Include="Generators\Jewelery\Aml_T1_Generator .cs" />
@@ -109,6 +110,10 @@
     <Compile Include="Generators\SerealizebleGenerators\GeneratorConfigsBundle.cs" />
     <Compile Include="Generators\SerealizebleGenerators\ISerealizebleGenerator.cs" />
     <Compile Include="Generators\SerealizebleGenerators\ItemTemplateConfigs.cs" />
+    <Compile Include="Generators\Weapons\Weap_Dual_T4_Generator.cs" />
+    <Compile Include="Generators\Weapons\Weap_Dual_T3_Generator.cs" />
+    <Compile Include="Generators\Weapons\Weap_Dual_T2_Generator.cs" />
+    <Compile Include="Generators\Weapons\Weap_Dual_T1_Generator.cs" />
     <Compile Include="Generators\Weapons\Weap_1h_T4_Generator .cs" />
     <Compile Include="Generators\Weapons\Weap_1h_T3_Generator .cs" />
     <Compile Include="Generators\Weapons\Weap_1h_T2_Generator .cs" />
