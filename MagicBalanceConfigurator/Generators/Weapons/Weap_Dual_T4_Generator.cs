@@ -32,6 +32,42 @@ namespace MagicBalanceConfigurator.Generators
                 VisualsExtra = new string[] { "ITMW_1H_DUAL_ORE_LEFT.3DS", "ItMw_1H_Ancient_Left.3DS", "ITMW_1H_DUAL_TWILIGHT_LEFT.3DS", "ItMw_1H_AssBlade_Left.3DS",
                     "ITMW_KATANA_02.3DS", "ITMW_1H_BELIARSWORD_LEFT.3DS", "ItMw_1H_ChelDrak_Left.3DS", "ItMw_1H_IlArahBlade_Left.3DS" },
             },
+            new ItemTemplatePreset()
+            {
+                ItemCondStat = CommonTemplates.ItemCondAtr_Mana,
+                WeaponDamageType = "dam_magic",
+                ItemType = String.Empty,
+                Visuals = new string[] { "ITMW_1H_DUAL_ORE_RIGHT.3DS", "ItMw_1H_Ancient_Right.3DS", "ITMW_1H_DUAL_TWILIGHT_RIGHT.3DS", "ItMw_ArabicSword_01.3DS",
+                    "ITMW_KATANA_01.3DS", "ITMW_1H_BELIARSWORD.3DS", "ItMw_1H_ChelDrak_Right.3DS", "ItMw_1H_IlArahBlade.3DS" },
+                VisualsExtra = new string[] { "ITMW_1H_DUAL_ORE_LEFT.3DS", "ItMw_1H_Ancient_Left.3DS", "ITMW_1H_DUAL_TWILIGHT_LEFT.3DS", "ItMw_1H_AssBlade_Left.3DS",
+                    "ITMW_KATANA_02.3DS", "ITMW_1H_BELIARSWORD_LEFT.3DS", "ItMw_1H_ChelDrak_Left.3DS", "ItMw_1H_IlArahBlade_Left.3DS" },
+                SpecialSection = "setitemvartrue([IdPrefix][Id]_right, bit_item_mag_sword);",
+                SpecialSectionExtra = "setitemvartrue([IdPrefix][Id]_left, bit_item_mag_sword);"
+            },
+            new ItemTemplatePreset()
+            {
+                ItemCondStat = CommonTemplates.ItemCondAtr_Mana,
+                WeaponDamageType = "dam_fire",
+                ItemType = String.Empty,
+                Visuals = new string[] { "ITMW_1H_DUAL_ORE_RIGHT.3DS", "ItMw_1H_Ancient_Right.3DS", "ITMW_1H_DUAL_TWILIGHT_RIGHT.3DS", "ItMw_ArabicSword_01.3DS",
+                    "ITMW_KATANA_01.3DS", "ITMW_1H_BELIARSWORD.3DS", "ItMw_1H_ChelDrak_Right.3DS", "ItMw_1H_IlArahBlade.3DS" },
+                VisualsExtra = new string[] { "ITMW_1H_DUAL_ORE_LEFT.3DS", "ItMw_1H_Ancient_Left.3DS", "ITMW_1H_DUAL_TWILIGHT_LEFT.3DS", "ItMw_1H_AssBlade_Left.3DS",
+                    "ITMW_KATANA_02.3DS", "ITMW_1H_BELIARSWORD_LEFT.3DS", "ItMw_1H_ChelDrak_Left.3DS", "ItMw_1H_IlArahBlade_Left.3DS" },
+                SpecialSection = "setitemvartrue([IdPrefix][Id]_right, bit_item_mag_sword);",
+                SpecialSectionExtra = "setitemvartrue([IdPrefix][Id]_left, bit_item_mag_sword);"
+            },
+            new ItemTemplatePreset()
+            {
+                ItemCondStat = CommonTemplates.ItemCondAtr_Mana,
+                WeaponDamageType = "dam_fly",
+                ItemType = String.Empty,
+                Visuals = new string[] { "ITMW_1H_DUAL_ORE_RIGHT.3DS", "ItMw_1H_Ancient_Right.3DS", "ITMW_1H_DUAL_TWILIGHT_RIGHT.3DS", "ItMw_ArabicSword_01.3DS",
+                    "ITMW_KATANA_01.3DS", "ITMW_1H_BELIARSWORD.3DS", "ItMw_1H_ChelDrak_Right.3DS", "ItMw_1H_IlArahBlade.3DS" },
+                VisualsExtra = new string[] { "ITMW_1H_DUAL_ORE_LEFT.3DS", "ItMw_1H_Ancient_Left.3DS", "ITMW_1H_DUAL_TWILIGHT_LEFT.3DS", "ItMw_1H_AssBlade_Left.3DS",
+                    "ITMW_KATANA_02.3DS", "ITMW_1H_BELIARSWORD_LEFT.3DS", "ItMw_1H_ChelDrak_Left.3DS", "ItMw_1H_IlArahBlade_Left.3DS" },
+                SpecialSection = "setitemvartrue([IdPrefix][Id]_right, bit_item_mag_sword);",
+                SpecialSectionExtra = "setitemvartrue([IdPrefix][Id]_left, bit_item_mag_sword);"
+            },
         };
     }
 }

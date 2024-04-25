@@ -668,7 +668,7 @@ func void unequip_[IdPrefix][Id]()
     value = 0;
     text[5] = StExt_Enchanted_Name_Value;
     count[5] = 0;
-    [SpecialSection]
+    [SpecialSectionL]
 };
 instance [IdPrefix][Id]_right(c_item) 
 {

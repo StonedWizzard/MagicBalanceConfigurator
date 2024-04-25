@@ -155,7 +155,7 @@ namespace MagicBalanceConfigurator
                 PackageBuilder packageBuilder = new PackageBuilder();
                 packageInfo = packageBuilder.BuildPackage(Consts.RandomItemsPackageDir, OutputDir, "StonedWizzard", new List<string>() { "StExtMod - Core" },
                     new List<string>() { "StExtMod - RandItemPack Patch", "StExtMod - Main", "StExtMod - User configs", "StExtMod - English" },
-                    "2.3", "StExtMod - Random items. Required 'StExtMod - Core'", true);
+                    "2.3.3", "StExtMod - Random items. Required 'StExtMod - Core'", true);
             }
 
             Generators.ForEach(g =>

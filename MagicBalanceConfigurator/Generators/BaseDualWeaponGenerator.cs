@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace MagicBalanceConfigurator.Generators
 {
@@ -22,6 +23,30 @@ namespace MagicBalanceConfigurator.Generators
         {
             var template = new StringBuilder(base.PreProcessTemplate(modsSet));
             template.Replace("[VisualL]", GetItemVisualL());
+
+            if (!String.IsNullOrEmpty(CurrentItemPreset.SpecialSection))
+                template.Replace("[SpecialSection]", CurrentItemPreset.SpecialSection);
+            else
+            {
+                string templateString = template.ToString();
+                Match match = Regex.Match(templateString, @"\n(.*?)\[SpecialSection(.*?)\n\}");
+                if (match.Success)
+                    template.Replace(match.Value, "}");
+                else
+                    template.Replace("[SpecialSection]", CurrentItemPreset.SpecialSection);
+            }
+
+            if (!String.IsNullOrEmpty(CurrentItemPreset.SpecialSectionExtra))
+                template.Replace("[SpecialSectionL]", CurrentItemPreset.SpecialSectionExtra);
+            else
+            {
+                string templateString = template.ToString();
+                Match match = Regex.Match(templateString, @"\n(.*?)\[SpecialSectionL(.*?)\n\}");
+                if (match.Success)
+                    template.Replace(match.Value, "}");
+                else
+                    template.Replace("[SpecialSectionL]", CurrentItemPreset.SpecialSectionExtra);
+            }
             return template.ToString();
         }
 

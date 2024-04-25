@@ -21,6 +21,7 @@ namespace MagicBalanceConfigurator.Generators
             SetModsCountRange(3, 4);
             ProhibitedMods = new List<int> { 227, 228, 229 };
             ItemModType = "StExt_ItemType_MeleeWeap";
+            ItemAltConditionMode = true;
         }
 
         protected override List<ItemTemplatePreset> BuildItemTemplatePresets() => new List<ItemTemplatePreset>()
@@ -41,7 +42,15 @@ namespace MagicBalanceConfigurator.Generators
                 ItemType = "item_2hd_axe",
                 Visuals = new string[] { "ITMW_2H_G3_STAFFDRUID_01.3DS", "ITMW_2H_G3_STAFFDRUID_01.3DS", "ITMW_2H_G3_STAFFFIRE_01.3DS",
                     "ITMW_2H_G3_STAFFWATER_01.3DS", "ITMW_2H_KMR_BLACKSTAFF_01.3DS", "ItMW_Addon_Stab04_New.3ds", "ITMW_2H_SERPENTSTAFF.3ds" }
-            }
+            },
+            new ItemTemplatePreset()
+            {
+                ItemCondStat = CommonTemplates.ItemCondAtr_Mana,
+                WeaponDamageType = "dam_fly",
+                ItemType = "item_2hd_axe",
+                Visuals = new string[] { "ITMW_2H_G3_STAFFDRUID_01.3DS", "ITMW_2H_G3_STAFFDRUID_01.3DS", "ITMW_2H_G3_STAFFFIRE_01.3DS",
+                    "ITMW_2H_G3_STAFFWATER_01.3DS", "ITMW_2H_KMR_BLACKSTAFF_01.3DS", "ItMW_Addon_Stab04_New.3ds", "ITMW_2H_SERPENTSTAFF.3ds" }
+            },
         };
 
         public override string GetTemplate() => CommonTemplates.StaffTemplate;

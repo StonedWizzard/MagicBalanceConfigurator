@@ -17,6 +17,7 @@ namespace MagicBalanceConfigurator.Generators.SerealizebleGenerators
         public string AltOnEquipFunc { get; set; }
         public string AltOnUnEquipFunc { get; set; }
         public string SpecialSection { get; set; } = String.Empty;
+        public string SpecialSectionExtra { get; set; } = String.Empty;
 
         public double ProtBluntMult { get; set; } = 1;
         public double ProtEdgeMult { get; set; } = 1;

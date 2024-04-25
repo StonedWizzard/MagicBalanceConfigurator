@@ -32,6 +32,42 @@ namespace MagicBalanceConfigurator.Generators
                 VisualsExtra = new string[] {"ITMW_1H_DUAL_IRON_LEFT.3DS", "ITMW_1H_DUAL_OLD_LEFT.3DS", "ITMW_1H_DUAL_STEEL_LEFT.3DS","ITMW_1H_DUAL_CURVED_LEFT.3DS",
                     "ITMW_1H_DUAL_ORE_LEFT.3DS", "ItMw_1H_Ancient_Left.3DS"  },
             },
+            new ItemTemplatePreset()
+            {
+                ItemCondStat = CommonTemplates.ItemCondAtr_Mana,
+                WeaponDamageType = "dam_magic",
+                ItemType = String.Empty,
+                Visuals = new string[] { "ITMW_1H_DUAL_IRON_RIGHT.3DS", "ITMW_1H_DUAL_OLD_RIGHT.3DS", "ITMW_1H_DUAL_STEEL_RIGHT.3DS", "ITMW_1H_DUAL_CURVED_RIGHT.3DS",
+                    "ITMW_1H_DUAL_ORE_RIGHT.3DS", "ItMw_1H_Ancient_Right.3DS" },
+                VisualsExtra = new string[] {"ITMW_1H_DUAL_IRON_LEFT.3DS", "ITMW_1H_DUAL_OLD_LEFT.3DS", "ITMW_1H_DUAL_STEEL_LEFT.3DS","ITMW_1H_DUAL_CURVED_LEFT.3DS",
+                    "ITMW_1H_DUAL_ORE_LEFT.3DS", "ItMw_1H_Ancient_Left.3DS"  },
+                SpecialSection = "setitemvartrue([IdPrefix][Id]_right, bit_item_mag_sword);",
+                SpecialSectionExtra = "setitemvartrue([IdPrefix][Id]_left, bit_item_mag_sword);"
+            },
+            new ItemTemplatePreset()
+            {
+                ItemCondStat = CommonTemplates.ItemCondAtr_Mana,
+                WeaponDamageType = "dam_fire",
+                ItemType = String.Empty,
+                Visuals = new string[] { "ITMW_1H_DUAL_IRON_RIGHT.3DS", "ITMW_1H_DUAL_OLD_RIGHT.3DS", "ITMW_1H_DUAL_STEEL_RIGHT.3DS", "ITMW_1H_DUAL_CURVED_RIGHT.3DS",
+                    "ITMW_1H_DUAL_ORE_RIGHT.3DS", "ItMw_1H_Ancient_Right.3DS" },
+                VisualsExtra = new string[] {"ITMW_1H_DUAL_IRON_LEFT.3DS", "ITMW_1H_DUAL_OLD_LEFT.3DS", "ITMW_1H_DUAL_STEEL_LEFT.3DS","ITMW_1H_DUAL_CURVED_LEFT.3DS",
+                    "ITMW_1H_DUAL_ORE_LEFT.3DS", "ItMw_1H_Ancient_Left.3DS"  },
+                SpecialSection = "setitemvartrue([IdPrefix][Id]_right, bit_item_mag_sword);",
+                SpecialSectionExtra = "setitemvartrue([IdPrefix][Id]_left, bit_item_mag_sword);"
+            },
+            new ItemTemplatePreset()
+            {
+                ItemCondStat = CommonTemplates.ItemCondAtr_Mana,
+                WeaponDamageType = "dam_fly",
+                ItemType = String.Empty,
+                Visuals = new string[] { "ITMW_1H_DUAL_IRON_RIGHT.3DS", "ITMW_1H_DUAL_OLD_RIGHT.3DS", "ITMW_1H_DUAL_STEEL_RIGHT.3DS", "ITMW_1H_DUAL_CURVED_RIGHT.3DS",
+                    "ITMW_1H_DUAL_ORE_RIGHT.3DS", "ItMw_1H_Ancient_Right.3DS" },
+                VisualsExtra = new string[] {"ITMW_1H_DUAL_IRON_LEFT.3DS", "ITMW_1H_DUAL_OLD_LEFT.3DS", "ITMW_1H_DUAL_STEEL_LEFT.3DS","ITMW_1H_DUAL_CURVED_LEFT.3DS",
+                    "ITMW_1H_DUAL_ORE_LEFT.3DS", "ItMw_1H_Ancient_Left.3DS"  },
+                SpecialSection = "setitemvartrue([IdPrefix][Id]_right, bit_item_mag_sword);",
+                SpecialSectionExtra = "setitemvartrue([IdPrefix][Id]_left, bit_item_mag_sword);"
+            },
         };
     }
 }

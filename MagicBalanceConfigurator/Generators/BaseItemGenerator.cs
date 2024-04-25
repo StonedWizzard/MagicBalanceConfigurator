@@ -18,6 +18,7 @@ namespace MagicBalanceConfigurator.Generators
         protected Dictionary<string, int> CurrentConditionsData { get; set; }
 
         public double ItemCondMultiplier { get; set; }
+        protected bool ItemAltConditionMode { get; set; }
 
         protected int _minItemCondValue;
         public int MinItemCondValue 
@@ -51,6 +52,7 @@ namespace MagicBalanceConfigurator.Generators
             ItemName = string.Empty;
             ItemTemplatePresets = BuildItemTemplatePresets();
             ItemCondMultiplier = 1;
+            ItemAltConditionMode = false;
             SetItemCondRange(5, 10);
         }
 
@@ -89,18 +91,30 @@ namespace MagicBalanceConfigurator.Generators
             return template.ToString();
         }
 
-        private string BuildItemCondSection()
+        protected virtual string BuildItemCondSection()
         {
             StringBuilder condAtrSection = new StringBuilder();
             StringBuilder condValueSection = new StringBuilder();
             StringBuilder result = new StringBuilder();
             int condValue = 0;
+            string primaryCondIndex;
+            string secondaryCondIndex;
+            if(ItemAltConditionMode)
+            {
+                primaryCondIndex = "2";
+                secondaryCondIndex = "1";
+            }
+            else
+            {
+                primaryCondIndex = "1";
+                secondaryCondIndex = "2";
+            }
 
             StringBuilder condAtrLine = new StringBuilder(CommonTemplates.ItemCondString_Atr);
             StringBuilder condValueLine = new StringBuilder(CommonTemplates.ItemCondString_Value);
-            condAtrLine.Replace("[Index]", "1");
+            condAtrLine.Replace("[Index]", primaryCondIndex);
             condAtrLine.Replace("[AtrIndex]", CurrentItemPreset.ItemCondStat);
-            condValueLine.Replace("[Index]", "1");
+            condValueLine.Replace("[Index]", primaryCondIndex);
             condValue = GetItemCondValue(CurrentItemPreset.ItemCondStat);
             condValueLine.Replace("[CondAtrValue]", condValue.ToString());
             condAtrSection.Append($"\t{condAtrLine}");
@@ -116,9 +130,9 @@ namespace MagicBalanceConfigurator.Generators
                 string condStat = allowedStats.ToArray().GetRandomElement();
                 condAtrLine = new StringBuilder(CommonTemplates.ItemCondString_Atr);
                 condValueLine = new StringBuilder(CommonTemplates.ItemCondString_Value);
-                condAtrLine.Replace("[Index]", "2");
+                condAtrLine.Replace("[Index]", secondaryCondIndex);
                 condAtrLine.Replace("[AtrIndex]", condStat);
-                condValueLine.Replace("[Index]", "2");
+                condValueLine.Replace("[Index]", secondaryCondIndex);
                 condValue = GetItemCondValue(condStat);
                 condValueLine.Replace("[CondAtrValue]", condValue.ToString());
                 condAtrSection.Append($"\t{condAtrLine}");
@@ -203,6 +217,7 @@ namespace MagicBalanceConfigurator.Generators
                 ProtMagicMult = preset.ProtMagicMult,
                 ProtPointMult = preset.ProtPointMult,
                 SpecialSection = preset.SpecialSection,
+                SpecialSectionExtra = preset.SpecialSectionExtra,
                 VisualChanges = preset.VisualChanges,
                 Visuals = preset.Visuals,
                 VisualsExtra = preset.VisualsExtra,
@@ -227,6 +242,7 @@ namespace MagicBalanceConfigurator.Generators
                 ProtMagicMult = config.ProtMagicMult,
                 ProtPointMult = config.ProtPointMult,
                 SpecialSection = config.SpecialSection,
+                SpecialSectionExtra = config.SpecialSectionExtra,
                 VisualChanges = config.VisualChanges,
                 Visuals = config.Visuals,
                 VisualsExtra = config.VisualsExtra,
@@ -252,6 +268,7 @@ namespace MagicBalanceConfigurator.Generators
             public string AltOnEquipFunc { get; set; }
             public string AltOnUnEquipFunc { get; set; }
             public string SpecialSection { get; set; } = String.Empty;
+            public string SpecialSectionExtra { get; set; } = String.Empty;            
 
             public double ProtBluntMult { get; set; } = 1;
             public double ProtEdgeMult { get; set; } = 1;

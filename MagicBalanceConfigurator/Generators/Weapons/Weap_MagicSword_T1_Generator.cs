@@ -42,6 +42,15 @@ namespace MagicBalanceConfigurator.Generators
                 ItemType = "item_swd",
                 Visuals = new string[] { "ItMw_SteelDagger_01_New_Magic.3DS", "ITMW_1H_ON_107.3DS", "ITMW_1H_KNIFE_HUNT.3DS", "ItMw_IronDagger_01_New.3DS" },
                 SpecialSection = "setitemvartrue([IdPrefix][Id], bit_item_mag_sword);"
+            },
+            new ItemTemplatePreset()
+            {
+                ItemNamePlaceholder = "Меч",
+                ItemCondStat = CommonTemplates.ItemCondAtr_Mana,
+                WeaponDamageType = "dam_fly",
+                ItemType = "item_swd",
+                Visuals = new string[] { "ItMw_SteelDagger_01_New_Magic.3DS", "ITMW_1H_ON_107.3DS", "ITMW_1H_KNIFE_HUNT.3DS", "ItMw_IronDagger_01_New.3DS" },
+                SpecialSection = "setitemvartrue([IdPrefix][Id], bit_item_mag_sword);"
             }
         };
 

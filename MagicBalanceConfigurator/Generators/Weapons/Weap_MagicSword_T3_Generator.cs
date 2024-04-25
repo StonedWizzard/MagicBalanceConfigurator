@@ -44,6 +44,16 @@ namespace MagicBalanceConfigurator.Generators
                 Visuals = new string[] { "ITMW_BLADE_HIGHMAGE.3DS", "ITMW__SPELLSWORD.3DS", "ITMW_SWORD_NEW_03.3DS",
                     "ITMW__STORM.3DS", "ITMW_TWILIGHT.3DS"},
                 SpecialSection = "setitemvartrue([IdPrefix][Id], bit_item_mag_sword);"
+            },
+            new ItemTemplatePreset()
+            {
+                ItemNamePlaceholder = "Меч",
+                ItemCondStat = CommonTemplates.ItemCondAtr_Mana,
+                WeaponDamageType = "dam_fly",
+                ItemType = "item_swd",
+                Visuals = new string[] { "ITMW_BLADE_HIGHMAGE.3DS", "ITMW__SPELLSWORD.3DS", "ITMW_SWORD_NEW_03.3DS",
+                    "ITMW__STORM.3DS", "ITMW_TWILIGHT.3DS"},
+                SpecialSection = "setitemvartrue([IdPrefix][Id], bit_item_mag_sword);"
             }
         };
 
